@@ -9,3 +9,8 @@ Route::get('/', function () {
 Route::get('/02', function () {
     return view('02_character');
 });
+
+Route::get('/cv', function () {
+    return view('cv');
+});
+
