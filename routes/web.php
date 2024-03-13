@@ -10,6 +10,10 @@ Route::get('/02', function () {
     return view('02_character');
 });
 
+Route::get('/slider', function () {
+    return view('slider');
+});
+
 Route::get('/cv', function () {
     return view('cv');
 });
