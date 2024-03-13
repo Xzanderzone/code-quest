@@ -136,11 +136,24 @@ img {
     border-top: 4px solid gray;
     padding: 30px;
     width: 100%;
-    height: calc(100% - 30px);
     overflow-y: scroll;
     background-color: rgb(28, 28, 29);
 }
 
+/*/ / LANDING PAGE / /*/
+.landing {
+    display: grid;
+    grid-template-rows: 3fr 1fr 0.1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    ". text ."
+    ". terminal ."
+    ". . .";
+}
+
+.landing .terminal {
+    max-height: calc(100% / 3);
+}
 
 /*/ / LOGIN - REGISTER / /*/
 .matrix-text {

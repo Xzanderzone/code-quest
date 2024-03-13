@@ -1,11 +1,12 @@
 <header>
-    <div id="logo">
-        LOGO
+    {{-- the logo can be the 'go to the landingpage / logout' button --}}
+    <div id="logo"> 
+        <a href="/">LOGO</a>
     </div>
     <div id="title">
         A WEB DEV JOURNEY
     </div>
     <div id="cv-emblem">
-        CV (only visible when logged in)
+        <a href="/cv">CV (only visible when logged in)</a>
     </div>
 </header>
