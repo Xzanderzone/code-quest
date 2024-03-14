@@ -3,7 +3,25 @@ html {
         fixed;
 }
 
-#tiles {
+#slider {
+    width: 600px;
+    display: flex;
+    background-color: rgb(104, 104, 104);
+    border: inset 2px #000000;
+    border-radius: 0.7rem;
+}
+#display {
+    padding: 10px;
+    padding-left: 17px;
+}
+#display img {
+    width: 100px;
+    display: block;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#puzzle {
     width: 400px;
     margin: 0;
     padding: 10px;
@@ -13,7 +31,6 @@ html {
     border: inset 2px #000000;
     border-radius: 0.7rem;
 }
-
 .tile {
     height: 85px;
     width: 23%;
@@ -22,7 +39,6 @@ html {
     border: inset 2px #000000;
     border-style: solid;
 }
-
 .selected {
     border-style: dashed;
     border: inset 4px #000;

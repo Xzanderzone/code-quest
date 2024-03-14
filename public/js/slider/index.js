@@ -3,23 +3,39 @@ let numberOfTiles = size ** 2;
 let highlighted = numberOfTiles;
 let shuffled = false;
 let totalMoves = 0;
+let inverted = false;
 
-let PuzzleContainer = document.getElementById("tiles");
-
+let PuzzleContainer = document.getElementById("puzzle");
+let invertButton = document.getElementById("invert");
+invertButton.addEventListener("click", () => {
+    inverted = !inverted;
+});
 // Keyboard controls
 const RIGHT_ARROW = 39;
 const LEFT_ARROW = 37;
 const UP_ARROW = 40;
 const DOWN_ARROW = 38;
 window.onkeydown = function (event) {
-    if (event.keyCode === RIGHT_ARROW) {
-        swap(highlighted + 1);
-    } else if (event.keyCode === LEFT_ARROW) {
-        swap(highlighted - 1);
-    } else if (event.keyCode === UP_ARROW) {
-        swap(highlighted + size);
-    } else if (event.keyCode === DOWN_ARROW) {
-        swap(highlighted - size);
+    if (!inverted) {
+        if (event.keyCode === RIGHT_ARROW) {
+            swap(highlighted + 1);
+        } else if (event.keyCode === LEFT_ARROW) {
+            swap(highlighted - 1);
+        } else if (event.keyCode === UP_ARROW) {
+            swap(highlighted + size);
+        } else if (event.keyCode === DOWN_ARROW) {
+            swap(highlighted - size);
+        }
+    } else {
+        if (event.keyCode === RIGHT_ARROW) {
+            swap(highlighted - 1);
+        } else if (event.keyCode === LEFT_ARROW) {
+            swap(highlighted + 1);
+        } else if (event.keyCode === UP_ARROW) {
+            swap(highlighted - size);
+        } else if (event.keyCode === DOWN_ARROW) {
+            swap(highlighted + size);
+        }
     }
 };
 
