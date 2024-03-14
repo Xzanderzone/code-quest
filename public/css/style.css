@@ -27,7 +27,7 @@ body {
 }
 
 a {
-    color: white;
+    color: black;
 }
 
 
@@ -144,6 +144,11 @@ img {
     background-color: rgb(28, 28, 29);
     height: 100%;
 }
+
+.content a {
+    color: white;
+}
+
 
 /*/ / LANDING PAGE / /*/
 .landing {

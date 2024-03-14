@@ -15,7 +15,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">~ Let's rock!</p>
-                <a href="/login">> Ye boiiiii</a>
+                <a href="/whoareyou">> Ye boiiiii</a>
             </div>
         </div>
         <div class="basile"><img src="..\media\stickmen\Stickman.svg" alt=""></div>
