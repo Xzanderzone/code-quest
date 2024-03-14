@@ -15,10 +15,10 @@
             </div>
             <div class="content">
                 <p class="matrix-text">~ Let's rock!</p>
-                <button>> Ye boiiiii</button>
-
+                <a href="/login">> Ye boiiiii</a>
             </div>
         </div>
+        <div class="basile"><img src="..\media\stickmen\Stickman.svg" alt=""></div>
     </main>
 </body>
 </html>

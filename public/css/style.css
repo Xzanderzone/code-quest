@@ -26,6 +26,10 @@ body {
     overflow: hidden;
 }
 
+a {
+    color: white;
+}
+
 
 /*/ / HEADER-SECTION / /*/
 
@@ -57,7 +61,7 @@ main {
 
 .dialogue {
     display: grid;
-    grid-template-rows: var(--height-text-balloon) 3fr var(--height-drawings);
+    grid-template-rows: 1fr 1.8fr var(--height-drawings);
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
     "text text text"
@@ -136,24 +140,22 @@ img {
     border-top: 4px solid gray;
     padding: 30px;
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: rgb(28, 28, 29);
+    height: 100%;
 }
 
 /*/ / LANDING PAGE / /*/
 .landing {
     display: grid;
-    grid-template-rows: 3fr 1fr 0.1fr;
+    grid-template-rows: 3fr 1fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
     ". text ."
     ". terminal ."
-    ". . .";
+    "basile . you";
 }
 
-.landing .terminal {
-    max-height: calc(100% / 3);
-}
 
 /*/ / LOGIN - REGISTER / /*/
 .matrix-text {
@@ -182,7 +184,7 @@ img {
 }
 
 ::placeholder {
-    color: rgb(255, 255, 255);
+    color: rgb(198, 198, 198);
     /* border: 0.5px solid white */
 }
 

@@ -6,11 +6,11 @@ Route::get('/', function () {
     return view('00_landingpage');
 });
 
-Route::get('/01', function () {
+Route::get('/login', function () {
     return view('01_login');
 });
 
-Route::get('/02', function () {
+Route::get('/character', function () {
     return view('02_character');
 });
 

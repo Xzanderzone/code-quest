@@ -5,21 +5,23 @@
     @include("_partials.header") 
     <main class="dialogue">
         <div class="text-balloon">
-            Alias repellendus sapiente soluta quo. Similique illum pariatur quae tempore dolore ipsa necessitatibus reprehenderit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium consequatur corporis blanditiis minus ab dolores fugiat illum, odit, sapiente maxime magnam optio nemo facilis sed commodi? Et dignissimos accusantium laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias non iste repudiandae sunt sed, laborum dicta error laboriosam nisi repellendus dolorem exercitationem id iusto consequuntur nostrum quam sequi quidem esse?
+            Hello and welcome to CodeQuest.  <br>My name is Persile and  I’ll guide you through this course where you’ll learn how to be a Web Developer.<br>
+            With this your chances of getting a JOB or an INTERNSHIP will increase! <br><br>
+            Tell me fellow student, what is your name?
         </div>
         <div class="terminal">
             <div class="bar">
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">HAMILTON ~ I'm new here, my name is:</p>
-                <form action="/02" method="get" class="login">
+                <p class="matrix-text">ANONYMOUS ~ Don’t you recognize me? It’s me:</p>
+                <form action="/character" method="get" class="login">
                     <input type="text" name="name" placeholder="▋name">
                     <input type="password" name="password" placeholder="▋password">
                     <button>> LOGIN</button>
                 </form>
-                <p class="matrix-text">HAMILTON ~ Don’t you recognize me? It’s me:</p>
-                <form action="/02" method="get" class="login">
+                <p class="matrix-text">ANONYMOUS ~ I'm new here, my name is:</p>
+                <form action="/character" method="get" class="login">
                     <input type="text" name="name" placeholder="▋name">
                     <input type="password" name="password" placeholder="▋password">
                     <input type="password" name="password-check" placeholder="▋password check">
