@@ -1,30 +1,31 @@
 html {
-	background: radial-gradient(circle, #ff8961, #fffb89, #74bdcb, #0e42c4) fixed;
-}
-
-h1 {
-	text-align: center;
-	font-size: 4rem;
+    background: radial-gradient(circle, #ff8961, #fffb89, #74bdcb, #0e42c4)
+        fixed;
 }
 
 #tiles {
-	width: 400px;
-	margin: 0 auto;
-	position: relative;
-	background-color: white;
-	padding: 8px;
-	border-radius: 0.5rem;
-}
-
-.selected {
-	background-color: #fff;
-	border: none;
-	color: white;
+    width: 400px;
+    margin: 0;
+    padding: 10px;
+    padding-left: 17px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border: inset 2px #000000;
+    border-radius: 0.7rem;
 }
 
 .tile {
-	height: 80px;
-	width: 25%;
-	cursor: pointer;
-	box-shadow: inset 0 0 2px #000;
+    height: 85px;
+    width: 23%;
+    margin-right: 7px;
+    cursor: pointer;
+    border: inset 2px #000000;
+    border-style: solid;
+}
+
+.selected {
+    border-style: dashed;
+    border: inset 4px #000;
+    color: rgb(0, 0, 0);
+    background-color: #dbdbdb;
 }

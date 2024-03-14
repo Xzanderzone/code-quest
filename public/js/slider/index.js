@@ -4,7 +4,7 @@ let highlighted = numberOfTiles;
 let shuffled = false;
 let totalMoves = 0;
 
-let buttonContainer = document.getElementById("tiles");
+let PuzzleContainer = document.getElementById("tiles");
 
 // Keyboard controls
 const RIGHT_ARROW = 39;
@@ -31,7 +31,6 @@ function newGame() {
     loadTiles("java");
     setTimeout(() => {
         shuffle();
-        totalMoves = 0;
     }, 500);
 }
 
@@ -50,7 +49,7 @@ function loadTiles(name) {
             newTile.addEventListener("click", function () {
                 swap(parseInt(this.getAttribute("index")));
             });
-            buttonContainer.append(newTile);
+            PuzzleContainer.append(newTile);
         }
     }
     selectedTile = document.getElementById(highlighted);
@@ -58,10 +57,10 @@ function loadTiles(name) {
 }
 
 function shuffle() {
-    let minShuffles = 100;
+    let minShuffles = 200;
     let totalShuffles =
         minShuffles + Math.floor(Math.random() * (200 - 100) + 100);
-    for (let i = minShuffles; i <= totalShuffles; i++) {
+    for (let i = 0; i <= totalShuffles; i++) {
         setTimeout(function timer() {
             let x = Math.floor(Math.random() * 4);
             let direction = 0;
@@ -87,22 +86,22 @@ function swap(clicked) {
     if (clicked < 1 || clicked > numberOfTiles) {
         return;
     }
-    //add total move (remove if false move)
+    //add new move (remove if false move)
     totalMoves++;
-    // Check if we are trying to swap right
+    //swap right
     if (clicked == highlighted + 1) {
         if (clicked % size != 1) {
             setSelected(clicked);
         }
-        // Check if we are trying to swap left
+        //left
     } else if (clicked == highlighted - 1) {
         if (clicked % size != 0) {
             setSelected(clicked);
         }
-        // Check if we are trying to swap up
+        //up
     } else if (clicked == highlighted + size) {
         setSelected(clicked);
-        // Check if we are trying to swap down
+        //down
     } else if (clicked == highlighted - size) {
         setSelected(clicked);
     } else totalMoves--;
@@ -110,7 +109,7 @@ function swap(clicked) {
     if (shuffled) {
         console.log(totalMoves);
         if (checkHasWon()) {
-            setTimeout(alert("Winner! used: " + totalMoves + " moves"), 300);
+            setTimeout(alert("Winner! used: " + totalMoves + " moves"), 1000);
         }
     } else totalMoves = 0;
 }
@@ -127,7 +126,6 @@ function checkHasWon() {
     return true;
 }
 
-// Applies stylings to the selected tile
 function setSelected(index) {
     let currentTile = document.getElementById(`${highlighted}`);
     currentTile.classList.remove("selected");

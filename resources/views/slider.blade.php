@@ -7,6 +7,6 @@
     @include("_partials.head")
 <body>
     @include("_partials.header") 
-@include("_partials.games.slider")
+    @include("_partials.games.slider")
 </body>
 </html>
