@@ -1,17 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
-    return view('00_landingpage');
+Route::get('/', [UserController::class, 'logout']);
+
+Route::get('/whoareyou', function () {
+    return view('login');
 });
 
-Route::get('/login', function () {
-    return view('01_login');
-});
+Route::post('/login', [UserController::class, 'login']);
+Route::post('/register', [UserController::class, 'register']);
 
-Route::get('/character', function () {
-    return view('02_character');
+Route::get('/00', function () {
+    return view('00');
 });
 
 Route::get('/slider', function () {
