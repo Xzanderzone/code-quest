@@ -19,6 +19,9 @@ Route::get('/00', function () {
 Route::get('/slider', function () {
     return view('slider');
 });
+Route::get('/guessing', function () {
+    return view('guessing');
+});
 
 Route::get('/cv', function () {
     return view('cv');
