@@ -1,6 +1,7 @@
 /*/ / GENERAL / /*/
 
-*, html {
+*,
+html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,21 +12,24 @@
     --height-text-balloon: 30%;
     --height-terminal: 50%;
     --height-drawings: 20%;
-    --matrix-color: rgb(8, 191, 8);
-    --terminal-text:  'Courier New', Courier, monospace;
+    --matrix-color: #5ccf32;
+    --terminal-text: "Press Start 2P", system-ui;
+    --terminal-text-size: 18px;
     --font-size: 24px;
+    --basic-body-font: "Space Grotesk", sans-serif;
 }
 
 @media screen and (max-height: 700px) {
     :root {
         --font-size: 17px;
-    }    
+    }
 }
 
 body {
     width: 100vw;
     height: 100svh;
 
+    font-family: var(--basic-body-font);
     font-size: var(--font-size);
 
     display: flex;
@@ -37,6 +41,15 @@ a {
     color: black;
 }
 
+h1 {
+    font-family: var(--basic-body-font);
+    font-size: 36px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--matrix-color);
+}
 
 /*/ / HEADER-SECTION / /*/
 
@@ -47,12 +60,18 @@ header {
     align-items: center;
 }
 
-#logo, #title, #cv-emblem {
+#logo,
+#title,
+#cv-emblem {
     width: calc(100% / 3);
 }
 
 #title {
     text-align: center;
+}
+
+#logo img {
+    width: 50%;
 }
 
 #cv-emblem {
@@ -68,12 +87,14 @@ main {
 
 .dialogue {
     display: grid;
-    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(--height-drawings);
+    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(
+            --height-drawings
+        );
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-    "text text text"
-    "line terminal terminal"
-    "basile . you";
+    grid-template-areas:
+        "text text text"
+        "line terminal terminal"
+        "basile . you";
 }
 
 /*/ / DIALOGUE TEMPLATE / /*/
@@ -115,28 +136,35 @@ main {
     align-items: end;
 }
 
-.basile img, .you img {
+.basile img,
+.you img {
     height: 90%;
 }
 
 /*/ / TERMINAL / /*/
 .terminal {
-   display: flex;
-   flex-direction: column;
-   justify-content: end;
-   max-height: calc(100svh - var(--height-header) - var(--height-drawings) - var(--height-text-balloon));
-   border: 4px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-height: calc(
+        100svh - var(--height-header) - var(--height-drawings) -
+            var(--height-text-balloon)
+    );
+    border: 4px solid gray;
 }
 
 .bar {
     width: 100%;
     height: 30px;
-    
-
 
     color: white;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgb(50, 45, 142) 0%, rgb(102, 102, 190) 35%, rgb(132, 181, 211) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgb(50, 45, 142) 0%,
+        rgb(102, 102, 190) 35%,
+        rgb(132, 181, 211) 100%
+    );
 }
 
 .bar p {
@@ -156,25 +184,22 @@ main {
     color: white;
 }
 
-
 /*/ / LANDING PAGE / /*/
 .landing {
     display: grid;
     grid-template-rows: 50% 30% var(--height-drawings);
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-    "text text text"
-    ". terminal ."
-    "basile . .";
+    grid-template-areas:
+        "text text text"
+        ". terminal ."
+        "basile . .";
 }
-
 
 /*/ / LOGIN - REGISTER / /*/
 .matrix-text {
     color: var(--matrix-color);
     font-family: var(--terminal-text);
-    font-weight: 900;
-
+    font-size: var(--terminal-text-size);
 }
 
 .login {
@@ -201,7 +226,8 @@ main {
 }
 
 button {
-    font-size: var(--font-size);
+    font-size: var(--terminal-text-size);
+    font-family: var(--terminal-text);
     height: 40px;
     width: fit-content;
     color: white;
@@ -212,7 +238,6 @@ button {
 
 button:hover {
     text-decoration: underline;
-
 }
 
 /*/ / CHOSE PERSON / /*/
@@ -220,7 +245,6 @@ button:hover {
     width: 100%;
     line-height: 0;
     font-size: 0;
-
 }
 
 .characters {
@@ -248,15 +272,16 @@ button:hover {
     margin-right: 0;
 }
 
-
-input[type='radio'] {
+input[type="radio"] {
     display: none;
 }
 
-.characters input[type="radio"]:checked+label img{ background-color: var(--matrix-color); }
-.characters input[type="radio"]:hover+label img{ background-color: var(--matrix-color); }
-
-
+.characters input[type="radio"]:checked + label img {
+    background-color: var(--matrix-color);
+}
+.characters input[type="radio"]:hover + label img {
+    background-color: var(--matrix-color);
+}
 
 /*/ / Chose seat / /*/
 .options {
@@ -269,9 +294,12 @@ input[type='radio'] {
     color: white;
 }
 
-.options input[type="radio"]:checked+label{ background-color: var(--matrix-color); }
-.options input[type="radio"]:hover+label{ background-color: var(--matrix-color); }
-
+.options input[type="radio"]:checked + label {
+    background-color: var(--matrix-color);
+}
+.options input[type="radio"]:hover + label {
+    background-color: var(--matrix-color);
+}
 
 /*/ / CARDS / /*/
 .cards {
@@ -282,7 +310,7 @@ input[type='radio'] {
 }
 
 .cards label {
-    width: calc((100% / 6) - 50px );
+    width: calc((100% / 6) - 50px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,8 +321,12 @@ input[type='radio'] {
     width: 100%;
 }
 
-.cards input[type="radio"]:checked+label{ border: var(--matrix-color) 6px solid; }
-.cards input[type="radio"]:hover+label{ border: var(--matrix-color) 6px solid; }
+.cards input[type="radio"]:checked + label {
+    border: var(--matrix-color) 6px solid;
+}
+.cards input[type="radio"]:hover + label {
+    border: var(--matrix-color) 6px solid;
+}
 
 /*/ / CV / /*/
 .curriculum {
