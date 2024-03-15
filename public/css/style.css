@@ -60,7 +60,7 @@ main {
 
 .dialogue {
     display: grid;
-    grid-template-rows: 1fr 1.8fr var(--height-drawings);
+    grid-template-rows: 2.3fr 5fr 2fr;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
     "text text text"
@@ -152,10 +152,10 @@ main {
 /*/ / LANDING PAGE / /*/
 .landing {
     display: grid;
-    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-rows: 5fr 2.3fr 2fr;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
-    ". text ."
+    "text text text"
     ". terminal ."
     "basile . you";
 }
