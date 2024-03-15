@@ -108,7 +108,7 @@ main {
     align-items: end;
 }
 
-img {
+.basile img, .you img {
     height: calc(var(--height-drawings) - 30px );
 }
 
@@ -211,15 +211,56 @@ button:hover {
 /*/ / CHOSE PERSON / /*/
 .choose-character {
     width: 100%;
+    line-height: 0;
+    font-size: 0;
 
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.choose-character label {
+    width: calc((100% / 6) - 50px);
+}
+
+.choose-character label::selection {
+    display: none;
 }
 
 .choose-character img {
-    background-color: white;
-    width: calc((100% / 6) - 50px);
-    margin-right: 10px;
-    padding: 5px;
+    height: calc(var(--height-drawings) - 30px );
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
 }
+
+.choose-character img:last-of-type {
+    margin-right: 0;
+}
+
+
+input[type='radio'] {
+    display: none;
+}
+
+input[type="radio"]:checked+label img{ background-color: var(--matrix-color); }
+
+
+/*/ / Chose seat / /*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    /* width: fit-content; */
+    color: white;
+}
+
+input[type="radio"]:checked+label{ background-color: var(--matrix-color); }
+input[type="radio"]:hover+label{ background-color: var(--matrix-color); }
 
 /*/ / CV / /*/
 .curriculum {
