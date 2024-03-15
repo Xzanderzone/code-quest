@@ -21,6 +21,14 @@ class StoryController extends Controller
         return view($progress, ['user' => $user]);
     }
 
+    public function nextPage() {
+        $user = Auth::user();
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
     public function chooseCharacter(Request $request) {
         $character = $request->character;
 
@@ -34,12 +42,15 @@ class StoryController extends Controller
         return redirect('/story');
     }
 
-    public function nextPage() {
+    public function seats(Request $request)  {
         $user = Auth::user();
+        $character = $request->character;
+        $user->seats= $character;
         $user->progress += 1;
         $user->save();
 
         return redirect('/story');
     }
+
 
 }

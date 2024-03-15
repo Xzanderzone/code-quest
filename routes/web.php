@@ -21,6 +21,7 @@ Route::get('/101', function () {
 });
 
 Route::get('/102', [StoryController::class, 'nextPage']);
+Route::get('/seats', [StoryController::class, 'seats']);
 Route::get('/103', [StoryController::class, 'nextPage']);
 
 

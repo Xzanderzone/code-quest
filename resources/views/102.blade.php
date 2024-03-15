@@ -15,10 +15,10 @@
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~    Hmmm, I see a few empty seats in the classroom. I must quickly chose what I do now!</p>
                 <form action="/seats" method="POST">
-                @csrf
-                <input type="radio" name="seat" id="empty-table"><label for="empty-table">I choose an empty table</label> 
-                <input type="radio" name="seat" id="occupied-table"><label for="occupied-table">I choose a table that is occupied by a small group, where there is one seat left.</label>
-                <button>> Let's own this descision</button>
+                    @csrf
+                    <input type="radio" name="seat" value="empty-table" id="empty-table"><label for="empty-table">I choose an empty table</label> 
+                    <input type="radio" name="seat" value="occupied-table" id="occupied-table"><label for="occupied-table">I choose a table that is occupied by a small group, where there is one seat left.</label>
+                    <button>> Let's own this descision</button>
                 </form>
             </div>
         </div>

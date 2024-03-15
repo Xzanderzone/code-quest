@@ -20,7 +20,8 @@ class User extends Authenticatable
         'name',
         'password',
         'progress', 
-        'character'
+        'character', 
+        'seats'
     ];
 
     /**

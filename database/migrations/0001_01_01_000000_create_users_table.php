@@ -19,6 +19,7 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('progress')->nullable();
             $table->string('character')->nullable();
+            $table->string('seats')->nullable();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
