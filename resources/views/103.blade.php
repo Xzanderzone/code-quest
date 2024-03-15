@@ -12,7 +12,8 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~ Yeah, I feel motivated!</p>
+                <p class="matrix-text">{{$user->name}} ~ Yeah!</p>
+                <a href="/104">> I feel motivated!</a>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>

@@ -21,8 +21,9 @@ Route::get('/101', function () {
 });
 
 Route::get('/102', [StoryController::class, 'nextPage']);
-Route::get('/seats', [StoryController::class, 'seats']);
-Route::get('/103', [StoryController::class, 'nextPage']);
+Route::post('/seats', [StoryController::class, 'seats']);
+Route::get('/104', [StoryController::class, 'nextPage']);
+
 
 
 Route::get('/slider', function () {
