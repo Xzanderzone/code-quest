@@ -6,7 +6,8 @@
     @include("_partials.header") 
     <main class="dialogue">
         <div class="text-balloon">
-            Hello {{$user->name}} and welcome to CodeQuest! Please, choose a place to sit.
+            I always like to start with an ice break game. I want each of you to take a look at these cards and choose one that you can relate to, that has some characteristics that remind you of yourself. 
+            <br> After picking your card, you have to explain to the class why you chose it.
 
         </div>
         <div class="terminal">
@@ -14,7 +15,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~    Hmmm, I see a few empty seats in the classroom. I must quickly chose what I do now!</p>
+                <p class="matrix-text">{{$user->name}} ~ I see some cards scattered around the place. Which one should I choose?! 😱</p>
                 <form action="/seats" method="POST" class="cards">
                     @csrf
                     <div class="cards">
