@@ -1,10 +1,12 @@
 <header>
     {{-- the logo can be the 'go to the landingpage / logout' button --}}
     <div id="logo"> 
-        LOGO
+        <img src="..\media\logo\Logo.svg" alt="Code Guest Logo">
     </div>
     <div id="title">
-        <a href="/" title="Go back to the landing page">A WEB DEV JOURNEY</a>
+        <h1>
+            <a href="/" title="Go back to the landing page">A WEB DEV JOURNEY</a>
+        </h1>
     </div>
     <div id="cv-emblem">
         @auth
