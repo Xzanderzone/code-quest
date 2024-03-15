@@ -8,12 +8,12 @@
 
 :root {
     --height-header: 100px;
-    --height-text-balloon: 25%;
+    --height-text-balloon: 30%;
+    --height-terminal: 50%;
     --height-drawings: 20%;
-    --height-terminal: 55%;
     --matrix-color: rgb(8, 191, 8);
     --terminal-text:  'Courier New', Courier, monospace;
-    --font-size: 26px;
+    --font-size: 24px;
 }
 
 @media screen and (max-height: 700px) {
@@ -160,7 +160,7 @@ main {
 /*/ / LANDING PAGE / /*/
 .landing {
     display: grid;
-    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(--height-drawings);
+    grid-template-rows: 60% 20% var(--height-drawings);
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
     "text text text"
