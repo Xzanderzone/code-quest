@@ -13,13 +13,20 @@
     --height-terminal: 55%;
     --matrix-color: rgb(8, 191, 8);
     --terminal-text:  'Courier New', Courier, monospace;
+    --font-size: 26px;
+}
+
+@media screen and (max-height: 700px) {
+    :root {
+        --font-size: 18px;
+    }    
 }
 
 body {
     width: 100vw;
     height: 100svh;
 
-    font-size: 20px;
+    font-size: var(--font-size);
 
     display: flex;
     flex-direction: column;
@@ -153,7 +160,7 @@ main {
 /*/ / LANDING PAGE / /*/
 .landing {
     display: grid;
-    grid-template-rows: 5fr 2.3fr 2fr;
+    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(--height-drawings);
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
     "text text text"
@@ -184,7 +191,7 @@ main {
     height: 40px;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: var(--font-size);
     background-color: initial;
 }
 
@@ -194,7 +201,7 @@ main {
 }
 
 button {
-    font-size: x-large;
+    font-size: var(--font-size);
     height: 40px;
     width: fit-content;
     color: white;
