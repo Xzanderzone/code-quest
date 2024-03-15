@@ -18,7 +18,7 @@ body {
     width: 100vw;
     height: 100svh;
 
-    font-size: x-large;
+    font-size: 20px;
 
     display: flex;
     flex-direction: column;
@@ -183,7 +183,7 @@ main {
     height: 40px;
     border: none;
     color: white;
-    font-size: x-large;
+    font-size: 20px;
     background-color: initial;
 }
 
