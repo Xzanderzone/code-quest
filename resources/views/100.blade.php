@@ -15,7 +15,7 @@
                 <p class="matrix-text">{{ $user->name }} ~ I look like this broh</p>
                 <form class="choose-character" method="POST" action="/choose-character"> 
                     @csrf
-                    <div class="options">
+                    <div class="characters">
                         <input type="radio" name="character" value="Stickman-partyhat-04.svg" id="partyhat"><label for="partyhat"><img src="..\media\stickmen\Stickman-partyhat-04.svg"></label>
                         <input type="radio" name="character" value="Stickman-moustache.svg" id="moustache"><label for="moustache"><img src="..\media\stickmen\Stickman-moustache.svg"></label>
                         <input type="radio" name="character" value="Stickman-hair-02.svg" id="hair"><label for="hair"><img src="..\media\stickmen\Stickman-hair-02.svg"></label>

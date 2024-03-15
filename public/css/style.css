@@ -223,7 +223,7 @@ button:hover {
 
 }
 
-.options {
+.characters {
     width: 100%;
     height: 50%;
     display: flex;
@@ -253,24 +253,48 @@ input[type='radio'] {
     display: none;
 }
 
-input[type="radio"]:checked+label img{ background-color: var(--matrix-color); }
-input[type="radio"]:hover+label img{ background-color: var(--matrix-color); }
+.characters input[type="radio"]:checked+label img{ background-color: var(--matrix-color); }
+.characters input[type="radio"]:hover+label img{ background-color: var(--matrix-color); }
 
 
 
 /*/ / Chose seat / /*/
-form {
+.options {
     display: flex;
     flex-direction: column;
 }
 
-label {
+.options label {
     /* width: fit-content; */
     color: white;
 }
 
-input[type="radio"]:checked+label{ background-color: var(--matrix-color); }
-input[type="radio"]:hover+label{ background-color: var(--matrix-color); }
+.options input[type="radio"]:checked+label{ background-color: var(--matrix-color); }
+.options input[type="radio"]:hover+label{ background-color: var(--matrix-color); }
+
+
+/*/ / CARDS / /*/
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards label {
+    width: calc((100% / 6) - 50px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.cards label img {
+    width: 100%;
+}
+
+.cards input[type="radio"]:checked+label{ border: var(--matrix-color) 6px solid; }
+.cards input[type="radio"]:hover+label{ border: var(--matrix-color) 6px solid; }
 
 /*/ / CV / /*/
 .curriculum {
