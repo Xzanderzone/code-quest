@@ -7,7 +7,6 @@
     <main class="dialogue">
         <div class="text-balloon">
             <img src="..\media\cards\card1.png">
-
         </div>
         <div class="terminal">
             <div class="bar">
@@ -15,23 +14,18 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ I see some cards scattered around the place. Which one should I choose?! 😱</p>
-                <form action="/seats" method="POST" class="cards">
+                <form action="/card-reason" method="POST">
                     @csrf
-                    <div class="cards">
-                        <input type="radio" name="card" value="card1.png" id="option1"><label for="option1"><img src="..\media\cards\card1.png"></label>
-                        <input type="radio" name="card" value="card2.png" id="option2"><label for="option2"><img src="..\media\cards\card2.png"></label>
-                        <input type="radio" name="card" value="card3.png" id="option3"><label for="option3"><img src="..\media\cards\card3.png"></label>
-                        <input type="radio" name="card" value="card4.png" id="option4"><label for="option4"><img src="..\media\cards\card4.png"></label>
-                        <input type="radio" name="card" value="card5.png" id="option5"><label for="option5"><img src="..\media\cards\card5.png"></label>
-                        <input type="radio" name="card" value="card6.png" id="option6"><label for="option6"><img src="..\media\cards\card6.png"></label>
-                    </div>
-                <button>> Let's own this descision</button>
+                    <div class="options">
+                        <input type="radio" name="card-reason" value="option1" id="option1"><label for="option1">I choose an empty table</label> 
+                        <input type="radio" name="card-reason" value="option2" id="option2"><label for="option2">I choose a table that is occupied by a small group, where there is one seat left.</label>
+                    </div> 
+                    <button>> This is what I say!</button>
                 </form>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>
-        <div class="basile"><img src="..\media\stickmen\Stickman.svg" alt=""></div>
-        <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
+        @include("_partials.drawings") 
     </main>
 </body>
 </html>

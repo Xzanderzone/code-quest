@@ -21,7 +21,9 @@ class User extends Authenticatable
         'password',
         'progress', 
         'character', 
-        'seats'
+        'seats', 
+        'card',
+        'card-reason'
     ];
 
     /**

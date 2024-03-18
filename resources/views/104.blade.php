@@ -31,8 +31,7 @@
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>
-        <div class="basile"><img src="..\media\stickmen\Stickman.svg" alt=""></div>
-        <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
+        @include("_partials.drawings") 
     </main>
 </body>
 </html>

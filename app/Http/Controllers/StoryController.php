@@ -52,5 +52,15 @@ class StoryController extends Controller
         return redirect('/story');
     }
 
+    public function cards(Request $request) {
+        $user = Auth::user();
+        $user->card = $request->card;
+
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
 
 }

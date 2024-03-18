@@ -23,7 +23,8 @@ Route::get('/101', function () {
 Route::get('/102', [StoryController::class, 'nextPage']);
 Route::post('/seats', [StoryController::class, 'seats']);
 Route::get('/104', [StoryController::class, 'nextPage']);
-
+Route::post('/cards', [StoryController::class, 'cards']);
+Route::post('/card-reason', [StoryController::class, 'card-reason']);
 
 
 Route::get('/slider', function () {
