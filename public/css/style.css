@@ -1,6 +1,7 @@
 /*/ / GENERAL / /*/
 
-*, html {
+*,
+html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,7 +12,7 @@
     --height-text-balloon: 180px;
     --height-drawings: 200px;
     --matrix-color: rgb(8, 191, 8);
-    --terminal-text:  'Courier New', Courier, monospace;
+    --terminal-text: "Courier New", Courier, monospace;
 }
 
 body {
@@ -30,7 +31,6 @@ a {
     color: black;
 }
 
-
 /*/ / HEADER-SECTION / /*/
 
 header {
@@ -40,7 +40,9 @@ header {
     align-items: center;
 }
 
-#logo, #title, #cv-emblem {
+#logo,
+#title,
+#cv-emblem {
     width: calc(100% / 3);
 }
 
@@ -63,10 +65,10 @@ main {
     display: grid;
     grid-template-rows: 1fr 1.8fr var(--height-drawings);
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-    "text text text"
-    "line terminal terminal"
-    "basile . you";
+    grid-template-areas:
+        "text text text"
+        "line terminal terminal"
+        "basile . you";
 }
 
 /*/ / DIALOGUE TEMPLATE / /*/
@@ -109,27 +111,33 @@ main {
 }
 
 img {
-    height: calc(var(--height-drawings) - 30px );
+    height: calc(var(--height-drawings) - 30px);
 }
 
 /*/ / TERMINAL / /*/
 .terminal {
-   display: flex;
-   flex-direction: column;
-   justify-content: end;
-   max-height: calc(100svh - var(--height-header) - var(--height-drawings) - var(--height-text-balloon));
-   border: 4px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-height: calc(
+        100svh - var(--height-header) - var(--height-drawings) -
+            var(--height-text-balloon)
+    );
+    border: 4px solid gray;
 }
 
 .bar {
     width: 100%;
     height: 30px;
-    
-
 
     color: white;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgb(50, 45, 142) 0%, rgb(102, 102, 190) 35%, rgb(132, 181, 211) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgb(50, 45, 142) 0%,
+        rgb(102, 102, 190) 35%,
+        rgb(132, 181, 211) 100%
+    );
 }
 
 .bar p {
@@ -149,25 +157,22 @@ img {
     color: white;
 }
 
-
 /*/ / LANDING PAGE / /*/
 .landing {
     display: grid;
     grid-template-rows: 3fr 1fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-    ". text ."
-    ". terminal ."
-    "basile . you";
+    grid-template-areas:
+        ". text ."
+        ". terminal ."
+        "basile . you";
 }
-
 
 /*/ / LOGIN - REGISTER / /*/
 .matrix-text {
     color: var(--matrix-color);
     font-family: var(--terminal-text);
     font-weight: 900;
-
 }
 
 .login {
@@ -205,13 +210,11 @@ button {
 
 button:hover {
     text-decoration: underline;
-
 }
 
 /*/ / CHOSE PERSON / /*/
 .choose-character {
     width: 100%;
-
 }
 
 .choose-character img {

@@ -6,7 +6,7 @@ html {
 #game {
     width: 700px;
     height: 400px;
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(37, 37, 37);
     border: inset 2px #000000;
     border-radius: 0.7rem;
 }
@@ -40,23 +40,24 @@ html {
     border-radius: 10px;
     background-color: rgb(158, 0, 0);
     border: 2px solid #000000;
-    display: block;
-    margin: 0 auto;
+    width: 40%;
 }
-#numberInput {
-    border-radius: 8px;
-    font-size: x-large;
-    width: 50px;
-    height: 32px;
-}
-#guess {
+#rock {
+    width: 40%;
     border-radius: 10px;
     background-color: rgb(0, 158, 13);
     border: 2px solid #000000;
 }
-#giveUp {
+#paper {
+    width: 40%;
     border-radius: 10px;
     background-color: rgb(0, 37, 158);
+    border: 2px solid #000000;
+}
+#scissor {
+    width: 40%;
+    border-radius: 10px;
+    background-color: rgb(155, 158, 0);
     border: 2px solid #000000;
 }
 .disabled {

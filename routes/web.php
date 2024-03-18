@@ -22,6 +22,9 @@ Route::get('/slider', function () {
 Route::get('/guessing', function () {
     return view('guessing');
 });
+Route::get('/rockPS', function () {
+    return view('rockPS');
+});
 
 Route::get('/cv', function () {
     return view('cv');

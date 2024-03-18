@@ -6,6 +6,11 @@ let passedMin = false;
 let numberInput = document.getElementById("numberInput");
 let guessButton = document.getElementById("guess");
 let giveUpButton = document.getElementById("giveUp");
+giveUpButton.addEventListener("click", () => {
+    alert(
+        "I remain the incognito master ! We shall settle this in a game of rock paper scissors instead."
+    );
+});
 guessButton.addEventListener("click", () => {
     guesses.push(numberInput.value);
     console.log(guesses);
