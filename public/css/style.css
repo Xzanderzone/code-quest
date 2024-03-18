@@ -9,33 +9,53 @@ html {
 
 :root {
     --height-header: 100px;
-    --height-text-balloon: 180px;
-    --height-drawings: 200px;
-    --matrix-color: rgb(8, 191, 8);
-    --terminal-text: "Courier New", Courier, monospace;
+    --height-text-balloon: 30%;
+    --height-terminal: 50%;
+    --height-drawings: 20%;
+    --matrix-color: #5ccf32;
+    --terminal-text: "Press Start 2P", system-ui;
+    --terminal-text-size: 18px;
+    --font-size: 24px;
+    --basic-body-font: "Space Grotesk", sans-serif;
+}
+
+@media screen and (max-height: 700px) {
+    :root {
+        --font-size: 17px;
+    }
 }
 
 body {
     width: 100vw;
     height: 100svh;
 
-    font-size: x-large;
+    font-family: var(--basic-body-font);
+    font-size: var(--font-size);
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
 }
 
 a {
     color: black;
 }
 
+h1 {
+    font-family: var(--basic-body-font);
+    font-size: 36px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: var(--matrix-color);
+}
+
 /*/ / HEADER-SECTION / /*/
 
 header {
     width: 80%;
-    height: 100px;
+    height: var(--height-header);
     display: flex;
     align-items: center;
 }
@@ -50,6 +70,10 @@ header {
     text-align: center;
 }
 
+#logo img {
+    width: 50%;
+}
+
 #cv-emblem {
     text-align: right;
 }
@@ -57,13 +81,15 @@ header {
 /*/ / MAIN / /*/
 main {
     width: 80%;
-    height: calc(100% - var(--height-header));
+    height: calc(100svh - var(--height-header));
     margin: 0 auto;
 }
 
 .dialogue {
     display: grid;
-    grid-template-rows: 1fr 1.8fr var(--height-drawings);
+    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(
+            --height-drawings
+        );
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
         "text text text"
@@ -97,7 +123,7 @@ main {
 
 .basile {
     grid-area: basile;
-    height: auto;
+
     display: flex;
     justify-content: center;
     align-items: end;
@@ -110,8 +136,9 @@ main {
     align-items: end;
 }
 
-img {
-    height: calc(var(--height-drawings) - 30px);
+.basile img,
+.you img {
+    height: 90%;
 }
 
 /*/ / TERMINAL / /*/
@@ -160,19 +187,19 @@ img {
 /*/ / LANDING PAGE / /*/
 .landing {
     display: grid;
-    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-rows: 50% 30% var(--height-drawings);
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
-        ". text ."
+        "text text text"
         ". terminal ."
-        "basile . you";
+        "basile . .";
 }
 
 /*/ / LOGIN - REGISTER / /*/
 .matrix-text {
     color: var(--matrix-color);
     font-family: var(--terminal-text);
-    font-weight: 900;
+    font-size: var(--terminal-text-size);
 }
 
 .login {
@@ -189,7 +216,7 @@ img {
     height: 40px;
     border: none;
     color: white;
-    font-size: x-large;
+    font-size: var(--font-size);
     background-color: initial;
 }
 
@@ -199,7 +226,8 @@ img {
 }
 
 button {
-    font-size: x-large;
+    font-size: var(--terminal-text-size);
+    font-family: var(--terminal-text);
     height: 40px;
     width: fit-content;
     color: white;
@@ -215,13 +243,89 @@ button:hover {
 /*/ / CHOSE PERSON / /*/
 .choose-character {
     width: 100%;
+    line-height: 0;
+    font-size: 0;
+}
+
+.characters {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.choose-character label {
+    height: 200px;
+    padding: 20px;
+}
+
+.choose-character label::selection {
+    display: none;
 }
 
 .choose-character img {
+    height: 100%;
     background-color: white;
+}
+
+.choose-character img:last-of-type {
+    margin-right: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.characters input[type="radio"]:checked + label img {
+    background-color: var(--matrix-color);
+}
+.characters input[type="radio"]:hover + label img {
+    background-color: var(--matrix-color);
+}
+
+/*/ / Chose seat / /*/
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options label {
+    /* width: fit-content; */
+    color: white;
+}
+
+.options input[type="radio"]:checked + label {
+    background-color: var(--matrix-color);
+}
+.options input[type="radio"]:hover + label {
+    background-color: var(--matrix-color);
+}
+
+/*/ / CARDS / /*/
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards label {
     width: calc((100% / 6) - 50px);
-    margin-right: 10px;
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.cards label img {
+    width: 100%;
+}
+
+.cards input[type="radio"]:checked + label {
+    border: var(--matrix-color) 6px solid;
+}
+.cards input[type="radio"]:hover + label {
+    border: var(--matrix-color) 6px solid;
 }
 
 /*/ / CV / /*/

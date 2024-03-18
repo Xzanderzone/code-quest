@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
 
-    public function register(Request $request, $slug = null){
+    public function register(Request $request){
         
         $inputs = $request->validate([
             'name' => 'required', 
@@ -31,7 +31,7 @@ class UserController extends Controller
             dd("The passwords are not the same, broh!");
         }
         
-        return redirect('/00');
+        return redirect('/story');
     }
 
     public function login(Request $request) {
@@ -51,7 +51,9 @@ class UserController extends Controller
         } else {
         $request->session()->regenerate();
         }
-        return redirect('/00');
+
+
+        return redirect('/story');
     }
 
     public function logout() {

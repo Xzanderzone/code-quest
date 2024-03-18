@@ -18,7 +18,7 @@
                 <a href="/whoareyou">> Ye boiiiii</a>
             </div>
         </div>
-        <div class="basile"><img src="..\media\stickmen\Stickman.svg" alt=""></div>
+        <div class="basile"><img src="..\media\stickmen\Stickman-persile-v1.gif" alt=""></div>
     </main>
 </body>
 </html>
