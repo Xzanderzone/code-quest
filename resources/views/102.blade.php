@@ -17,8 +17,8 @@
                 <form action="/seats" method="POST">
                     @csrf
                     <div class="options">
-                        <input type="radio" name="seat" value="empty-table" id="empty-table"><label for="empty-table">I choose an empty table</label> 
-                        <input type="radio" name="seat" value="occupied-table" id="occupied-table"><label for="occupied-table">I choose a table that is occupied by a small group, where there is one seat left.</label>
+                        <input type="radio" name="seat" value="empty-table" id="empty-table"><label for="empty-table">1) I choose an empty table</label> 
+                        <input type="radio" name="seat" value="occupied-table" id="occupied-table"><label for="occupied-table">2) I choose a table that is occupied by a small group, where there is one seat left.</label>
                     </div> 
                     <button>> Let's own this descision</button>
                 </form>
