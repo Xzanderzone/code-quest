@@ -6,8 +6,7 @@
     @include("_partials.header") 
     <main class="dialogue">
         <div class="text-balloon">
-            I always like to start with an ice break game. I want each of you to take a look at these cards and choose one that you can relate to, that has some characteristics that remind you of yourself. 
-            <br> After picking your card, you have to explain to the class why you chose it.
+            <img src="..\media\cards\card1.png">
 
         </div>
         <div class="terminal">
@@ -16,7 +15,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ I see some cards scattered around the place. Which one should I choose?! 😱</p>
-                <form action="/cards" method="POST" class="cards">
+                <form action="/seats" method="POST" class="cards">
                     @csrf
                     <div class="cards">
                         <input type="radio" name="card" value="card1.png" id="option1"><label for="option1"><img src="..\media\cards\card1.png"></label>
