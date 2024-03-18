@@ -15,7 +15,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~ I see some cards scattered around the place. Which one should I choose?! 😱</p>
+                <p class="matrix-text">{{$user->name}} ~ I see some cards scattered around the place. Which one should I choose?!</p>
                 <form action="/cards" method="POST" class="cards">
                     @csrf
                     <div class="cards">
@@ -26,7 +26,7 @@
                         <input type="radio" name="card" value="card5.png" id="option5"><label for="option5"><img src="..\media\cards\card5.png"></label>
                         <input type="radio" name="card" value="card6.png" id="option6"><label for="option6"><img src="..\media\cards\card6.png"></label>
                     </div>
-                <button>> Let's own this descision</button>
+                <button>> That's the one!</button>
                 </form>
             </div>
         </div>

@@ -3,7 +3,7 @@
     @include("_partials.head")
 <body>
     @include("_partials.header") 
-    <main class="dialogue">
+    <main class="ok-page">
         <div class="text-balloon">
             You arrive at CodeQuest headquarters feeling a little nervous. The classroom is full of other students, and you are greeted by Persile. 
         </div>

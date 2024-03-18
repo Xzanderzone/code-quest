@@ -9,14 +9,14 @@ html {
 
 :root {
     --height-header: 100px;
-    --height-text-balloon: 30%;
+    --height-text-balloon: 25%;
     --height-terminal: 50%;
-    --height-drawings: 20%;
+    --height-drawings: 25%;
     --matrix-color: #5ccf32;
     --terminal-background: rgb(40, 40, 49);
     --terminal-text: "Press Start 2P", system-ui;
     --terminal-text-size: 18px;
-    --font-size: 24px;
+    --font-size: 28px;
     --basic-body-font: "Space Grotesk", sans-serif;
 }
 
@@ -142,15 +142,50 @@ main {
     height: 90%;
 }
 
+/*/ / OK-PAGE TEMPLATE / /*/
+.ok-page {
+    display: grid;
+grid-template-rows: 35% 40% var(
+        --height-drawings
+    );
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-areas:
+    "text text text"
+    "line terminal terminal"
+    "basile . you";
+}
+
+.ok-page .text-balloon {
+    font-size: 32px;
+}
+
+/*/ / OK-PAGE TEMPLATE / /*/
+.no-text {
+    display: grid;
+grid-template-rows: 35% 40% var(
+        --height-drawings
+    );
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-areas:
+    "line terminal terminal"
+    ". terminal terminal"
+    "basile . you";
+}
+
+.ok-page .text-balloon {
+    font-size: 32px;
+}
+
+
 /*/ / TERMINAL / /*/
 .terminal {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    max-height: calc(
+    /* max-height: calc(
         100svh - var(--height-header) - var(--height-drawings) -
             var(--height-text-balloon)
-    );
+    ); */
     border: 4px solid gray;
 }
 
@@ -181,6 +216,21 @@ main {
     height: 100%;
 }
 
+.content::-webkit-scrollbar
+{
+	width: 10px;
+    background-color: white;
+}
+
+.content::-webkit-scrollbar-thumb
+{
+	background-color: var(--matrix-color);	
+}
+
+.content>*{
+    margin-bottom: 10px;
+}
+
 .content a {
     color: white;
     font-family: var(--terminal-text);
@@ -191,18 +241,41 @@ main {
 .landing {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
     align-items:center;
 }
 
+.landing .pixel {
+    margin: auto 0;
+}
+
 /*/ / LOGIN - REGISTER / /*/
+
+.introducing {
+    display: grid;
+    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(
+            --height-drawings
+        );
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "text text text"
+        "line terminal terminal"
+        "basile terminal terminal";
+}
+
+.introducing .terminal {
+    margin: 30px 0 ;
+}
+
 .matrix-text {
     color: var(--matrix-color);
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
     line-height: 30px;
 }
-
+form>* {
+    margin-bottom: 10px;
+}
 .login {
     display: flex;
     flex-direction: column;
@@ -312,16 +385,18 @@ input[type="radio"] {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 .cards label {
-    width: calc((100% / 6) - 50px);
+    width: calc((100% / 4) - 30px);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: white;
     border: white 6px solid;
+    margin-right: 30px;
+    margin-bottom: 30px;
 }
 
 .cards label img {
@@ -342,6 +417,8 @@ input[type="radio"] {
     background-color: blue;
     aspect-ratio: 1/1.41;
 }
+
+
 
 /*/ / PIXEL BUTTON / /*/
 .pixel, .pixel2 {
