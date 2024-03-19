@@ -1,6 +1,7 @@
 let wins = 0;
 let losses = 0;
 let ties = 0;
+let total = 5;
 let options = ["rock", "paper", "scissor"];
 
 let randomOptionIndex = Math.floor(Math.random() * options.length);
@@ -34,9 +35,11 @@ function UpdateHistory(outcome, e) {
     if (outcome == "Won") {
         wins++;
         chatbox.style.color = "green";
+        if (wins >= int(total / 2 + 1)) EndGame(true);
     } else if (outcome == "Lost") {
         losses++;
         chatbox.style.color = "red";
+        if (losses >= int(total / 2 + 1)) EndGame(false);
     } else if (outcome == "Tied") {
         ties++;
         chatbox.style.color = "white";
@@ -55,4 +58,18 @@ function UpdateHistory(outcome, e) {
         losses +
         " Ties: " +
         ties;
+}
+function EndGame(win) {
+    if (win) {
+        //change scene to victory screen
+        alert("you've beaten the mighty Persil!");
+    } else {
+        //allow player to keep going in new "best off"
+        total += 5;
+        alert(
+            "you've lost! Make it best out of " +
+                total +
+                "?[or try again from 0?]"
+        );
+    }
 }
