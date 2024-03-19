@@ -17,7 +17,7 @@
     <main class="game">
         <div class="terminal">
             <div class="bar">
-                <p>📟 YOUR TERMINAL</p>
+                <p>📟 MASTERMIND</p>
             </div>
             <div class="content">
                 <div class="board">
