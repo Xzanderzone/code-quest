@@ -3,7 +3,7 @@
     @include("_partials.head")
 <body>
     @include("_partials.header") 
-    <main class="dialogue">
+    <main class="introducing">
         <div class="text-balloon">
             Hello and welcome to CodeQuest.  <br>My name is Persile and  I’ll guide you through this course where you’ll learn how to be a Web Developer.<br>
             With this your chances of getting a JOB or an INTERNSHIP will increase! <br><br>
@@ -32,8 +32,7 @@
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>
-        <div class="basile"><img src="..\media\stickmen\Stickman-persile-v1.gif" alt=""></div>
-        <div class="you"></div>
+        @include("_partials.drawings") 
     </main>
 </body>
 </html>

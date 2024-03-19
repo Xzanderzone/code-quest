@@ -23,14 +23,22 @@ Route::get('/101', function () {
 Route::get('/102', [StoryController::class, 'nextPage']);
 Route::post('/seats', [StoryController::class, 'seats']);
 Route::get('/104', [StoryController::class, 'nextPage']);
+Route::post('/cards', [StoryController::class, 'cards']);
+Route::post('/card-reason', [StoryController::class, 'cardReason']);
+Route::get('/107', [StoryController::class, 'nextPage']);
+Route::get('/108', [StoryController::class, 'nextPage']);
 
 
 
 Route::get('/slider', function () {
     return view('slider');
 });
-
-Route::get('/cv', function () {
-    return view('cv');
+Route::get('/guessing', function () {
+    return view('guessing');
 });
+Route::get('/rockPS', function () {
+    return view('rockPS');
+});
+
+Route::get('/cv', [StoryController::class, 'cv']);
 

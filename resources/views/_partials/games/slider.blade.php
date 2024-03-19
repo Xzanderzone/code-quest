@@ -1,7 +1,6 @@
 
 		<h1>Sliding Puzzle </h1>
 		<div id='slider'>
-
 			<div id="puzzle"></div>
 				<div id='display'>
 					<img src="./media/slider/java/solved.png" alt="solved puzzle example">
