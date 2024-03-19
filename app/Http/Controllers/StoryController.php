@@ -9,7 +9,13 @@ use Illuminate\Support\Facades\Auth;
 class StoryController extends Controller
 {
     public function story() {
+
         $user = Auth::user();
+
+        if (!$user) {
+            return redirect('/');
+        }
+
         $progress = $user->progress;
 
         if (!$progress) {
@@ -21,6 +27,16 @@ class StoryController extends Controller
         return view($progress, ['user' => $user]);
     }
 
+    public function cv() {
+        $user = Auth::user();
+
+        if (!$user) {
+            return redirect('/');
+        }
+
+        return view('cv', ['user' => $user]);
+    }
+
     public function nextPage() {
         $user = Auth::user();
         $user->progress += 1;
@@ -30,6 +46,9 @@ class StoryController extends Controller
     }
 
     public function chooseCharacter(Request $request) {
+        $request->validate([
+            'character' => 'required'
+        ]);
         $character = $request->character;
 
         $user = Auth::user();

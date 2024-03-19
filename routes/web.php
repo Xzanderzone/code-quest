@@ -26,9 +26,7 @@ Route::get('/104', [StoryController::class, 'nextPage']);
 Route::post('/cards', [StoryController::class, 'cards']);
 Route::post('/card-reason', [StoryController::class, 'cardReason']);
 Route::get('/107', [StoryController::class, 'nextPage']);
-Route::get('/mastermind', function () {
-    return view('mastermind');
-});
+Route::get('/108', [StoryController::class, 'nextPage']);
 
 
 
@@ -36,7 +34,5 @@ Route::get('/slider', function () {
     return view('slider');
 });
 
-Route::get('/cv', function () {
-    return view('cv');
-});
+Route::get('/cv', [StoryController::class, 'cv']);
 
