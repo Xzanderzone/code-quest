@@ -159,7 +159,7 @@ grid-template-areas:
     font-size: 32px;
 }
 
-/*/ / OK-PAGE TEMPLATE / /*/
+/*/ / no-text TEMPLATE / /*/
 .no-text {
     display: grid;
 grid-template-rows: 35% 40% var(
@@ -249,6 +249,31 @@ grid-template-areas:
     margin: auto 0;
 }
 
+/*/ / GAME / /*/
+.game {
+    display: grid;
+    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(
+            --height-drawings
+        );
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "terminal terminal terminal"
+        "terminal terminal terminal"
+        "terminal terminal terminal";
+}
+
+.game .terminal {
+    margin: 30px 0 ;
+}
+
+.game .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
 /*/ / LOGIN - REGISTER / /*/
 
 .introducing {
@@ -314,6 +339,20 @@ button {
 button:hover {
     text-decoration: underline;
 }
+
+/*/ / STAR YOU EARNED A SKILL! / /*/
+.star {
+    background-image: url(../media/new_skill/smile.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 
 /*/ / CHOSE PERSON / /*/
 .choose-character {

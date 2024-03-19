@@ -43,6 +43,10 @@ class StoryController extends Controller
     }
 
     public function seats(Request $request)  {
+        $request->validate([
+            'seat' => 'required'
+        ]);
+
         $user = Auth::user();
         $character = $request->character;
         $user->seats= $character;
@@ -53,8 +57,26 @@ class StoryController extends Controller
     }
 
     public function cards(Request $request) {
+
+        $request->validate([
+            'card' => 'required'
+        ]);
+
         $user = Auth::user();
         $user->card = $request->card;
+
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function cardReason(Request $request) {
+        $request->validate([
+            'card_reason' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->card_reason = $request->card_reason;
 
         $user->progress += 1;
         $user->save();
