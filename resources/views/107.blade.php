@@ -5,14 +5,17 @@
     @include("_partials.header") 
     <main class="ok-page">
         <div class="text-balloon">
-            You arrive at CodeQuest headquarters feeling a little nervous. The classroom is full of other students, and you are greeted by Persile. 
+            I am so proud of you! 🙌 Now, it's time to learn code.<br>
+            In order to master code, one first needs to know how to solve a code.<br>
+            For the next challenge, we'll see if you are truly a master mind!  
         </div>
         <div class="terminal">
             <div class="bar">
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <a href="/102">> cool</a>
+                <p class="matrix-text">{{$user->name}} ~ Yeah!</p>
+                <a href="/108">> Gimmi that code!</a>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>

@@ -3,9 +3,10 @@
     @include("_partials.head")
 <body>
     @include("_partials.header") 
-    <main class="dialogue">
+    <main class="ok-page">
         <div class="text-balloon">
-            Now that everyone has a seat, I want to explain how this training is going to work. You are here to learn some programming skills: HTML, CSS and Javascript, for start. After that, you will choose which path you want to follow: to become a Salesforce Consultant, a Java or a Full-Stack Developer. And don’t forget, this training is not only about hard skills! During this journey, you will also have to make some decisions that will impact your career! These are opportunities to develop new soft skills and improve your CV. The ultimate goal is to get a job or an internship, and I am sure that each and every one of you can do it. We believe in you, so you have to believe in yourself too.
+            Now that everyone has a seat, I want to explain how this training is going to work. You are here to learn some programming skills: HTML, CSS and Javascript, for start. 
+            <br> During this journey, you will also have to make some decisions that will impact your path! These are opportunities to develop new soft skills and improve your CV. The ultimate goal is to get a job or an internship. We believe in you, so you have to believe in yourself too.
         </div>
         <div class="terminal">
             <div class="bar">

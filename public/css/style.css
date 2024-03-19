@@ -9,13 +9,14 @@ html {
 
 :root {
     --height-header: 100px;
-    --height-text-balloon: 30%;
+    --height-text-balloon: 25%;
     --height-terminal: 50%;
-    --height-drawings: 20%;
+    --height-drawings: 25%;
     --matrix-color: #5ccf32;
+    --terminal-background: rgb(40, 40, 49);
     --terminal-text: "Press Start 2P", system-ui;
     --terminal-text-size: 18px;
-    --font-size: 24px;
+    --font-size: 28px;
     --basic-body-font: "Space Grotesk", sans-serif;
 }
 
@@ -141,15 +142,50 @@ main {
     height: 90%;
 }
 
+/*/ / OK-PAGE TEMPLATE / /*/
+.ok-page {
+    display: grid;
+grid-template-rows: 35% 40% var(
+        --height-drawings
+    );
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-areas:
+    "text text text"
+    "line terminal terminal"
+    "basile . you";
+}
+
+.ok-page .text-balloon {
+    font-size: 32px;
+}
+
+/*/ / no-text TEMPLATE / /*/
+.no-text {
+    display: grid;
+grid-template-rows: 35% 40% var(
+        --height-drawings
+    );
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-areas:
+    "line terminal terminal"
+    ". terminal terminal"
+    "basile . you";
+}
+
+.ok-page .text-balloon {
+    font-size: 32px;
+}
+
+
 /*/ / TERMINAL / /*/
 .terminal {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    max-height: calc(
+    /* max-height: calc(
         100svh - var(--height-header) - var(--height-drawings) -
             var(--height-text-balloon)
-    );
+    ); */
     border: 4px solid gray;
 }
 
@@ -176,32 +212,95 @@ main {
     padding: 30px;
     width: 100%;
     overflow-y: auto;
-    background-color: rgb(28, 28, 29);
+    background-color: var(--terminal-background);
     height: 100%;
+}
+
+.content::-webkit-scrollbar
+{
+	width: 10px;
+    background-color: white;
+}
+
+.content::-webkit-scrollbar-thumb
+{
+	background-color: var(--matrix-color);	
+}
+
+.content>*{
+    margin-bottom: 10px;
 }
 
 .content a {
     color: white;
+    font-family: var(--terminal-text);
+    font-size: var(--terminal-text-size);   
 }
 
 /*/ / LANDING PAGE / /*/
 .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items:center;
+}
+
+.landing .pixel {
+    margin: auto 0;
+}
+
+/*/ / GAME / /*/
+.game {
     display: grid;
-    grid-template-rows: 50% 30% var(--height-drawings);
+    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(
+            --height-drawings
+        );
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
-        "text text text"
-        ". terminal ."
-        "basile . .";
+        "terminal terminal terminal"
+        "terminal terminal terminal"
+        "terminal terminal terminal";
+}
+
+.game .terminal {
+    margin: 30px 0 ;
+}
+
+.game .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 /*/ / LOGIN - REGISTER / /*/
+
+.introducing {
+    display: grid;
+    grid-template-rows: var(--height-text-balloon) var(--height-terminal) var(
+            --height-drawings
+        );
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "text text text"
+        "line terminal terminal"
+        "basile terminal terminal";
+}
+
+.introducing .terminal {
+    margin: 30px 0 ;
+}
+
 .matrix-text {
     color: var(--matrix-color);
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
+    line-height: 30px;
 }
-
+form>* {
+    margin-bottom: 10px;
+}
 .login {
     display: flex;
     flex-direction: column;
@@ -216,7 +315,8 @@ main {
     height: 40px;
     border: none;
     color: white;
-    font-size: var(--font-size);
+    font-family: var(--terminal-text);
+    font-size: var(--terminal-text-size);
     background-color: initial;
 }
 
@@ -239,6 +339,20 @@ button {
 button:hover {
     text-decoration: underline;
 }
+
+/*/ / STAR YOU EARNED A SKILL! / /*/
+.star {
+    background-image: url(../media/new_skill/smile.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 
 /*/ / CHOSE PERSON / /*/
 .choose-character {
@@ -272,6 +386,7 @@ button:hover {
     margin-right: 0;
 }
 
+
 input[type="radio"] {
     display: none;
 }
@@ -292,6 +407,9 @@ input[type="radio"] {
 .options label {
     /* width: fit-content; */
     color: white;
+    font-family: var(--terminal-text);
+    font-size: var(--terminal-text-size);
+    line-height: 30px;
 }
 
 .options input[type="radio"]:checked + label {
@@ -306,15 +424,18 @@ input[type="radio"] {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 .cards label {
-    width: calc((100% / 6) - 50px);
+    width: calc((100% / 4) - 30px);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: white;
+    border: white 6px solid;
+    margin-right: 30px;
+    margin-bottom: 30px;
 }
 
 .cards label img {
@@ -335,3 +456,118 @@ input[type="radio"] {
     background-color: blue;
     aspect-ratio: 1/1.41;
 }
+
+
+
+/*/ / PIXEL BUTTON / /*/
+.pixel, .pixel2 {
+    font-size: 25px;
+    color: white;
+    height: auto;
+    margin: 10px;
+    font-family: 'VT323';
+    
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .pixel:active, .pixel2:active {
+    top: 2px;
+  }
+  
+  .pixel {
+    line-height: 0;
+    
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+    
+    border-style: solid;
+    border-width: 20px;
+    -moz-border-image: url(../media/button/pixelball.png) 20 stretch;
+    -webkit-border-image: url(../media/button/pixelball.png) 20 stretch;
+    -o-border-image: url(../media/button/pixelball.png) 20 stretch;
+    border-image: url(../media/button/pixelball.png) 20 stretch;
+  }
+  
+  .pixel p {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: auto;
+    text-align: center;
+    margin: -20px -20px;
+    line-height: 20px;
+    padding: 10px 20px;
+    
+      background: #000000;
+      background:
+          linear-gradient(135deg, transparent 10px, #000000 0) top left,
+          linear-gradient(225deg, transparent 10px, #000000 0) top right,
+          linear-gradient(315deg, transparent 10px, #000000 0) bottom right,
+          linear-gradient(45deg,  transparent 10px, #000000 0) bottom left;
+      background-size: 50% 50%;
+      background-repeat: no-repeat;
+      background-image:
+          radial-gradient(circle at 0 0, rgba(204,0,0,0) 14px, #000000 15px),
+          radial-gradient(circle at 100% 0, rgba(204,0,0,0) 14px, #000000 15px),
+          radial-gradient(circle at 100% 100%, rgba(204,0,0,0) 14px, #000000 15px),
+          radial-gradient(circle at 0 100%, rgba(204,0,0,0) 14px, #000000 15px);
+  }
+  
+  .pixel2 {
+    position: relative;
+    display: block;
+    margin: 10px;
+    font-family: 'VT323';
+    text-transform: uppercase;
+    
+    font-size: 25px;
+    color: white;
+  }
+  
+  .pixel2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -6px;
+    right: -6px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel2 {
+    padding: 10px 10px;
+    position: relative;
+    background: black;
+    width: auto;
+    z-index: 2;
+  }

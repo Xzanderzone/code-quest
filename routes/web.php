@@ -24,7 +24,10 @@ Route::get('/102', [StoryController::class, 'nextPage']);
 Route::post('/seats', [StoryController::class, 'seats']);
 Route::get('/104', [StoryController::class, 'nextPage']);
 Route::post('/cards', [StoryController::class, 'cards']);
-Route::post('/card-reason', [StoryController::class, 'card-reason']);
+Route::post('/card-reason', [StoryController::class, 'cardReason']);
+Route::get('/107', [StoryController::class, 'nextPage']);
+Route::get('/108', [StoryController::class, 'nextPage']);
+
 
 
 Route::get('/slider', function () {
@@ -37,7 +40,5 @@ Route::get('/rockPS', function () {
     return view('rockPS');
 });
 
-Route::get('/cv', function () {
-    return view('cv');
-});
+Route::get('/cv', [StoryController::class, 'cv']);
 

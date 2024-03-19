@@ -9,16 +9,7 @@
             Your ultimate goal? To secure a job or internship in the tech industry. However, be warned: depending on your decisions, you may find yourself facing setbacks and challenges that extend your stay in your mom's basement a little longer than anticipated. Will you rise to the occasion and prove yourself worthy of the opportunities that come your way, or will you falter under pressure and struggle to find your place in the digital landscape? <br><br>      
             Are you ready to take on the "CodeQuest" and chart your path to becoming a master Web Developer? The journey awaits!
         </div>
-        <div class="terminal">
-            <div class="bar">
-                <p>📟 YOUR TERMINAL</p>
-            </div>
-            <div class="content">
-                <p class="matrix-text">~ Let's rock!</p>
-                <a href="/whoareyou">> Ye boiiiii</a>
-            </div>
-        </div>
-        <div class="basile"><img src="..\media\stickmen\Stickman-persile-v1.gif" alt=""></div>
+        <a class="pixel" href="/whoareyou"><p class="matrix-text">~ Let's rock!</p></a>
     </main>
 </body>
 </html>
