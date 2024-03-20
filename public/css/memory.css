@@ -11,21 +11,17 @@ body {
     color: white;
   }
   
-  h1 {
-      text-align: center;
-      font-weight: 700;
-      font-size: 50px;
-  }
-  
-  p {
+  #score-text {
       text-align: center;
       font-size: 30px;
       font-weight: bold;
+      padding-top: 15px;
   }
   
   .actions {
       display: flex;
       justify-content: center;
+      padding-top: 20px;
   }
   
   .actions button {
@@ -39,14 +35,14 @@ body {
   .grid-container {
     display: grid;
     justify-content: center;
-    grid-gap: 14px;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(5, 120px);
+    grid-gap: 4px;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(5, 100px);
   }
   
   .card {
-    width: calc(120px / 2 * 3);
-    height: 120px;
+    width: calc(100px / 2 * 3);
+    height: 100px;
     border-radius: 10px;
     background-color: white;
     position: relative;

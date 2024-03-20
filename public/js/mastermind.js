@@ -119,10 +119,7 @@ function round() {
             }
 
             console.log(givenAnswer);
-            console.log(tips)
             tips.sort((a, b) => (a === 'black') ? -1 : 1);
-
-            console.log(tips)
 
             drawTips(tips);
 
@@ -276,6 +273,8 @@ function drawTips(tips) {
     }
 }
 
+let popupWin = document.querySelector('#won');
+
 function showAnswer(){
     let answer = document.querySelectorAll('.answer');
     for (let i = 0; i < answer.length; i++) {
@@ -283,4 +282,6 @@ function showAnswer(){
         answer[i].style.backgroundColor = 'var(--' + code[i] + ')';
         
     }
+
+    popupWin.style.display = "block";
 }
