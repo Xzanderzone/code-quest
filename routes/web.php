@@ -39,6 +39,9 @@ Route::get('/guessing', function () {
 Route::get('/rockPS', function () {
     return view('rockPS');
 });
+Route::get('/memory', function () {
+    return view('memory');
+});
 
 Route::get('/cv', [StoryController::class, 'cv']);
 
