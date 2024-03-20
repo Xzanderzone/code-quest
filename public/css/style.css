@@ -269,6 +269,11 @@ main {
     margin: auto 0;
 }
 
+.highlight {
+    font-weight: bold;
+    color:#5ccf32;
+}
+
 /*/ / GAME / /*/
 .game {
     display: grid;
