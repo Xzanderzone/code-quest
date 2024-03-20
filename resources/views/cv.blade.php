@@ -84,13 +84,7 @@
             </div>
             <div class="SoftSkills">
                 <h2>Soft Skills</h2>
-                <ul>
-                    <li>communicative</li>
-                    <li>communicative</li>
-                    <li>communicative</li>
-                    <li>communicative</li>
-                    <li>communicative</li>
-                </ul>
+                <p>communication, teamwork, Problem-solving,  Time management, Organizational and adaptability</p>
             </div>
             <div class="Education">
                 <h2>Education</h2>
