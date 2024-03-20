@@ -17,9 +17,10 @@
     <main class="game">
         <div class="terminal">
             <div class="bar">
-                <p>📟 YOUR TERMINAL</p>
+                <p>📟 MASTERMIND</p>
             </div>
             <div class="content">
+                {{-- COPY YOUR GAME HERE INSIDE THE CONTENT DIV --}}
                 <div class="board">
                     <div class="top">
                         <div class="playbutton"></div>
