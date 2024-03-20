@@ -16,6 +16,7 @@ html {
     --terminal-background: rgb(40, 40, 49);
     --terminal-text: "Press Start 2P", system-ui;
     --terminal-text-size: 0.9vw;
+    --terminal-glow-green: 1px 0px 6px rgb(33, 188, 62);
     --font-size: 1.3vw;
     --basic-body-font: "Space Grotesk", sans-serif;
 }
@@ -360,7 +361,7 @@ main {
 .matrix-text {
     color: var(--matrix-color);
     padding-bottom: 10px;
-    text-shadow: 1px 0px 12px rgb(33, 188, 62);
+    text-shadow: var(--terminal-glow-green);
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
     line-height: 30px;
@@ -548,6 +549,7 @@ input[type="radio"] {
 }
 .left h2 {
     color: #5ccf32;
+    text-shadow: var(--terminal-glow-green);
     font-size: 1.1vw;
 }
 
