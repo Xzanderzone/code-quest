@@ -27,20 +27,18 @@
             <div class="Contact">
                 <h2>Contact</h2>
                 <p>
-                      <b>Username:</b>Michael Horse
+                      <b>Username:</b>
+                        </br>Michael Horse
                   </p>
                 <p>
-                      <b>Favorite Pet:</b>Cow
+                      <b>Favorite Pet:</b></br>Cow
                   </p>
             </div>
-            <div class="Skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>
-                          <b>Programming Languages :
-                            Python, Java, C++</b>
-                      </li>
-                </ul>
+            <div class="Summary">
+                <h2>Summary</h2>
+                <p>
+                    Beautiful moustache man. 
+                </p>
             </div>
             <div class="Language">
                 <h2>Language</h2>
@@ -64,39 +62,20 @@
             <div class="title">
                 <p>Web Developer</p>
             </div>
-            <div class="Summary">
-                <h2>Summary</h2>
-                <p>
-                    Mustachioed mirth maker, riding the range of comedy with finesse. 
-                    Wrangling laughs and lassos alike, he's the cowboy of humor you need in your posse.
-                </p>
-            </div>
-            <div class="Experience">
-                <h2>Experience</h2>
-                <h3>Fighting horse</h3>
-                <p>January 2022 to Present</p>
+            <div class="SoftSkills">
+                <h2>Soft Skills</h2>
                 <ul>
-                    <li>
-                        Web creativity 
-                    </li>
-                    <li>
-                        Designing horse saddles
-                    </li>
-        
+                    <li>Communication •</li>
+                    <li>Teamwork •</li>
+                    <li>Problem-solving •</li>
+                    <li>Time management •</li>
+                    <li>Organizational •</li>
+                    <li>Adaptability •</li>
                 </ul>
             </div>
-            <div class="Education">
-                <h2>Education</h2>
-                <table>
-                    <tr>
-                        <th>University</th>
-                        <th>Year</th>
-                    </tr>
-                    <tr>
-                        <td>Becode</td>
-                        <td>{{now()->year}}</td>
-                    </tr>
-                </table>
+            <div class="TechSkills">
+                <h2>Tech Skills</h2>
+                <p>Java • Back end • HTML • Salesforce</p>
             </div>
             <div class="project">
                 <h2>Code>Quest</h2>
@@ -111,6 +90,15 @@
                         <img class="ChosenCard" src="..\media\cards\card1.png" alt="Card1">
                     </li>
                 </ul>
+            </div>
+            <div class="Education">
+                <h2>Education</h2>
+                <table>
+                    <tr>
+                        <th>Becode</th>
+                        <th>{{now()->year}}</th>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

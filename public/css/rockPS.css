@@ -1,11 +1,6 @@
-html {
-    background: radial-gradient(circle, #ff8961, #fffb89, #74bdcb, #0e42c4)
-        fixed;
-}
-
 #game {
-    width: 700px;
-    height: 400px;
+    width: 900px;
+    height: 700px;
     background-color: rgb(37, 37, 37);
     border: inset 2px #000000;
     border-radius: 0.7rem;
@@ -17,6 +12,16 @@ html {
     text-align: right;
     border-bottom: 2px solid #000000;
     height: 35%;
+}
+#modalLost {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 #player {
     /* background-color: rgba(0, 0, 255, 0.164); */

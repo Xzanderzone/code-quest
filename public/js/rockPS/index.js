@@ -13,13 +13,7 @@ handleClick = (e) => {
     if (options[randomOptionIndex] === element) UpdateHistory("Tied", element);
     else if (options[(randomOptionIndex + 1) % options.length] === element)
         UpdateHistory("Won", element);
-    else if (
-        randomOptionIndex > 0 &&
-        options[randomOptionIndex - 1] === element
-    )
-        UpdateHistory("Lost", element);
-    else if (options[options.length - 1] === element)
-        UpdateHistory("Lost", element);
+    else UpdateHistory("Lost", element);
     randomOptionIndex = Math.floor(Math.random() * options.length);
 };
 
@@ -31,15 +25,16 @@ let scissorButton = document.getElementById("scissor");
 scissorButton.addEventListener("click", handleClick);
 
 function UpdateHistory(outcome, e) {
-    console.log(outcome, e);
     if (outcome == "Won") {
         wins++;
+        console.log(outcome, e);
+        console.log("test", wins, total / 2);
         chatbox.style.color = "green";
-        if (wins >= int(total / 2 + 1)) EndGame(true);
+        if (wins >= total / 2) EndGame(true);
     } else if (outcome == "Lost") {
         losses++;
         chatbox.style.color = "red";
-        if (losses >= int(total / 2 + 1)) EndGame(false);
+        if (losses >= total / 2) EndGame(false);
     } else if (outcome == "Tied") {
         ties++;
         chatbox.style.color = "white";
