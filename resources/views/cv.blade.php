@@ -87,12 +87,12 @@
                 <h2>Code>Quest</h2>
                 <table>
                     <tr>
-                        <th>Points:</th>
                         <th>Chosen card:</th>
+                        <th>Points:</th>
                     </tr>
                     <tr>
-                        <td class="points">666</td>
-                        <td><img class="ChosenCard" src="..\media\cards\card1.png" alt="Card1"></td>
+                        <td><img class="ChosenCard" src="..\media\cards\card1.png" alt="Card1"></td>    
+                        <td class="points">666</td>   
                     </tr>
                 </table>
             </div>

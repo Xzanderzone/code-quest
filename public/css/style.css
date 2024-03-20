@@ -271,7 +271,7 @@ main {
 
 .highlight-green {
     font-weight: bold;
-    color:#5ccf32;
+    color: #5ccf32;
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
 }
@@ -611,6 +611,7 @@ td {
 
 .points {
     font-family: var(--terminal-text);
+    vertical-align: top;
 }
 .project img {
     margin-top: 10px;
