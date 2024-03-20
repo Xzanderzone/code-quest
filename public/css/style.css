@@ -477,7 +477,7 @@ input[type="radio"] {
 
 .cv h1 {
     font-family: var(--terminal-text);
-    font-size: 0.9vw;
+    font-size: 1vw;
     line-height: 1.5;
 }
 
@@ -510,8 +510,9 @@ input[type="radio"] {
 .right {
     position: initial;
     background-color: rgb(255, 255, 255);
-    padding-left: 30px;
+    padding-left: 22px;
     padding-top: 15px;
+    padding-right: 10px;
 }
 
 .right h2 {
@@ -531,15 +532,11 @@ input[type="radio"] {
     margin-bottom: 1vw;
 }
 
-.Education th,
-td {
+.Education th {
     border-spacing: 10px;
     padding-right: 20px;
     padding-left: 20px;
     text-align: left;
-}
-
-.Education th {
     border-right: 4px solid black;
 }
 

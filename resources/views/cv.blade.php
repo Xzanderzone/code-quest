@@ -35,12 +35,23 @@
                   </p>
             </div>
             <div class="Skills">
-                <h2>Skills</h2>
+                <h2>Tech Skills</h2>
                 <ul>
                     <li>
-                          <b>Programming Languages :
-                            Python, Java, C++</b>
-                      </li>
+                        <p>Java</p>
+                    </li>
+                    <li>
+                        <p>CSS</p>
+                    </li>
+                    <li>
+                        <p>Salesforce</p>
+                    </li>
+                    <li>
+                        <p>HTML</p>
+                    </li>
+                    <li>
+                        <p>Back end</p>
+                    </li>
                 </ul>
             </div>
             <div class="Language">
@@ -68,19 +79,25 @@
             <div class="Summary">
                 <h2>Summary</h2>
                 <p>
-                    Galloping through the plains of comedy with a mustache as his faithful steed, roping in laughs wherever he rides.
+                    Comedy's cowboy, roping laughs with a legendary mustache.
                 </p>
+            </div>
+            <div class="SoftSkills">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>communicative</li>
+                    <li>communicative</li>
+                    <li>communicative</li>
+                    <li>communicative</li>
+                    <li>communicative</li>
+                </ul>
             </div>
             <div class="Education">
                 <h2>Education</h2>
                 <table>
                     <tr>
-                        <th>University</th>
-                        <th>Year</th>
-                    </tr>
-                    <tr>
-                        <td>Becode</td>
-                        <td>{{now()->year}}</td>
+                        <th>Becode</th>
+                        <th>{{now()->year}}</th>
                     </tr>
                 </table>
             </div>
