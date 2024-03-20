@@ -1,15 +1,17 @@
 
 		<div id='game'>
 			<div id="persil">
-				<p>The mighty persil!</p>
-				<img src="..\media\stickmen\Stickman-persile-v1.gif" style='width:120px' alt="">
+				<div id="persilCharacter">
+					<p>The mighty persil!</p>
+					<img src="..\media\stickmen\Stickman-persile-v1.gif" style='width:120px' alt="">
+				</div>
 			</div>
 			<div id="player">
 				<p>Hamilton </p>		
 					@if(empty($user->character))
-					<img src="..\media\stickmen\Stickman-moustache.svg" style='width:50px' alt="">
+					<img src="..\media\stickmen\Stickman-moustache.svg"  alt="">
 					@else 
-					<img src="..\media\stickmen\{{ $user->character }}" style='width:50px' alt="">
+					<img src="..\media\stickmen\{{ $user->character }}"  alt="">
 					@endif
 			</div>
 			<div id='ui'>

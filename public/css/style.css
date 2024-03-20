@@ -269,6 +269,24 @@ main {
     margin: auto 0;
 }
 
+.highlight-green {
+    font-weight: bold;
+    color:#5ccf32;
+    font-family: var(--terminal-text);
+    font-size: var(--terminal-text-size);
+}
+
+.highlight-gray {
+    color: #141421;
+    font-weight: bold;
+}
+
+.highlight-shadow {
+    color: #141421;
+    text-shadow: 3px 4px 1px #5ccf32;
+    font-weight: bold;
+}
+
 /*/ / GAME / /*/
 .game {
     display: grid;
