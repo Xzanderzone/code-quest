@@ -15,6 +15,22 @@
 <body>
     @include("_partials.header") 
     <main class="game">
+        <div class="popup terminal" id="lost" style="display: none">
+            <div class="bar">
+                <p>📟 YOU LOSE 😭</p>
+            </div>
+            <div class="content">
+                <a href="/story">> RESTART</a>
+            </div>
+        </div>
+        <div class="popup terminal" id="won" style="display: none">
+            <div class="bar">
+                <p>📟 YOU WIN 😁</p>
+            </div>
+            <div class="content">
+                <a href="/story">> NICE! CONTINUE</a>
+            </div>
+        </div>
         <div class="terminal">
             <div class="bar">
                 <p>📟 MASTERMIND</p>

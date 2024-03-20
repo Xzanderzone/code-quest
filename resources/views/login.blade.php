@@ -14,13 +14,6 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">ANONYMOUS ~ Don’t you recognize me? It’s me:</p>
-                <form action="/login" method="post" class="login">
-                    @csrf
-                    <input type="text" name="name" placeholder="▋name">
-                    <input type="password" name="password" placeholder="▋password">
-                    <button>> LOGIN</button>
-                </form>
                 <p class="matrix-text">ANONYMOUS ~ I'm new here, my name is:</p>
                 <form action="/register" method="post" class="login">
                     @csrf
@@ -28,6 +21,13 @@
                     <input type="password" name="password" placeholder="▋password">
                     <input type="password" name="password-check" placeholder="▋password check">
                     <button>> REGISTER</button>
+                </form>
+                <p class="matrix-text">ANONYMOUS ~ Don’t you recognize me? It’s me:</p>
+                <form action="/login" method="post" class="login">
+                    @csrf
+                    <input type="text" name="name" placeholder="▋name">
+                    <input type="password" name="password" placeholder="▋password">
+                    <button>> LOGIN</button>
                 </form>
             </div>
         </div>

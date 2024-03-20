@@ -103,5 +103,9 @@ class StoryController extends Controller
         return redirect('/story');
     }
 
+    public function mastermindCheck(Request $request) {
+        
+    }
+
 
 }
