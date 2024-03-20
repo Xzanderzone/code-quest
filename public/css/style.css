@@ -192,7 +192,7 @@ main {
 }
 
 .ok-page .text-balloon {
-    font-size: 32px;
+    font-size: var(--font-size);
 }
 
 /*/ / TERMINAL / /*/
@@ -544,13 +544,10 @@ input[type="radio"] {
     padding-right: 10px;
 }
 
-.right h2 {
-    font-size: 1.1vw;
-}
-
 .image,
 .Contact,
-.Skills,
+.TechSkills,
+.SoftSkills,
 .Language,
 .Hobbies,
 .title,
@@ -558,7 +555,31 @@ input[type="radio"] {
 .Experience,
 .Education,
 .project {
-    margin-bottom: 1vw;
+    margin-bottom: 1.5vh;
+}
+
+.right h2 {
+    font-size: 1vw;
+    text-transform: uppercase;
+    text-decoration: underline wavy blue;
+    text-underline-offset: 0.7vh;
+    padding-bottom: 1vh;
+}
+
+.right ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.right li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.right li:hover {
+    font-style: oblique;
+    color: blue;
 }
 
 .Education th {
