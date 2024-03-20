@@ -28,7 +28,7 @@ Route::post('/card-reason', [StoryController::class, 'cardReason']);
 Route::get('/107', [StoryController::class, 'nextPage']);
 Route::get('/108', [StoryController::class, 'nextPage']);
 
-
+Route::get('/200', [StoryController::class, 'mastermindCheck']);
 
 Route::get('/slider', function () {
     return view('slider');

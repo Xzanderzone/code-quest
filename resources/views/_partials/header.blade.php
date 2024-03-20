@@ -10,7 +10,7 @@
     </div>
     <div id="cv-emblem">
         @auth
-        <a href="/cv">CV</a>
+        <a href="/cv" class="pixel-borders">CV</a>
         @endauth
     </div>
 </header>
