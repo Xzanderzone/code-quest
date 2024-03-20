@@ -27,10 +27,11 @@
             <div class="Contact">
                 <h2>Contact</h2>
                 <p>
-                      <b>Username:</b>Michael Horse
+                      <b>Username:</b>
+                        </br>Michael Horse
                   </p>
                 <p>
-                      <b>Favorite Pet:</b>Cow
+                      <b>Favorite Pet:</b></br>Cow
                   </p>
             </div>
             <div class="Skills">
@@ -67,23 +68,8 @@
             <div class="Summary">
                 <h2>Summary</h2>
                 <p>
-                    Mustachioed mirth maker, riding the range of comedy with finesse. 
-                    Wrangling laughs and lassos alike, he's the cowboy of humor you need in your posse.
+                    Galloping through the plains of comedy with a mustache as his faithful steed, roping in laughs wherever he rides.
                 </p>
-            </div>
-            <div class="Experience">
-                <h2>Experience</h2>
-                <h3>Fighting horse</h3>
-                <p>January 2022 to Present</p>
-                <ul>
-                    <li>
-                        Web creativity 
-                    </li>
-                    <li>
-                        Designing horse saddles
-                    </li>
-        
-                </ul>
             </div>
             <div class="Education">
                 <h2>Education</h2>
