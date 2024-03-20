@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/mastermind.css">
         <script src="js/mastermind.js" defer></script>
+        <script src="js/script.js" defer></script>
         <title>A Web Dev Journey</title>
     </head>
 <body>

@@ -1,13 +1,18 @@
 
-		<h1>Guessing Game</h1>
 		<div id='game'>
 			<div id="persil">
-				<p>The tighty persil!</p>
-				add persil animations  here
+				<div id="persilCharacter">
+					<p>The mighty persil!</p>
+					<img src="..\media\stickmen\Stickman-persile-v1.gif" style='width:120px' alt="">
+				</div>
 			</div>
 			<div id="player">
-				<p>Hamilton </p>
-				add player animations  here
+				<p>Hamilton </p>		
+					@if(empty($user->character))
+					<img src="..\media\stickmen\Stickman-moustache.svg"  alt="">
+					@else 
+					<img src="..\media\stickmen\{{ $user->character }}"  alt="">
+					@endif
 			</div>
 				<div id='ui'>
 					<div id='chatbox'>You will never guess my age for i am,
