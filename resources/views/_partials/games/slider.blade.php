@@ -1,5 +1,4 @@
 
-		<h1>Sliding Puzzle </h1>
 		<div id='slider'>
 			<div id="puzzle"></div>
 				<div id='display'>

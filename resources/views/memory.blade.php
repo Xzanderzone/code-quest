@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,8 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css" />
-        <script src="js/mastermind.js" defer></script>
+		    <link rel="stylesheet" type="text/css" media="screen" href="css/memory.css" />
         <title>A Web Dev Journey</title>
     </head>
 <body>
@@ -18,12 +16,10 @@
     <main class="game">
         <div class="terminal">
             <div class="bar">
-                <p>📟 SLIDER PUZZLE</p>
+                <p>📟 MEMORY GAME</p>
             </div>
             <div class="content">
-                <div class="board">
-    @include("_partials.games.slider")
-                </div>
+    @include("_partials.games.memory")
             </div>
         </div>
     </main>
