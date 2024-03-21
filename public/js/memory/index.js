@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector(".grid-container");
 let cards = [];
 let firstCard, secondCard;
+let matchedPair = [];
 let lockBoard = false;
 let score = 0;
 
@@ -48,7 +49,6 @@ function flipCard() {
   if (this === firstCard) return;
 
   this.classList.add("flipped");
-  //add class or element and then do if statement that checks if the class/id is there. if true the card is flipped and turn opacity on / if false remove the class/id and change opacity to 0
 
   if (!firstCard) {
     firstCard = this;
@@ -66,7 +66,19 @@ function flipCard() {
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 
-  isMatch ? disableCards() : unflipCards();
+  if (isMatch) {
+    if (!isPairMatched(firstCard.dataset.name, secondCard.dataset.name)) {
+      addMatchedPair(firstCard.dataset.name, secondCard.dataset.name);
+      console.log("Pair matched:", firstCard.dataset.name, secondCard.dataset.name);
+    } else {
+      console.log("Pair already matched!");
+    }
+    disableCards();
+  } else {
+    unflipCards();
+  }
+
+  console.log(matchedPair)
 }
 
 function disableCards() {
@@ -98,3 +110,17 @@ function restart() {
   gridContainer.innerHTML = "";
   generateCards();
 }
+
+function isPairMatched(firstCardName, secondCardName) {
+  return matchedPair.some(pair => pair.includes(firstCardName) && pair.includes(secondCardName));
+}
+
+function addMatchedPair(firstCardName, secondCardName) {
+  matchedPair.push([firstCardName, secondCardName]);
+}
+
+let firstPair = matchedPair[0];
+let fourthPair = matchedPair[3];
+let eighthPair = matchedPair[7];
+
+
