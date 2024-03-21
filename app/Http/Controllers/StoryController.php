@@ -8,9 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class StoryController extends Controller
 {
+    public function getPageArray(){
+        return ["100","101","102","103","104","105","106","107","108","200",];
+    }
     public function story() {
-        $pages=["100","101","102","103","104","105","106","107","108","200",];
-
+        $pages=StoryController::getPageArray();
         $user = Auth::user();
 
         if (!$user) {
@@ -38,12 +40,14 @@ class StoryController extends Controller
         return view('cv', ['user' => $user]);
     }
 
-    public function nextPage() {
+    public function nextPage($id) {
+        if(in_array($id,StoryController::getPageArray())){
         $user = Auth::user();
         $user->progress += 1;
         $user->save();
 
         return redirect('/story');
+        }
     }
 
     public function chooseCharacter(Request $request) {
