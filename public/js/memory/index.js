@@ -7,13 +7,35 @@ let score = 0;
 
 document.querySelector(".score").textContent = score;
 
-fetch("/media/memory_cards/cards.json")
-  .then((res) => res.json())
-  .then((data) => {
-    cards = [...data, ...data];
-    shuffleCards();
-    generateCards();
-  });
+switch(expression) {
+  case fullstack:
+    fetch("/media/memory_cards/fullstack.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+    break;
+  case salesforce:
+    fetch("/media/memory_cards/salesforce.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+    break;
+  case java:
+    fetch("/media/memory_cards/java.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+}
+
 
 function shuffleCards() {
   let currentIndex = cards.length,
