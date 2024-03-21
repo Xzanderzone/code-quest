@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class StoryController extends Controller
 {
     public function story() {
+        $pages=["100","101","102","103","104","105","106","107","108","200",];
 
         $user = Auth::user();
 
@@ -17,14 +18,14 @@ class StoryController extends Controller
         }
 
         $progress = $user->progress;
-
-        if (!$progress) {
-            $progress = 100;
+        //100 to check older accounts from before array method
+        if (!$progress || $progress>=100) {
+            $progress = 0;
         } 
 
         $user->update(['progress' => $progress]);
 
-        return view($progress, ['user' => $user]);
+        return view($pages[$progress], ['user' => $user]);
     }
 
     public function cv() {
