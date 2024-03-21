@@ -15,22 +15,12 @@
         <div class="terminal">
             <div class="popup terminal" id="lost" style="display: none">
                 <div class="bar">
-                    <p>📟 YOU LOSE 😭</p>
+                    <p>📟 IMPOSSIBLE ODDS 😭</p>
                 </div>
                 <div class="content">
                     <p id='msgLost'>📟 YOU LOSE 😭</p>
                     <br>
-                    <a id='msgLink' href="/story">> RESTART</a>
-                </div>
-            </div>
-            <div class="popup terminal" id="won" style="display: none">
-                <div class="bar">
-                    <p>📟 YOU WIN 😁</p>
-                </div>
-                <div class="content">
-                    <p id="msgWin">📟 YOU WIN 😁</p>
-                    <br>
-                    <a href="/story">> NICE! CONTINUE</a>
+                    <a id='msgLink' href="/next">> Let's Rock!</a>
                 </div>
             </div>
             <div class="bar">

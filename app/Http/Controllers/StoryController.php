@@ -8,7 +8,12 @@ use Illuminate\Support\Facades\Auth;
 class StoryController extends Controller
 {
     public function getPageArray(){
-        return ["100","101","102","103","104","105","106","107","108","200",];
+        return ["100","101","102","103","104","105","106","107",
+        // "mastermind",
+        "guessing","rockPS",
+        // "memory",
+        "slider",
+        "999"];
     }
     public function story() {
         $user = Auth::user();

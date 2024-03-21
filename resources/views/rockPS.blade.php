@@ -32,7 +32,7 @@
                 <div class="content">
                     <p id="msgWin">📟 YOU WIN 😁</p>
                     <br>
-                    <a href="/story">> NICE! CONTINUE</a>
+                    <a href="/next">> NICE! CONTINUE</a>
                 </div>
             </div>
             <div class="bar">

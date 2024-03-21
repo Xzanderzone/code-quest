@@ -27,9 +27,9 @@
     border-radius: 0.7rem;
 }
 .tile {
-    height: 100px;
+    height: 110px;
     width: 23%;
-    margin-right: 7px;
+    margin: 2px;
     cursor: pointer;
     border: inset 2px #000000;
     border-style: solid;

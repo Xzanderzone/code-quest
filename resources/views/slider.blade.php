@@ -10,22 +10,41 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css" />
-        <script src="js/mastermind.js" defer></script>
         <title>A Web Dev Journey</title>
     </head>
-<body>
-    @include("_partials.header") 
-    <main class="game">
-        <div class="terminal">
-            <div class="bar">
-                <p>📟 SLIDER PUZZLE</p>
-            </div>
-            <div class="content">
-                <div class="board">
-    @include("_partials.games.slider")
+    <body>
+        @include("_partials.header") 
+        <main class="game">
+            <div class="terminal">
+                <div class="popup terminal" id="lost" style="display: none">
+                    <div class="bar">
+                        <p>📟 YOU LOSE 😭</p>
+                    </div>
+                    <div class="content">
+                        <p id='msgLost'>📟 YOU LOSE 😭</p>
+                        <br>
+                        <a id='msgLink'href="/story">> Not throwing away my shot!(try again)</a>
+                    </div>
+                </div>
+                <div class="popup terminal" id="won" style="display: none">
+                    <div class="bar">
+                        <p >📟 YOU WIN 😁</p>
+                    </div>
+                    <div class="content">
+                        <p id="msgWin">📟 YOU WIN 😁</p>
+                        <br>
+                        <a href="/next">> NICE! CONTINUE</a>
+                    </div>
+                </div>
+                <div class="bar">
+                    <p>📟 SLIDER PUZZLE</p>
+                </div>
+                <div class="content">
+                    <div class="board">
+                        @include("_partials.games.slider")
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-</body>
-</html>
+        </main>
+    </body>
+    </html>
