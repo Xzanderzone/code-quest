@@ -16,6 +16,7 @@ html {
     --terminal-background: rgb(40, 40, 49);
     --terminal-text: "Press Start 2P", system-ui;
     --terminal-text-size: 0.9vw;
+    --terminal-glow-green: 1px 0px 6px rgb(33, 188, 62);
     --font-size: 1.3vw;
     --basic-body-font: "Space Grotesk", sans-serif;
 }
@@ -269,9 +270,22 @@ main {
     margin: auto 0;
 }
 
-.highlight {
+.highlight-green {
     font-weight: bold;
-    color:#5ccf32;
+    color: #5ccf32;
+    font-family: var(--terminal-text);
+    font-size: var(--terminal-text-size);
+}
+
+.highlight-gray {
+    color: #141421;
+    font-weight: bold;
+}
+
+.highlight-shadow {
+    color: #141421;
+    text-shadow: 3px 4px 1px #5ccf32;
+    font-weight: bold;
 }
 
 /*/ / GAME / /*/
@@ -347,7 +361,7 @@ main {
 .matrix-text {
     color: var(--matrix-color);
     padding-bottom: 10px;
-    text-shadow: 1px 0px 12px rgb(33, 188, 62);
+    text-shadow: var(--terminal-glow-green);
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
     line-height: 30px;
@@ -535,12 +549,14 @@ input[type="radio"] {
 }
 .left h2 {
     color: #5ccf32;
+    text-shadow: var(--terminal-glow-green);
     font-size: 1.1vw;
 }
 
 .left img {
     height: 15vh;
 }
+
 .right {
     position: initial;
     background-color: rgb(255, 255, 255);
@@ -587,17 +603,22 @@ input[type="radio"] {
     color: blue;
 }
 
-.Education th {
-    border-spacing: 10px;
+.project th,
+td {
+    /*border-spacing: 10px;*/
     padding-right: 20px;
-    padding-left: 20px;
     text-align: left;
-    border-right: 4px solid black;
+    /*border-right: 4px solid black;*/
 }
 
+.points {
+    font-family: var(--terminal-text);
+    vertical-align: top;
+}
 .project img {
     margin-top: 10px;
     border: 4px solid black;
+    height: 20vh;
 }
 
 /*/ / PIXEL BUTTON / /*/

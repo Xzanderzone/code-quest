@@ -75,30 +75,30 @@
             </div>
             <div class="TechSkills">
                 <h2>Tech Skills</h2>
-                <p>Java • Back end • HTML • Salesforce</p>
+                <ul>
+                    <li>Java •</li>
+                    <li>Back end •</li>
+                    <li>HTML •</li>
+                    <li>Salesforce •</li>
+                    <li>Express •</li>
+                </ul>
             </div>
             <div class="project">
                 <h2>Code>Quest</h2>
-                <ul>
-                    <li>
-                        <p>
-                            Points:
-                        </p>
-                    </li>
-                    <li>
-                        <p>Chosen card:</p>
-                        <img class="ChosenCard" src="..\media\cards\card1.png" alt="Card1">
-                    </li>
-                </ul>
+                <table>
+                    <tr>
+                        <th>Chosen card:</th>
+                        <th>Points:</th>
+                    </tr>
+                    <tr>
+                        <td><img class="ChosenCard" src="..\media\cards\card1.png" alt="Card1"></td>    
+                        <td class="points">666</td>   
+                    </tr>
+                </table>
             </div>
             <div class="Education">
                 <h2>Education</h2>
-                <table>
-                    <tr>
-                        <th>Becode</th>
-                        <th>{{now()->year}}</th>
-                    </tr>
-                </table>
+                <b>Becode │ {{now()->year}}</b>
             </div>
         </div>
     </div>
