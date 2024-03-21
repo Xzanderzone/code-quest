@@ -15,6 +15,26 @@
     @include("_partials.header") 
     <main class="game">
         <div class="terminal">
+            <div class="popup terminal" id="lost" style="display: none">
+                <div class="bar">
+                    <p>📟 YOU LOSE 😭</p>
+                </div>
+                <div class="content">
+                    <p id='msgLost'>📟 YOU LOSE 😭</p>
+                    <br>
+                    <a id='msgLink'href="/story">> Not throwing away my shot!(try again)</a>
+                </div>
+            </div>
+            <div class="popup terminal" id="won" style="display: none">
+                <div class="bar">
+                    <p >📟 YOU WIN 😁</p>
+                </div>
+                <div class="content">
+                    <p id="msgWin">📟 YOU WIN 😁</p>
+                    <br>
+                    <a href="/story">> NICE! CONTINUE</a>
+                </div>
+            </div>
             <div class="bar">
                 <p>📟 ROCK PAPER SCISSOR</p>
             </div>

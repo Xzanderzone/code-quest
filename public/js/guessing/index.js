@@ -7,18 +7,27 @@ let numberInput = document.getElementById("numberInput");
 let guessButton = document.getElementById("guess");
 let giveUpButton = document.getElementById("giveUp");
 giveUpButton.addEventListener("click", () => {
-    alert(
-        "I remain the incognito master ! We shall settle this in a game of rock paper scissors instead."
-    );
+    let msg = document.getElementById("msgLost");
+    msg.style.color = "white";
+    msg.textContent =
+        "I remain the incognito master ! We shall settle this in a game of rock paper scissors instead.";
+    let modal = document.getElementById("lost");
+    modal.style.display = "";
 });
 guessButton.addEventListener("click", () => {
     guesses.push(numberInput.value);
     console.log(guesses);
-    if (guesses.length >= max)
-        alert(
-            "i grow weary of your presistence, a game of rock paper scissors will decide"
-        );
-    else if (guesses.length > min && !passedMin) {
+    if (guesses.length >= max) {
+        let msg = document.getElementById("msgLink");
+        msg.style.color = "white";
+        msg.textContent = "Lets rock!";
+        msg = document.getElementById("msgLost");
+        msg.style.color = "white";
+        msg.textContent =
+            "I grow weary of your presistence, a game of rock paper scissors will decide your skill.";
+        let modal = document.getElementById("lost");
+        modal.style.display = "";
+    } else if (guesses.length > min && !passedMin) {
         passedMin = true;
         giveUpButton.classList.remove("disabled");
         alert("Surrender now! You will never find my age.");
