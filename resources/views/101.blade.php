@@ -12,7 +12,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <a href="/102">> cool</a>
+                <a href="next">> cool</a>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>

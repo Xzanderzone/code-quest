@@ -5,19 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
 class StoryController extends Controller
 {
+    public function getPageArray(){
+        return ["100","101","102","103","104","105","106","107","108","200",];
+    }
     public function story() {
-        $pages=["100","101","102","103","104","105","106","107","108","200",];
-
         $user = Auth::user();
-
-        if (!$user) {
-            return redirect('/');
-        }
-
-        $progress = $user->progress;
+  
+        $pages=StoryController::getPageArray();
+        $progress = $user->progress ;
         //100 to check older accounts from before array method
         if (!$progress || $progress>=100) {
             $progress = 0;
@@ -39,11 +36,13 @@ class StoryController extends Controller
     }
 
     public function nextPage() {
+        // if(in_array($id,StoryController::getPageArray())){
         $user = Auth::user();
         $user->progress += 1;
         $user->save();
 
         return redirect('/story');
+        // }else dd("page not found(story controller nextPage with id: ".$id);
     }
 
     public function chooseCharacter(Request $request) {
