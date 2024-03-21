@@ -555,6 +555,7 @@ input[type="radio"] {
 
 .left img {
     height: 15vh;
+    background-color: white;
 }
 
 .right {
