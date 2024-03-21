@@ -27,8 +27,6 @@ scissorButton.addEventListener("click", handleClick);
 function UpdateHistory(outcome, e) {
     if (outcome == "Won") {
         wins++;
-        console.log(outcome, e);
-        console.log("test", wins, total / 2);
         chatbox.style.color = "green";
         if (wins >= total / 2) EndGame(true);
     } else if (outcome == "Lost") {
@@ -57,14 +55,24 @@ function UpdateHistory(outcome, e) {
 function EndGame(win) {
     if (win) {
         //change scene to victory screen
-        alert("you've beaten the mighty Persil!");
+        let msg = document.getElementById("msgWin");
+        msg.style.color = "white";
+        msg.textContent = "You've beaten the mighty Persil!";
+        let modal = document.getElementById("won");
+        modal.style.display = "";
     } else {
         //allow player to keep going in new "best off"
-        total += 5;
-        alert(
-            "you've lost! Make it best out of " +
-                total +
-                "?[or try again from 0?]"
-        );
+        // total += 5;
+        // alert(
+        //     "you've lost! Make it best out of " +
+        //         total +
+        //         "?[or try again from 0?]"
+        // );
+
+        let msg = document.getElementById("msgLost");
+        msg.style.color = "white";
+        msg.textContent = "The mighty Persil wins this time! Try again?";
+        let modal = document.getElementById("lost");
+        modal.style.display = "";
     }
 }
