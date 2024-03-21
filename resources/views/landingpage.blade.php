@@ -13,7 +13,7 @@
             <p>Are you ready to take on the "<strong>CodeQuest</strong>" and chart your path to becoming a <span style="color: #000080; font-weight: bold;">master Web Developer</span>? The journey awaits!</p>
             
         </div>
-        <a class="pixel" href="/whoareyou"><p class="matrix-text">~ Let's rock!</p></a>
+        <a class="pixel" href="/login"><p class="matrix-text">~ Let's rock!</p></a>
     </main>
 </body>
 </html>
