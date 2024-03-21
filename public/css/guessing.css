@@ -24,6 +24,7 @@
     offset-position: 10px;
 }
 #player {
+    display: flex;
     border-bottom: 2px solid #000000;
     margin-top: 95px;
     margin-left: 10px;

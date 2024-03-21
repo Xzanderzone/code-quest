@@ -7,16 +7,22 @@
 				</div>
 			</div>
 			<div id="player">
-				<p>Hamilton </p>		
+				<div>
+					<p style="text-align:center">{{$user->name}} </p>
 					@if(empty($user->character))
 					<img src="..\media\stickmen\Stickman-moustache.svg"  alt="">
 					@else 
 					<img src="..\media\stickmen\{{ $user->character }}"  alt="">
 					@endif
+				</div>
+				<p >
+					Guessing history: 		<br>
+				</p>
 			</div>
 				<div id='ui'>
-					<div id='chatbox'>You will never guess my age for i am,
-						the mighty persil -- the digital footprint expert!
+					<div id='chatbox'><p>The mighty Persil:</p> <br>
+					<p id="persilChat">You will never guess my age for i am,
+						the mighty persil -- the digital footprint expert!</p>
 					</div>
 					<div id='options'>
 						<button id='question'>What will you do?</button>
