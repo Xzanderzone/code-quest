@@ -10,7 +10,7 @@ class StoryController extends Controller
     public function getPageArray(){
         return ["100","101","102","103","104","105","106","107",
         // "mastermind",
-        "201","202","203","guessing","rockPS",
+        "201","202","203","204","guessing","rockPS",
         // "memory",
         "slider",
         "999"];
@@ -73,7 +73,7 @@ class StoryController extends Controller
 
         $user = Auth::user();
         $user->seats= $request->seats;
-        
+
         $user->progress += 1;
         $user->save();
 
