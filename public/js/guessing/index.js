@@ -63,9 +63,9 @@ guessButton.addEventListener("click", () => {
         giveUpButton.classList.remove("disabled");
         let modal = document.getElementById("won");
         modal.style.display = "";
+        //hide the modal without reloading page
         let continueUpButton = document.getElementById("continue");
         continueUpButton.addEventListener("click", () => {
-            console.log("display none the parent?");
             modal.style.display="none";
         })
     }

@@ -28,9 +28,14 @@
                     <p>📟 THE MIGHTY PERSIL 😁</p>
                 </div>
                 <div class="content">
-                    <p id="msgWin" style='color:white;'>📟 Surrender now! You will never find my age.</p>
+                    <p id="msgWin" style='color:white;'>Surrender now! You will never find my age.<br>
+                        Let us settle this in a game of Rock paper scissor instead.</p>
+                    <br>
                     <br>
                     <a id="continue"><u>>I AM DETERMINED</u></a>
+                    <br>
+                    <br>
+                    <a href="/next"><u>>Rock Paper Scissor it is!</u></a>
                 </div>
             </div>
             <div class="bar">

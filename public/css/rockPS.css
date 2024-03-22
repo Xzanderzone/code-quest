@@ -6,11 +6,20 @@
     background-color: white;
 }
 #persil {
+    display: flex;
     width: 100%;
     text-align: right;
     border-bottom: 2px solid #000000;
-    margin-left: -10px;
     margin-top: 95px;
+}
+#history{
+    margin-left: 270px;
+    margin-top: -50px;
+}
+#historyBasile{
+    margin-left: 380px;
+    text-align: left;
+    margin-top: -50px;
 }
 #persil img {
     width: 50px;
@@ -21,12 +30,12 @@
     width: 50px;
 }
 #persilCharacter {
-    offset-position: 10px;
+    margin-left: 150px;
 }
 #player {
+    display: flex;
     border-bottom: 2px solid #000000;
     margin-top: 95px;
-    margin-left: 10px;
     width: 100%;
 }
 #ui {
