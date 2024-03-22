@@ -32,6 +32,8 @@ Route::post('/card-reason', [StoryController::class, 'cardReason']);
 
 // Route::get('/200', [StoryController::class, 'mastermindCheck']);
 
+Route::post('/toilet-choice', [StoryController::class, 'toiletChoice']);
+
 Route::get('/slider', function () {
     return view('slider');
 });
