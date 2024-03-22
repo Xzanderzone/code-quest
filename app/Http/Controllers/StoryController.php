@@ -112,5 +112,17 @@ class StoryController extends Controller
         
     }
 
+    public function toiletChoice(Request $request) {
+        $request->validate([
+            'toilet' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->toilet_choice = $request->toilet_choice;
+
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
 
 }
