@@ -10,7 +10,7 @@ class StoryController extends Controller
     public function getPageArray(){
         return ["100","101","102","103","104","105","106","107",
         // "mastermind",
-        "201","202","guessing","rockPS",
+        "201","202","203","guessing","rockPS",
         // "memory",
         "slider",
         "999"];
@@ -68,12 +68,12 @@ class StoryController extends Controller
 
     public function seats(Request $request)  {
         $request->validate([
-            'seat' => 'required'
+            'seats' => 'required'
         ]);
 
         $user = Auth::user();
-        $character = $request->character;
-        $user->seats= $character;
+        $user->seats= $request->seats;
+        
         $user->progress += 1;
         $user->save();
 
@@ -114,7 +114,7 @@ class StoryController extends Controller
 
     public function toiletChoice(Request $request) {
         $request->validate([
-            'toilet' => 'required'
+            'toilet_choice' => 'required'
         ]);
         $user = Auth::user();
         $user->toilet_choice = $request->toilet_choice;
