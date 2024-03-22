@@ -1,10 +1,12 @@
 
 		<div id='game'>
 			<div id="persil">
-				<div id="persilCharacter">
-					<p>The mighty persil!</p>
-					<img src="..\media\stickmen\Stickman-persile-v1.gif" style='width:120px' alt="">
-				</div>
+				<p id='historyBasile'>History of wrong guesses:<br></p>
+					<div id="persilCharacter">
+						<p>The mighty persil!</p>
+						<img src="..\media\stickmen\Stickman-persile-v1.gif" style='width:120px' alt="">
+					</div>
+						
 			</div>
 			<div id="player">
 				<div>
@@ -15,9 +17,7 @@
 					<img src="..\media\stickmen\{{ $user->character }}"  alt="">
 					@endif
 				</div>
-				<p >
-					Guessing history: 		<br>
-				</p>
+				<p id='history'>Guessing history:<br></p>
 			</div>
 				<div id='ui'>
 					<div id='chatbox'><p>The mighty Persil:</p> <br>
@@ -25,7 +25,7 @@
 						the mighty persil -- the digital footprint expert!</p>
 					</div>
 					<div id='options'>
-						<button id='question'>What will you do?</button>
+						<button id='question' class='disabled'>What will you do?</button>
 						<input type="number" value='35'id='numberInput'></input>
 						<button id='guess'>Guess</button>
 						<button id='giveUp' class='disabled'>Give Up</button>
