@@ -50,8 +50,11 @@ h1 {
 
 h1 a {
     text-decoration: none;
+    font-family: var(--terminal-text);
+    font-size: 1.3vw;
     color: var(--matrix-color);
-    text-shadow: 3px 4px 1px black;
+    background-color: #000000;
+    padding: 3%;
 }
 
 h1 a:hover {
