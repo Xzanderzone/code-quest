@@ -67,8 +67,8 @@
                 <h2>Soft Skills</h2>
                 <ul>
                     <li>{{$user->card_reason}} •</li>
-                    <li>Test •</li>
-                    <li>Test •</li>
+                    <li>{{$user->toilet_choice}} •</li>
+                    <li>{{$user->extra_toilet}} •</li>
                     <li>Test •</li>
                     <li>Test •</li>
                     <li>Test •</li>

@@ -125,6 +125,21 @@ class StoryController extends Controller
         return redirect('/story');
     }
 
+    public function extraToiletSkill(Request $request) {
+        $user = Auth::user();
+
+        if ($user->seats === 'empty-table') {
+            $user->extra_toilet = "Empathy";
+        } else {
+            $user->extra_toilet = "Positive Attitude";
+        }
+        
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
     public function deleteCardReason(Request $request) {
         $user = Auth::user();
         $user->card_reason = null;
