@@ -15,12 +15,14 @@
                     @endif
                 </h2>
                 <a class="pixel" href="/next"><p class="matrix-text">I'm happy!</p></a>
+            @elseif ($user->card_reason === "Leadership" || $user->card_reason === "Communication")
+                <h2>Your colleagues are disappointed in you. {{$user->card_reason}} was removed from your CV.</h2>
+                <form action="/card-reason-update" method="POST">
+                    @csrf
+                    <button class="pixel matrix-text">Let's move on</button>
+                </form>
             @else
-                @if ($user->card_reason === "Leadership" || $user->card_reason === "Communication")
-                    <h2>Your colleagues are disappointed in you. {{$user->card_reason}} was removed from your CV.</h2>
-                @else
-                    <h2>Your colleagues are starting to keep their distance from you and your CV progress is delayed, causing you to not acquire a new soft skill.</h2>
-                @endif
+                <h2>Your colleagues are starting to keep their distance from you and your CV progress is delayed, causing you to not acquire a new soft skill.</h2>
                 <a class="pixel" href="/next"><p class="matrix-text">Let's move on</p></a>
             @endif
     </main>

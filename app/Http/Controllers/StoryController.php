@@ -125,4 +125,14 @@ class StoryController extends Controller
         return redirect('/story');
     }
 
+    public function deleteCardReason(Request $request) {
+        $user = Auth::user();
+        $user->card_reason = null;
+
+        $user->save();
+        $user->progress += 1;
+    
+        return redirect('/story');
+    }
+    
 }
