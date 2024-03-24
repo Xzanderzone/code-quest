@@ -129,9 +129,9 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->card_reason = null;
 
-        $user->save();
         $user->progress += 1;
-    
+        $user->save();
+
         return redirect('/story');
     }
     
