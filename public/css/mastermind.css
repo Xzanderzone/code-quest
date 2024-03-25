@@ -1,4 +1,5 @@
-*, html {
+*,
+html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,22 +12,21 @@
     --transparancy: 0.5;
 
     --black: rgb(74, 74, 74);
-    --white: rgb(255, 202, 202);
+    --white: rgb(231, 231, 231);
     --red: rgb(255, 69, 69);
     --blue: rgb(69, 69, 232);
     --yellow: rgb(210, 210, 0);
     --green: rgb(41, 125, 41);
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     :root {
         --dimension: calc(100% / 14);
     }
 }
 
-
 body {
-    width: 100vw;
+    width: 100svw;
     height: 100svh;
     display: flex;
     justify-content: space-around;
@@ -36,7 +36,7 @@ body {
 }
 
 p {
-    line-height: 150%
+    line-height: 150%;
 }
 
 .board {
@@ -59,7 +59,6 @@ p {
     /* border: 1px solid var(--gravings);   */
 }
 
-
 .secret-code {
     width: calc(4 * var(--dimension) - 20px);
     height: calc(var(--dimension) - 20px);
@@ -72,8 +71,9 @@ p {
 
     box-sizing: content-box;
 
-    box-shadow: rgb(85, 91, 255) 0px 0px 0px 2px, rgb(31, 193, 27) 0px 0px 0px 4px, rgb(255, 217, 19) 0px 0px 0px 6px, rgb(255, 156, 85) 0px 0px 0px 8px, rgb(255, 85, 85) 0px 0px 0px 10px;
-
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 2px,
+        rgb(31, 193, 27) 0px 0px 0px 4px, rgb(255, 217, 19) 0px 0px 0px 6px,
+        rgb(255, 156, 85) 0px 0px 0px 8px, rgb(255, 85, 85) 0px 0px 0px 10px;
 }
 
 .secret-code .answer {
@@ -102,7 +102,8 @@ p {
     position: relative;
 }
 
-.rownumber, .confirm {
+.rownumber,
+.confirm {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -120,10 +121,10 @@ p {
 }
 
 .confirm button {
-    height: calc(var(--dimension)/2);
-    width: calc(var(--dimension)/2);
+    height: calc(var(--dimension) / 2);
+    width: calc(var(--dimension) / 2);
 
-    font-size: calc(var(--dimension)/4);
+    font-size: calc(var(--dimension) / 4);
     border: 1px solid var(--gravings);
 }
 
@@ -200,7 +201,9 @@ p {
 }
 
 .selected {
-    box-shadow: rgb(85, 91, 255) 0px 0px 0px 2px, rgb(31, 193, 27) 0px 0px 0px 4px, rgb(255, 217, 19) 0px 0px 0px 6px, rgb(255, 156, 85) 0px 0px 0px 8px, rgb(255, 85, 85) 0px 0px 0px 10px;
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 2px,
+        rgb(31, 193, 27) 0px 0px 0px 4px, rgb(255, 217, 19) 0px 0px 0px 6px,
+        rgb(255, 156, 85) 0px 0px 0px 8px, rgb(255, 85, 85) 0px 0px 0px 10px;
 }
 
 .not-selected {
@@ -212,17 +215,14 @@ p {
 }
 
 .white {
-        
-    background-color:var(--white);
+    background-color: var(--white);
 }
 
 .red {
-        
-    background-color:var(--red);
+    background-color: var(--red);
 }
 
 .blue {
-        
     background-color: var(--blue);
 }
 
@@ -243,18 +243,19 @@ p {
     border-radius: 50%;
 }
 
-.rightpanel, .leftpanel {
+.rightpanel,
+.leftpanel {
     width: calc(5 * var(--dimension));
-}   
+}
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     body {
         justify-content: left;
     }
 
     .rightpanel {
         display: none;
-    }   
+    }
 
     .leftpanel {
         width: calc(100% - (6.5 * var(--dimension)));
@@ -262,15 +263,18 @@ p {
         margin-right: calc(0.8 * var(--dimension));
         background-color: black;
     }
-    
-    .selected, .secret-code {
-        box-shadow: rgb(85, 91, 255) 0px 0px 0px 1px, rgb(31, 193, 27) 0px 0px 0px 2px, rgb(255, 217, 19) 0px 0px 0px 3px, rgb(255, 156, 85) 0px 0px 0px 4px, rgb(255, 85, 85) 0px 0px 0px 5px;
+
+    .selected,
+    .secret-code {
+        box-shadow: rgb(85, 91, 255) 0px 0px 0px 1px,
+            rgb(31, 193, 27) 0px 0px 0px 2px, rgb(255, 217, 19) 0px 0px 0px 3px,
+            rgb(255, 156, 85) 0px 0px 0px 4px, rgb(255, 85, 85) 0px 0px 0px 5px;
     }
 
     .secret-code {
         width: calc(4 * var(--dimension) - 10px);
         height: calc(var(--dimension) - 10px);
-    
+
         margin: 5px;
     }
 

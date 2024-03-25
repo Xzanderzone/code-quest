@@ -42,6 +42,9 @@ Route::get('/rockPS', function () {
 Route::get('/memory', function () {
     return view('memory');
 });
+Route::get('/mastermind', function () {
+    return view('108');
+});
 
 Route::get('/cv', [StoryController::class, 'cv']);
 
