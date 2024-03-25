@@ -7,11 +7,11 @@ html {
 
 :root {
     --dimension: calc((100svh - var(--height-header) - 100px) / 15);
-    --hole: rgb(243, 243, 243);
+    --hole: rgba(243, 243, 243, 0.13);
     --gravings: rgb(219, 219, 219);
     --transparancy: 0.5;
 
-    --black: rgb(74, 74, 74);
+    --black: rgb(43, 43, 43);
     --white: rgb(231, 231, 231);
     --red: rgb(255, 69, 69);
     --blue: rgb(69, 69, 232);
@@ -42,7 +42,6 @@ p {
 .board {
     width: calc(5 * var(--dimension));
     max-width: 100%;
-
     display: flex;
     flex-direction: column;
 }
@@ -137,10 +136,10 @@ p {
 }
 
 .result .placeholder {
-    height: calc(var(--dimension) / 12);
-    width: calc(var(--dimension) / 12);
+    height: calc(var(--dimension) / 6);
+    width: calc(var(--dimension) / 6);
 
-    margin: calc(var(--dimension) / 4.8);
+    margin: calc(var(--dimension) / 7);
 
     border-radius: 50%;
 
@@ -150,10 +149,10 @@ p {
 }
 
 .result .keg {
-    height: calc(var(--dimension) / 6);
-    width: calc(var(--dimension) / 6);
+    height: calc(var(--dimension) / 3);
+    width: calc(var(--dimension) / 3);
 
-    margin: calc(var(--dimension) / 6);
+    margin: calc(var(--dimension) / 12);
 
     border: none;
 
@@ -170,14 +169,14 @@ p {
 }
 
 .attempt .placeholder {
-    height: calc(var(--dimension) / 4);
-    width: calc(var(--dimension) / 4);
+    height: calc(var(--dimension) / 2);
+    width: calc(var(--dimension) / 2);
 
     border-radius: 50%;
-    margin: calc(var(--dimension) / 6);
+    margin: calc(var(--dimension) / 12);
 
     outline: 1px solid var(--gravings);
-    outline-offset: calc(var(--dimension) / 6);
+    outline-offset: calc(var(--dimension) / 12);
 
     background-color: var(--hole);
 }
