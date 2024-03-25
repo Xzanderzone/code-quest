@@ -23,7 +23,7 @@
                         <input type="radio" name="character" value="Stickman-dab-06.svg" id="dab"><label for="dab"><img src="..\media\stickmen\Stickman-dab-06.svg"></label>
                         <input type="radio" name="character" value="Stickman-dab-05.svg" id="nose"><label for="nose"><img src="..\media\stickmen\Stickman-dab-05.svg"></label>
                     </div>
-                    <button>> This is me</button>
+                    <button id="animationButton">> This is me</button>
                 </form>
             </div>
         </div>

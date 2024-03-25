@@ -22,7 +22,7 @@
                         <input type="radio" name="toilet_choice" value="null" id="option3"><label for="option3">3) hehehehe BONASI HAHAHAHAHAHA</label> 
                         <input type="radio" name="toilet_choice" value="null" id="option4"><label for="option4">4) I leave the bathroom and do nothing</label>
                     </div> 
-                    <button>> That's what I do</button>
+                    <button id="animationButton">> That's what I do</button>
                 </form>
             </div>
         </div>

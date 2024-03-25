@@ -42,7 +42,7 @@
                         <input type="radio" name="card_reason" value="Diligent" id="option6B"><label for="option6B">2) I like to document and share things that I encounter, that I think are interesting or can be useful for other people.</label>
                         @endif
                         </div> 
-                    <button>> This is what I say!</button>
+                    <button id="animationButton">> This is what I say!</button>
                 </form>
             </div>
         </div>
