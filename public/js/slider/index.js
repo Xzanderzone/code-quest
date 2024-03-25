@@ -125,9 +125,17 @@ function swap(clicked) {
     if (shuffled) {
         console.log(totalMoves);
         if (checkHasWon()) {
-            setTimeout(alert("Winner! used: " + totalMoves + " moves"), 1000);
+            setTimeout(EndGame, 500);
         }
     } else totalMoves = 0;
+}
+function EndGame() {
+        //change scene to victory screen
+        let msg = document.getElementById("msgWin");
+        msg.style.color = "white";
+        msg.textContent = "Landslide to victory!";
+        let modal = document.getElementById("won");
+        modal.style.display = "";
 }
 
 function checkHasWon() {

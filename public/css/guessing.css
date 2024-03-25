@@ -6,11 +6,26 @@
     background-color: white;
 }
 #persil {
+    display: flex;
     width: 100%;
     text-align: right;
     border-bottom: 2px solid #000000;
-    margin-left: -10px;
     margin-top: 95px;
+}
+#history{
+    margin-left: 200px;
+    margin-top: -50px;
+}
+#historyBasile{
+    margin-left: 220px;
+    margin-top: -50px;
+}
+i{
+    font-size: large;
+}
+s{
+    text-decoration-color: rgb(255, 0, 0);
+    text-decoration-style:wavy;
 }
 #persil img {
     width: 50px;
@@ -21,12 +36,12 @@
     width: 50px;
 }
 #persilCharacter {
-    offset-position: 10px;
+    margin-left: 150px;
 }
 #player {
+    display: flex;
     border-bottom: 2px solid #000000;
     margin-top: 95px;
-    margin-left: 10px;
     width: 100%;
 }
 #ui {
@@ -85,4 +100,7 @@ button {
     border-radius: 10px;
     background-color: rgb(0, 37, 158);
     border: 2px solid #000000;
+}
+#continue:hover{
+    cursor: pointer;
 }

@@ -5,7 +5,7 @@
     </div>
     <div id="title">
         <h1>
-            <a href="/" title="Go back to the landing page">A WEB DEV JOURNEY</a>
+            <a href="/" title="Go back to the landing page">> A WEB DEV JOURNEY</a>
         </h1>
     </div>
     <div id="cv-emblem">

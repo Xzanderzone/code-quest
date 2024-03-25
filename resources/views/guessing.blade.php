@@ -15,22 +15,27 @@
         <div class="terminal">
             <div class="popup terminal" id="lost" style="display: none">
                 <div class="bar">
-                    <p>📟 YOU LOSE 😭</p>
+                    <p>📟 IMPOSSIBLE ODDS 😭</p>
                 </div>
                 <div class="content">
                     <p id='msgLost'>📟 YOU LOSE 😭</p>
                     <br>
-                    <a id='msgLink' href="/story">> RESTART</a>
+                    <a id='msgLink' href="/next">> Let's Rock!</a>
                 </div>
             </div>
             <div class="popup terminal" id="won" style="display: none">
                 <div class="bar">
-                    <p>📟 YOU WIN 😁</p>
+                    <p>📟 THE MIGHTY PERSIL 😁</p>
                 </div>
                 <div class="content">
-                    <p id="msgWin">📟 YOU WIN 😁</p>
+                    <p id="msgWin" style='color:white;'>Surrender now! You will never find my age.<br>
+                        Let us settle this in a game of Rock paper scissor instead.</p>
                     <br>
-                    <a href="/story">> NICE! CONTINUE</a>
+                    <br>
+                    <a id="continue"><u>>I AM DETERMINED</u></a>
+                    <br>
+                    <br>
+                    <a href="/next"><u>>Rock Paper Scissor it is!</u></a>
                 </div>
             </div>
             <div class="bar">

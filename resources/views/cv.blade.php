@@ -8,7 +8,7 @@
         </div>
         <div id="title">
             <h1>
-                <a href="/" title="Go back to the landing page">A WEB DEV JOURNEY</a>
+                <a href="/" title="Go back to the landing page">> A WEB DEV JOURNEY</a>
             </h1>
         </div>
         <div id="cv-emblem">
@@ -21,14 +21,15 @@
         <div class="full">
         <div class="left">
             <div class="image">
-                <img src="..\media\stickmen\Stickman-persile-v1.gif"
-                     alt="chosen character">
+            @if(!empty($user->character))
+            <img src="..\media\stickmen\{{ $user->character }}" alt="">
+            @endif
             </div>
             <div class="Contact">
                 <h2>Contact</h2>
                 <p>
                       <b>Username:</b>
-                        </br>Michael Horse
+                        </br>{{ $user->name }}
                   </p>
                 <p>
                       <b>Favorite Pet:</b></br>Cow
@@ -57,7 +58,7 @@
         </div>
         <div class="right">
             <div class="name">
-                <h1>Hamilton Johnson</h1>
+                <h1>{{ $user->name }}</h1>
             </div>
             <div class="title">
                 <p>Web Developer</p>
@@ -65,12 +66,12 @@
             <div class="SoftSkills">
                 <h2>Soft Skills</h2>
                 <ul>
-                    <li>Communication •</li>
-                    <li>Teamwork •</li>
-                    <li>Problem-solving •</li>
-                    <li>Time management •</li>
-                    <li>Organizational •</li>
-                    <li>Adaptability •</li>
+                    <li>{{$user->card_reason}} •</li>
+                    <li>Test •</li>
+                    <li>Test •</li>
+                    <li>Test •</li>
+                    <li>Test •</li>
+                    <li>Test •</li>
                 </ul>
             </div>
             <div class="TechSkills">
@@ -91,7 +92,11 @@
                         <th>Points:</th>
                     </tr>
                     <tr>
-                        <td><img class="ChosenCard" src="..\media\cards\card1.png" alt="Card1"></td>    
+                        <td>
+                            @if(!empty($user->card))
+                            <img src="..\media\cards\{{ $user->card }}" alt="">
+                            @endif
+                        </td>    
                         <td class="points">666</td>   
                     </tr>
                 </table>

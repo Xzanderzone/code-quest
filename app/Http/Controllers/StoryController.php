@@ -5,26 +5,29 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
 class StoryController extends Controller
 {
+    public function getPageArray(){
+        return ["100","101","102","103","104","105","106","107",
+        // "mastermind",
+        "201","202","203","204","guessing","rockPS",
+        // "memory",
+        "slider",
+        "999"];
+    }
     public function story() {
-
         $user = Auth::user();
-
-        if (!$user) {
-            return redirect('/');
-        }
-
-        $progress = $user->progress;
-
-        if (!$progress) {
-            $progress = 100;
+  
+        $pages=StoryController::getPageArray();
+        $progress = $user->progress ;
+        //100 to check older accounts from before array method
+        if (!$progress || $progress>=100) {
+            $progress = 0;
         } 
 
         $user->update(['progress' => $progress]);
 
-        return view($progress, ['user' => $user]);
+        return view($pages[$progress], ['user' => $user]);
     }
 
     public function cv() {
@@ -38,11 +41,13 @@ class StoryController extends Controller
     }
 
     public function nextPage() {
+        // if(in_array($id,StoryController::getPageArray())){
         $user = Auth::user();
         $user->progress += 1;
         $user->save();
 
         return redirect('/story');
+        // }else dd("page not found(story controller nextPage with id: ".$id);
     }
 
     public function chooseCharacter(Request $request) {
@@ -63,12 +68,12 @@ class StoryController extends Controller
 
     public function seats(Request $request)  {
         $request->validate([
-            'seat' => 'required'
+            'seats' => 'required'
         ]);
 
         $user = Auth::user();
-        $character = $request->character;
-        $user->seats= $character;
+        $user->seats= $request->seats;
+
         $user->progress += 1;
         $user->save();
 
@@ -107,5 +112,42 @@ class StoryController extends Controller
         
     }
 
+    public function toiletChoice(Request $request) {
+        $request->validate([
+            'toilet_choice' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->toilet_choice = $request->toilet_choice;
 
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function extraToiletSkill(Request $request) {
+        $user = Auth::user();
+
+        if ($user->seats === 'empty-table') {
+            $user->extra_toilet = "Empathy";
+        } else {
+            $user->extra_toilet = "Positive Attitude";
+        }
+        
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function deleteCardReason(Request $request) {
+        $user = Auth::user();
+        $user->card_reason = null;
+
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+    
 }

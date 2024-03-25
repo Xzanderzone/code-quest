@@ -8,7 +8,7 @@
     <div class="grid-container">
     <script defer src="js/memory/index.js"></script>
     </div>
-    <p>Score: <span class="score"></span></p>
+    <p id="score-text">Score: <span class="score"></span></p>
     <div class="actions">
         <button onclick="restart()">Restart</button>
     </div>
