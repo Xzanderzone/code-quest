@@ -37,6 +37,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    overflow: hidden;
 }
 
 a {
@@ -165,7 +167,16 @@ main {
 }
 
 .gif {
-    display: none;
+    animation: moveRight 5s forwards; /* Adjust the value as needed */
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(18vw); /* Adjust the value as needed */
+    }
 }
 
 .basile img,

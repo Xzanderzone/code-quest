@@ -6,6 +6,6 @@
         @php
             $gifFilename = pathinfo($user->character, PATHINFO_FILENAME) . '.gif';
         @endphp
-        <img class="gif" id="gifImage" src="..\media\animations\{{ $gifFilename }}" alt="">
+        <img class="gif" id="gifImage" src="..\media\animations\{{ $gifFilename }}" alt="" style="display: none;">
     </div>
 @endif
