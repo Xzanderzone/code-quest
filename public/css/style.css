@@ -452,7 +452,7 @@ button:hover {
 
 .choose-character img {
     height: 100%;
-    background-color: white;
+    border: 4px solid white;
 }
 
 .choose-character img:last-of-type {
@@ -464,10 +464,10 @@ input[type="radio"] {
 }
 
 .characters input[type="radio"]:checked + label img {
-    background-color: var(--matrix-color);
+    border: 4px solid var(--matrix-color);
 }
 .characters input[type="radio"]:hover + label img {
-    background-color: var(--matrix-color);
+    border: 4px solid var(--matrix-color);
 }
 
 /*/ / Chose seat / /*/
