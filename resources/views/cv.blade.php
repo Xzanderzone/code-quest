@@ -66,12 +66,8 @@
             <div class="SoftSkills">
                 <h2>Soft Skills</h2>
                 <ul>
-                    <li>{{$user->card_reason}} •</li>
-                    <li>Test •</li>
-                    <li>Test •</li>
-                    <li>Test •</li>
-                    <li>Test •</li>
-                    <li>Test •</li>
+                    @if($user->card_reason)<li title="Card choice">{{$user->card_reason}} •</li>
+                    @endif
                 </ul>
             </div>
             <div class="TechSkills">
@@ -87,18 +83,18 @@
             <div class="project">
                 <h2>Code>Quest</h2>
                 <table>
+                    @if(!empty($user->card))
                     <tr>
                         <th>Chosen card:</th>
                         <th>Points:</th>
                     </tr>
                     <tr>
                         <td>
-                            @if(!empty($user->card))
                             <img src="..\media\cards\{{ $user->card }}" alt="">
-                            @endif
                         </td>    
                         <td class="points">666</td>   
                     </tr>
+                    @endif
                 </table>
             </div>
             <div class="Education">
