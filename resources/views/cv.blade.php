@@ -83,18 +83,18 @@
             <div class="project">
                 <h2>Code>Quest</h2>
                 <table>
+                    @if(!empty($user->card))
                     <tr>
                         <th>Chosen card:</th>
                         <th>Points:</th>
                     </tr>
                     <tr>
                         <td>
-                            @if(!empty($user->card))
                             <img src="..\media\cards\{{ $user->card }}" alt="">
-                            @endif
                         </td>    
                         <td class="points">666</td>   
                     </tr>
+                    @endif
                 </table>
             </div>
             <div class="Education">
