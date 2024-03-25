@@ -358,6 +358,20 @@ main {
     );
 }
 
+#warning .bar {
+    width: 100%;
+    height: 30px;
+
+    color: white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgb(233, 7, 7) 0%,
+        rgb(197, 46, 46) 35%,
+        rgb(189, 60, 60) 100%
+    );
+}
+
 /*/ / LOGIN - REGISTER / /*/
 
 .introducing {
@@ -380,6 +394,14 @@ main {
     color: var(--matrix-color);
     padding-bottom: 10px;
     text-shadow: var(--terminal-glow-green);
+    font-family: var(--terminal-text);
+    font-size: var(--terminal-text-size);
+    line-height: 30px;
+}
+.matrix-warning {
+    color: rgb(255, 0, 0);
+    padding-bottom: 10px;
+    text-shadow: 1px 0px 6px rgb(188, 33, 33);
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
     line-height: 30px;

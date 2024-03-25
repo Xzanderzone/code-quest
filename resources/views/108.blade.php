@@ -21,7 +21,20 @@
                 <p>📟 YOU LOSE 😭</p>
             </div>
             <div class="content">
-                <a href="/story">> RESTART</a>
+                <p class='matrix-text'>YOU DIDN'T CRACK THE CODE THIS TIME! </p> <br><br>
+                <a href="/story">> TRY AGAIN</a><br><br>
+                <button id='skip'>> SKIP</button>
+            </div>
+        </div>
+        <div class="popup terminal" id="warning" style="display: none">
+            <div class="bar">
+                <p>📟 WARNING: SKIP HAS IMPACT</p>
+            </div>
+            <div class="content">
+                <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p> <br>
+                <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> <br>
+                <a href="/story">> KEEP GOING </a><br><br>
+                <a href="/next">> I'M SURE! LET ME SKIP</a>
             </div>
         </div>
         <div class="popup terminal" id="won" style="display: none">
@@ -29,6 +42,7 @@
                 <p>📟 YOU WIN 😁</p>
             </div>
             <div class="content">
+                <p> YOU ARE THE MASTERMIND </p>
                 <a href="/story">> NICE! CONTINUE</a>
             </div>
         </div>
@@ -37,7 +51,6 @@
                 <p>📟 MASTERMIND</p>
             </div>
             <div class="content">
-                {{-- COPY YOUR GAME HERE INSIDE THE CONTENT DIV --}}
                 <div class="board">
                     <div class="top">
                         <div class="playbutton"></div>
