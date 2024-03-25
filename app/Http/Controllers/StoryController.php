@@ -9,7 +9,7 @@ class StoryController extends Controller
 {
     public function getPageArray(){
         return ["100","101","102","103","104","105","106","107",
-        // "mastermind",
+        "108",
         "201","202","203","204","205","guessing","rockPS",
         // "memory",
         "slider",
