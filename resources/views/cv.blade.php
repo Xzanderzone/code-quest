@@ -66,7 +66,7 @@
             <div class="SoftSkills">
                 <h2>Soft Skills</h2>
                 <ul>
-                    <li title="Card choice">{{$user->card_reason}} •</li>
+                    <li>{{$user->card_reason}} •</li>
                     <li>Test •</li>
                     <li>Test •</li>
                     <li>Test •</li>

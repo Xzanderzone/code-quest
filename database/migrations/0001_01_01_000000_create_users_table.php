@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('seats')->nullable();
             $table->string('card')->nullable();
             $table->string('card_reason')->nullable();
+            $table->string('toilet_choice')->nullable();
+            $table->string('extra_toilet')->nullable();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
