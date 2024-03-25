@@ -16,7 +16,8 @@ let codes = [
 ]
 
 let score = [];
-
+let attempts=0;
+let max=12;
 let code;
 
 let colors = document.querySelectorAll('.colorselection');
@@ -97,7 +98,9 @@ function round() {
     let button = document.querySelector('.confirm button')
     button.addEventListener("click", ()=> {
         console.log('yom'); 
+            if(score.length>=max)EndGame(false);
         if (checkForFullRow()) {
+            attempts++;
             let givenAnswer = checkForFullRow();
             let tips = [];
 
@@ -139,6 +142,8 @@ function round() {
                 removeConfirmationButton();
                 checkForFullRow() = null;
                 return game();
+            }else if (attempts>=max){
+            EndGame(false);
             }
             console.log("yo")
             checkActiveRow(0).played = true;
@@ -232,15 +237,12 @@ function placePawn() {
     });
 }
 
-
-
 function colorPawn(e) {
     if (selectedColor) {
         e.target.className = 'pawn ' + selectedColor;
         e.target.color = selectedColor;
     }
 }
-
 
 function checkForFullRow() {
     let code = [null, null, null, null]
@@ -273,8 +275,6 @@ function drawTips(tips) {
     }
 }
 
-let popupWin = document.querySelector('#won');
-
 function showAnswer(){
     let answer = document.querySelectorAll('.answer');
     for (let i = 0; i < answer.length; i++) {
@@ -282,6 +282,15 @@ function showAnswer(){
         answer[i].style.backgroundColor = 'var(--' + code[i] + ')';
         
     }
+    setTimeout(EndGame(true), 500);
+}
 
-    popupWin.style.display = "block";
+function EndGame(win=false){
+    if(win){
+        let popup = document.querySelector('#won');
+        popup.style.display = "block";
+    }else{
+        let popup = document.querySelector('#lost');
+        popup.style.display = "block";
+    }
 }
