@@ -11,6 +11,7 @@ class StoryController extends Controller
         return ["100","101","102","103","104","105","106","107",
         // "mastermind",
         "201","202","203","204","205","guessing","rockPS",
+        "301",
         // "memory",
         "slider",
         "999"];
@@ -143,6 +144,19 @@ class StoryController extends Controller
     public function deleteCardReason(Request $request) {
         $user = Auth::user();
         $user->card_reason = null;
+
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function techTalkTopic(Request $request) {
+        $request->validate([
+            'tech_talk' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->tech_talk = $request->tech_talk;
 
         $user->progress += 1;
         $user->save();

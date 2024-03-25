@@ -5,7 +5,7 @@
     @include("_partials.header") 
     <main class="ok-page">
         <div class="text-balloon">
-            <p>Weeks passed by quickly, and your skills as a Web Developer are sharpening up! Persile tells the class that he wants each of you to prepare a presentation - a 'Tech Talk' - about a topic that relates with technology.<br>
+            <p>Weeks passed by quickly, and your skills as a Web Developer are sharpening up! Persile tells the class that he wants each of you to prepare a presentation - a 'Tech Talk' - about a topic that relates with technology.<br><br>
             - Any topic is valid, except talking about tech billionaires and cryptocoins.
             </p>
         </div>
@@ -15,7 +15,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~  It's your time to present! Which topic do you choose for your Tech Talk?</p>
-                <form action="/toilet-choice" method="POST">
+                <form action="/tech-talk" method="POST">
                     @csrf
                     <div class="options">
                         <input type="radio" name="tech_talk" value="" id="option1"><label for="option1">1) How investing in HabibiCoins can make you become the next Melon Dusk!</label> 
