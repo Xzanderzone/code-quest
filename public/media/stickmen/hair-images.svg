@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="158" height="166">
+<!-- Created with Pivot Animator (http://pivotanimator.net) -->
+<rect x="0" y="0" width="158" height="166" style="fill:rgb(255,255,255)"/>
+<g id="fig0" opacity="1" stroke-linecap="round" stroke-linejoin="round">
+<line x1="79.254" y1="107.895" x2="80.127" y2="59.903" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<circle cx="79.077" cy="35.13" r="24.795" style="stroke-width:6;fill:rgb(255,255,255);stroke:rgb(0,0,0)"/>
+<line x1="80.127" y1="59.903" x2="66.516" y2="93.991" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="66.516" y1="93.991" x2="70.2" y2="112.737" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="80.127" y1="59.903" x2="88.47" y2="95.647" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="88.47" y1="95.647" x2="104.111" y2="106.481" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="79.254" y1="107.895" x2="78.621" y2="138.65" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="78.621" y1="138.65" x2="60.873" y2="156.257" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="79.254" y1="107.895" x2="84.081" y2="139.343" style="stroke-width:6.25;stroke:rgb(0,0,0)"/>
+<line x1="84.081" y1="139.343" x2="80.816" y2="163.129" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+</g>
+<g id="fig1" opacity="1" stroke-linecap="round" stroke-linejoin="round">
+<image xlink:href="Hair_3_0.png" x="0" y="-691" width="602" height="691" transform="translate(53.902 74.785) scale(0.1)  rotate(-7.104) "/>
+</g>
+</svg>

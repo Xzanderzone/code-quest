@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="158" height="160">
+<!-- Created with Pivot Animator (http://pivotanimator.net) -->
+<rect x="0" y="0" width="158" height="160" style="fill:rgb(255,255,255)"/>
+<g id="fig0" opacity="1" stroke-linecap="round" stroke-linejoin="round">
+<line x1="79.254" y1="102.062" x2="80.127" y2="54.07" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<circle cx="79.077" cy="29.296" r="24.795" style="stroke-width:6;fill:rgb(255,255,255);stroke:rgb(0,0,0)"/>
+<line x1="80.127" y1="54.07" x2="66.516" y2="88.157" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="66.516" y1="88.157" x2="70.2" y2="106.904" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="80.127" y1="54.07" x2="88.47" y2="89.814" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="88.47" y1="89.814" x2="104.111" y2="100.647" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="79.254" y1="102.062" x2="78.621" y2="132.816" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="78.621" y1="132.816" x2="60.873" y2="150.424" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+<line x1="79.254" y1="102.062" x2="84.081" y2="133.509" style="stroke-width:6.25;stroke:rgb(0,0,0)"/>
+<line x1="84.081" y1="133.509" x2="80.816" y2="157.296" style="stroke-width:6;stroke:rgb(0,0,0)"/>
+</g>
+<g id="fig1" opacity="1" stroke-linecap="round" stroke-linejoin="round">
+<image xlink:href="moustache_3_0.png" x="0" y="-357" width="1184" height="357" transform="translate(71.933 37.576) scale(0.02) "/>
+</g>
+</svg>
