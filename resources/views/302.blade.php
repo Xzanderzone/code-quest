@@ -30,10 +30,10 @@
                         @if ($user->tech_talk === "Growth Mindset" || $user->tech_talk === "Storytelling")
                             <input type="radio" name="feedback" value="Openness to Feedback" id="option1"><label for="option1">1) You thank him for the feedback and said that you will keep this in mind for the next one.</label> 
                             <input type="radio" name="feedback" value="Adaptability" id="option2"><label for="option2">2) You realise the beamer is not showing the proper colours of your presentation and immediately start changing the settings until it's fixed.</label>
-                            <input type="radio" name="feedback" value="" id="option3"><label for="option3">3) You dismiss the input, saying that he is incapable of appreciating good aesthetics and the minimalist approach you took.</label>
+                            <input type="radio" name="feedback" value="null" id="option3"><label for="option3">3) You dismiss the input, saying that he is incapable of appreciating good aesthetics and the minimalist approach you took.</label>
                         @else
                             <input type="radio" name="feedback" value="Accountability" id="option1"><label for="option1">1) You profusely apologise and explain that you misunderstood the remark.</label> 
-                            <input type="radio" name="feedback" value="" id="option2"><label for="option2">2) You stand your ground and say that you thought the topic was interesting anyway.</label>
+                            <input type="radio" name="feedback" value="null" id="option2"><label for="option2">2) You stand your ground and say that you thought the topic was interesting anyway.</label>
                         @endif
                     </div> 
                     <button>> I'm going with that</button>
@@ -41,7 +41,7 @@
             </div>
         </div>
  
-        <div class="text-balloon-line"><img src="..\media\cards\{{ $user->card }}"></div>
+        <div class="text-balloon-line"><div class="actual-line"></div></div>
         <div class="basile"><img src="..\media\stickmen\Stickman-class.svg"></div>
         @if(!empty($user->character))
             <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
