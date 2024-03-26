@@ -18,7 +18,7 @@
                 <form action="/tech-talk" method="POST">
                     @csrf
                     <div class="options">
-                        <input type="radio" name="tech_talk" value="" id="option1"><label for="option1">1) How investing in HabibiCoins can make you become the next Melon Dusk!</label> 
+                        <input type="radio" name="tech_talk" value="null" id="option1"><label for="option1">1) How investing in HabibiCoins can make you become the next Melon Dusk!</label> 
                         <input type="radio" name="tech_talk" value="Growth Mindset" id="option2"><label for="option2">2) Present a new coding tool that can be useful for your colleagues.</label>
                         <input type="radio" name="tech_talk" value="Storytelling" id="option3"><label for="option3">3) Spaceships! Replicators! Lightsabers! Weeeeeeee!</label>
                     </div> 
