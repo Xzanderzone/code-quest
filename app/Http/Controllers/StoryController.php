@@ -11,7 +11,7 @@ class StoryController extends Controller
         return ["100","101","102","103","104","105","106","107",
         "108",
         "201","202","203","204","205","guessing","rockPS",
-        "301","302","303","304",
+        "301","302","303","304","305",
         // "memory",
         "slider",
         "999"];
@@ -169,6 +169,19 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->feedback = $request->feedback;
+
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function developerTrack(Request $request) {
+        $request->validate([
+            'track' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->track = $request->track;
 
         $user->progress += 1;
         $user->save();
