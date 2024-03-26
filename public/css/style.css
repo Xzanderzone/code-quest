@@ -48,19 +48,9 @@ a {
 h1 {
     font-family: var(--basic-body-font);
     font-size: 36px;
-}
-
-h1 a {
     text-decoration: none;
-    font-family: var(--terminal-text);
-    font-size: 1.3vw;
     color: var(--matrix-color);
-    background-color: #000000;
-    padding: 3%;
-}
-
-h1 a:hover {
-    text-decoration: underline;
+    text-shadow: 3px 4px 1px black;
 }
 
 /*/ / HEADER-SECTION / /*/
@@ -82,8 +72,31 @@ header {
     text-align: center;
 }
 
-#logo img {
+#logo {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.logoBlack,
+.logoWhite {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 50%;
+    transition: opacity 0.3s ease;
+    padding: 5px;
+}
+
+.logoWhite {
+    opacity: 0; /* Initially hide the white logo */
+}
+
+#logo:hover .logoWhite {
+    opacity: 1;
+    background-color: #000000;
+    box-shadow: -7px 0 0 0 black, 7px 0 0 0 black, 0 -7px 0 0 black,
+        0 7px 0 0 black;
 }
 
 #cv-emblem {
