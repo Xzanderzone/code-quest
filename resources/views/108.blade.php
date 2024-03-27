@@ -43,7 +43,7 @@
             </div>
             <div class="content">
                 <p> YOU ARE THE MASTERMIND </p>
-                <a href="/story">> NICE! CONTINUE</a>
+                <a href="/next">> NICE! CONTINUE</a>
             </div>
         </div>
         <div class="terminal">
