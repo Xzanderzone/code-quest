@@ -45,10 +45,9 @@ a {
     color: black;
 }
 
-h1 {
+#title {
     font-family: var(--basic-body-font);
-    font-size: 36px;
-    text-decoration: none;
+    font-size: 1.1vw;
     color: var(--matrix-color);
     text-shadow: 3px 4px 1px black;
 }
