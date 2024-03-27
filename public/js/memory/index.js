@@ -7,9 +7,9 @@ let score = 0;
 
 document.querySelector(".score").textContent = score;
 
-switch(expression) {
+switch(course) {
   case fullstack:
-    fetch("/media/memory_cards/fullstack.json")
+    fetch("/media/memory_cards/fullstack/fullstack.json")
     .then((res) => res.json())
     .then((data) => {
       cards = [...data, ...data];
@@ -18,7 +18,7 @@ switch(expression) {
     });
     break;
   case salesforce:
-    fetch("/media/memory_cards/salesforce.json")
+    fetch("/media/memory_cards/salesforce/salesforce.json")
     .then((res) => res.json())
     .then((data) => {
       cards = [...data, ...data];
@@ -27,7 +27,7 @@ switch(expression) {
     });
     break;
   case java:
-    fetch("/media/memory_cards/java.json")
+    fetch("/media/memory_cards/java/java.json")
     .then((res) => res.json())
     .then((data) => {
       cards = [...data, ...data];
@@ -145,4 +145,6 @@ let firstPair = matchedPair[0];
 let fourthPair = matchedPair[3];
 let eighthPair = matchedPair[7];
 
-
+getCourseChoice() {
+  
+}
