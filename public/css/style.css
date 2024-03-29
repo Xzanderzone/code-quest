@@ -37,28 +37,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    overflow: hidden;
 }
 
 a {
     color: black;
 }
 
-h1 {
+#title {
     font-family: var(--basic-body-font);
-    font-size: 36px;
-}
-
-h1 a {
-    text-decoration: none;
-    font-family: var(--terminal-text);
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     color: var(--matrix-color);
-    background-color: #000000;
-    padding: 3%;
-}
-
-h1 a:hover {
-    text-decoration: underline;
+    text-shadow: 3px 4px 1px black;
 }
 
 /*/ / HEADER-SECTION / /*/
@@ -80,8 +71,31 @@ header {
     text-align: center;
 }
 
-#logo img {
+#logo {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.logoBlack,
+.logoWhite {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 50%;
+    transition: opacity 0.3s ease;
+    padding: 5px;
+}
+
+.logoWhite {
+    opacity: 0; /* Initially hide the white logo */
+}
+
+#logo:hover .logoWhite {
+    opacity: 1;
+    background-color: #000000;
+    box-shadow: -7px 0 0 0 black, 7px 0 0 0 black, 0 -7px 0 0 black,
+        0 7px 0 0 black;
 }
 
 #cv-emblem {
@@ -149,6 +163,7 @@ main {
     background-color: black;
 }
 
+/* FOOTER */
 .basile {
     grid-area: basile;
 
@@ -165,7 +180,16 @@ main {
 }
 
 .gif {
-    display: none;
+    animation: moveRight 5s forwards; /* Adjust the value as needed */
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(18vw); /* Adjust the value as needed */
+    }
 }
 
 .basile img,
@@ -347,6 +371,20 @@ main {
     );
 }
 
+#warning .bar {
+    width: 100%;
+    height: 30px;
+
+    color: white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgb(233, 7, 7) 0%,
+        rgb(197, 46, 46) 35%,
+        rgb(189, 60, 60) 100%
+    );
+}
+
 /*/ / LOGIN - REGISTER / /*/
 
 .introducing {
@@ -369,6 +407,14 @@ main {
     color: var(--matrix-color);
     padding-bottom: 10px;
     text-shadow: var(--terminal-glow-green);
+    font-family: var(--terminal-text);
+    font-size: var(--terminal-text-size);
+    line-height: 30px;
+}
+.matrix-warning {
+    color: rgb(255, 0, 0);
+    padding-bottom: 10px;
+    text-shadow: 1px 0px 6px rgb(188, 33, 33);
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
     line-height: 30px;
@@ -541,7 +587,7 @@ input[type="radio"] {
 }
 
 .full {
-    height: 100%;
+    height: 95%;
     aspect-ratio: 1/1.41;
     margin: 2em auto;
     box-shadow: -7px 0 0 0 black, 7px 0 0 0 black, 0 -7px 0 0 black,
@@ -565,7 +611,7 @@ input[type="radio"] {
 }
 
 .left img {
-    height: 15vh;
+    height: 13vh;
     background-color: white;
 }
 

@@ -35,6 +35,9 @@ Route::post('/card-reason', [StoryController::class, 'cardReason']);
 Route::post('/toilet-choice', [StoryController::class, 'toiletChoice']);
 Route::post('/extra-toilet-skill', [StoryController::class, 'extraToiletSkill']);
 Route::post('/card-reason-update', [StoryController::class, 'deleteCardReason']);
+Route::post('/tech-talk', [StoryController::class, 'techTalkTopic']);
+Route::post('/feedback', [StoryController::class, 'feedback']);
+Route::post('/track', [StoryController::class, 'developerTrack']);
 
 Route::get('/slider', function () {
     return view('slider');
@@ -47,6 +50,9 @@ Route::get('/rockPS', function () {
 });
 Route::get('/memory', function () {
     return view('memory');
+});
+Route::get('/mastermind', function () {
+    return view('108');
 });
 
 

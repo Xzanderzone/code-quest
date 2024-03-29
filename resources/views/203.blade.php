@@ -37,14 +37,13 @@
         <div class="text-balloon-line"><div class="actual-line"></div></div>
 
             @if ($user->toilet_choice === "Initiative")
-                <div class="basile"><img src="..\media\stickmen\Stickman-persile-v1.gif"></div>
+                <div class="text-balloon-line"><div class="actual-line"></div></div>
+                @include("_partials.drawings") 
             @else
-                <div class="basile"><img src="..\media\stickmen\Stickman-dab-06.svg"></div>
+                <div class="basile"><img src="..\media\stickmen\glasses.png"></div>
+                <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
             @endif
-        
-        @if(!empty($user->character))
-            <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
-        @endif
+
     </main>
 </body>
 </html>

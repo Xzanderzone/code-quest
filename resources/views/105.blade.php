@@ -48,11 +48,7 @@
         </div>
         <div class="text-balloon-line"><img src="..\media\cards\{{ $user->card }}"></div>
 
-        <div class="basile"><img src="..\media\stickmen\Stickman-class.svg"></div>
-
-        @if(!empty($user->character))
-            <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
-        @endif
+        @include("_partials.drawings") 
     </main>
 </body>
 </html>
