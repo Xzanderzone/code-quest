@@ -1,0 +1,43 @@
+[
+    {
+        "image": "./media/memory_cards/fullstack/Git.png",
+        "name": "git"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/Github.png",
+        "name": "github"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/Mysql.png",
+        "name": "mysql"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/PHP.png",
+        "name": "php"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/rest-api-icon.png",
+        "name": "api"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/sass.png",
+        "name": "sass"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/node_js.png",
+        "name": "node.js"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/react.png",
+        "name": "react"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/vue.png",
+        "name": "vue"
+    },
+    {
+        "image": "./media/memory_cards/fullstack/SEO.png",
+        "name": "seo"
+    }
+
+]

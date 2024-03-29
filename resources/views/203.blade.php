@@ -7,12 +7,12 @@
         <div class="text-balloon">
             @csrf
                 @if ($user->toilet_choice === "Initiative")
-                    <p>You go to the coach and explain the situation.<br><br>
+                    <p>You go to the coach and explain the situation.<br>
                     - Hey Persile, Bonasi's name isn't actually Bonasi. I don't know his name either but he's crying in the bathroom, I think you should check up on him to clear the confusion.<br>
                     - Thanks for having the initiative of talking to me and helping your colleague, {{$user->name}}. - said Persile.
                     </p>
                 @elseif ($user->toilet_choice === "Conflict Resolution")
-                    <p>You try to comfort 'Bonasi' and encourage him to talk to Persile.<br><br> 
+                    <p>You try to comfort 'Bonasi' and encourage him to talk to Persile.<br>
                     @if ($user->seats === 'empty-table')
                         - Starting something new can be very stressful! I remember the first day of classes, I arrived and was so stressed about meeting new people that I isolated myself sitting at an empty table. But now I already feel more confident in meeting new people. I am sure everyone feels like this, and they will be understandable about your little slip.<br>
                         - Oh, thank you for these kind words, {{$user->name}}. I feel that I have a friend on you! I'll go and explain to Persile that my real name is “Yo-nasi”.
@@ -40,7 +40,7 @@
                 <div class="text-balloon-line"><div class="actual-line"></div></div>
                 @include("_partials.drawings") 
             @else
-                <div class="basile"><img src="..\media\stickmen\glasses.png"></div>
+                <div class="basile"><img src="..\media\stickmen\Bonasi-crying.gif"></div>
                 <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
             @endif
 

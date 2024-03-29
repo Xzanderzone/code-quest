@@ -39,6 +39,7 @@ body {
     align-items: center;
 
     overflow: hidden;
+
 }
 
 a {
@@ -144,6 +145,7 @@ main {
     grid-area: text;
     display: flex;
     align-items: center;
+    opacity: 0;
 }
 
 .terminal {
@@ -490,6 +492,10 @@ button:hover {
 .choose-character label {
     height: 200px;
     padding: 20px;
+}
+
+.choose-character label:first-of-type {
+    padding-left: 0;
 }
 
 .choose-character label::selection {
