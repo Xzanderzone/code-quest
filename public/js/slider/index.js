@@ -1,10 +1,13 @@
 let size = 4;
 let numberOfTiles = size ** 2;
-let highlighted = numberOfTiles;
+//start with empty tile on bottom right
+let empty = numberOfTiles;
+//stop game from starting as finished
 let shuffled = false;
 let totalMoves = 0;
 let inverted = false;
 
+let giveUpBtn = document.getElementById("skip");
 let PuzzleContainer = document.getElementById("puzzle");
 let invertButton = document.getElementById("invert");
 invertButton.addEventListener("click", () => {
@@ -18,33 +21,35 @@ const DOWN_ARROW = 38;
 window.onkeydown = function (event) {
     if (!inverted) {
         if (event.keyCode === RIGHT_ARROW) {
-            swap(highlighted + 1);
+            swap(empty + 1);
         } else if (event.keyCode === LEFT_ARROW) {
-            swap(highlighted - 1);
+            swap(empty - 1);
         } else if (event.keyCode === UP_ARROW) {
-            swap(highlighted + size);
+            swap(empty + size);
         } else if (event.keyCode === DOWN_ARROW) {
-            swap(highlighted - size);
+            swap(empty - size);
         }
     } else {
         if (event.keyCode === RIGHT_ARROW) {
-            swap(highlighted - 1);
+            swap(empty - 1);
         } else if (event.keyCode === LEFT_ARROW) {
-            swap(highlighted + 1);
+            swap(empty + 1);
         } else if (event.keyCode === UP_ARROW) {
-            swap(highlighted - size);
+            swap(empty - size);
         } else if (event.keyCode === DOWN_ARROW) {
-            swap(highlighted + size);
+            swap(empty + size);
         }
     }
 };
-
 newGame();
 
 function newGame() {
     // loadTiles("laravel");
     // loadTiles("salesforce");
-    loadTiles("java");
+    // loadTiles("numbers");
+    // loadTiles("java");
+    let game = document.currentScript.getAttribute("track") ?? "java";
+    loadTiles(game);
     setTimeout(() => {
         shuffle();
     }, 500);
@@ -54,96 +59,92 @@ function newGame() {
 function loadTiles(name) {
     for (let x = 0; x < size; x++) {
         for (let y = 0; y < size; y++) {
-            var newTile = document.createElement("img");
+            let newTile = document.createElement("img");
             let id = x * size + y + 1;
             newTile.id = id;
-            newTile.setAttribute("index", id);
-            // if (x != size - 1 || y != size - 1)
-            newTile.src = `./media/slider/${name}/${id}.png`;
-            newTile.className = "tile";
             newTile.name = id;
+            newTile.className = "tile";
+            newTile.src = `./media/slider/${name}/${id}.png`;
+            newTile.setAttribute("draggable", false);
             newTile.addEventListener("click", function () {
-                swap(parseInt(this.getAttribute("index")));
+                swap(id);
             });
             PuzzleContainer.append(newTile);
         }
     }
-    selectedTile = document.getElementById(highlighted);
-    selectedTile.classList.add("selected");
 }
 
 function shuffle() {
-    let minShuffles = 200;
-    let totalShuffles =
-        minShuffles + Math.floor(Math.random() * (200 - 100) + 100);
+    let minShuffles = 300;
+    let totalShuffles = minShuffles + Math.floor(Math.random() * 200);
     for (let i = 0; i <= totalShuffles; i++) {
         setTimeout(function timer() {
             let x = Math.floor(Math.random() * 4);
             let direction = 0;
             if (x == 0) {
-                direction = highlighted + 1;
+                direction = empty + 1;
             } else if (x == 1) {
-                direction = highlighted - 1;
+                direction = empty - 1;
             } else if (x == 2) {
-                direction = highlighted + size;
+                direction = empty + size;
             } else if (x == 3) {
-                direction = highlighted - size;
+                direction = empty - size;
             }
             swap(direction);
-            if (i >= totalShuffles - 1) {
+            if (i > totalShuffles - 1) {
                 shuffled = true;
             }
-        }, i * 8);
+        }, i * 10);
     }
 }
 
 // Swap tiles
-function swap(clicked) {
-    if (clicked < 1 || clicked > numberOfTiles) {
+function swap(tile) {
+    if (tile < 1 || tile > numberOfTiles) {
         return;
     }
     //add new move (remove if false move)
     totalMoves++;
     //swap right
-    if (clicked == highlighted + 1) {
-        if (clicked % size != 1) {
-            setSelected(clicked);
+    if (tile == empty + 1) {
+        if (tile % size != 1) {
+            setSelected(tile);
         }
         //left
-    } else if (clicked == highlighted - 1) {
-        if (clicked % size != 0) {
-            setSelected(clicked);
+    } else if (tile == empty - 1) {
+        if (tile % size != 0) {
+            setSelected(tile);
         }
         //up
-    } else if (clicked == highlighted + size) {
-        setSelected(clicked);
+    } else if (tile == empty + size) {
+        setSelected(tile);
         //down
-    } else if (clicked == highlighted - size) {
-        setSelected(clicked);
+    } else if (tile == empty - size) {
+        setSelected(tile);
     } else totalMoves--;
 
     if (shuffled) {
-        console.log(totalMoves);
         if (checkHasWon()) {
             setTimeout(EndGame, 500);
+        } else if (totalMoves > 25) {
+            giveUpBtn.disabled = false;
         }
     } else totalMoves = 0;
 }
 function EndGame() {
-        //change scene to victory screen
-        let msg = document.getElementById("msgWin");
-        msg.style.color = "white";
-        msg.textContent = "Landslide to victory!";
-        let modal = document.getElementById("won");
-        modal.style.display = "";
+    //change scene to victory screen
+    let msg = document.getElementById("msgWin");
+    msg.style.color = "white";
+    msg.textContent = "Landslide to victory!";
+    let modal = document.getElementById("won");
+    modal.style.display = "";
 }
 
 function checkHasWon() {
     for (let b = 1; b <= numberOfTiles; b++) {
         currentTile = document.getElementById(`${b}`);
-        currentTileIndex = currentTile.getAttribute("index");
         currentTileValue = currentTile.name;
-        if (parseInt(currentTileIndex) != parseInt(currentTileValue)) {
+        if (b != parseInt(currentTileValue)) {
             return false;
         }
     }
@@ -151,15 +152,15 @@ function checkHasWon() {
 }
 
 function setSelected(index) {
-    let currentTile = document.getElementById(`${highlighted}`);
-    currentTile.classList.remove("selected");
+    let currentTile = document.getElementById(`${empty}`);
     let newTile = document.getElementById(`${index}`);
-    let holder = currentTile.src;
+    let swap = currentTile.src;
     currentTile.src = newTile.src;
-    newTile.src = holder;
-    holder = currentTile.name;
+    newTile.src = swap;
+    swap = currentTile.name;
     currentTile.name = newTile.name;
-    newTile.name = holder;
+    newTile.name = swap;
     newTile.classList.add("selected");
-    highlighted = index;
+    currentTile.classList.remove("selected");
+    empty = index;
 }
