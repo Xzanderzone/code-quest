@@ -446,6 +446,10 @@ button:hover {
     padding: 20px;
 }
 
+.choose-character label:first-of-type {
+    padding-left: 0;
+}
+
 .choose-character label::selection {
     display: none;
 }
