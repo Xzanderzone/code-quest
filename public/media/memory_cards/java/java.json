@@ -16,7 +16,7 @@
         "name": "intellij"
     },
     {
-        "image": "./media/memory_cards/java/junit.jpg",
+        "image": "./media/memory_cards/java/junit.png",
         "name": "junit"
     },
     {
@@ -32,7 +32,7 @@
         "name": "springboot"
     },
     {
-        "image": "./media/memory_cards/java/architecture.jpg",
+        "image": "./media/memory_cards/java/architecture.png",
         "name": "architecture"
     },
     {

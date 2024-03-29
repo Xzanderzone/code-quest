@@ -12,7 +12,7 @@ class StoryController extends Controller
         "108",
         "201","202","203","204","205","guessing","rockPS",
         "301","302","303","304","305","306",
-        // "memory",
+        "memory",
         "slider",
         "999"];
     }
