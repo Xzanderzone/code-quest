@@ -5,8 +5,8 @@
     @include("_partials.header") 
     <main class="ok-page">
         <div class="text-balloon">
-            <p>Weeks passed by quickly, and your skills as a Web Developer are sharpening up! Persile tells the class that he wants each of you to prepare a presentation - a 'Tech Talk' - about a topic that relates with technology.<br><br>
-            - Any topic is valid, except talking about tech billionaires and cryptocoins.
+            <p>Weeks passed by quickly, and your skills as a Web Developer are sharpening up! Persile tells the class that he wants each of you to prepare a presentation - a 'Tech Talk' - about a topic that relates with technology.<br><br><br>
+            Any topic is valid, except talking about tech billionaires and cryptocoins.
             </p>
         </div>
         <div class="terminal">

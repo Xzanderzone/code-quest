@@ -27,7 +27,7 @@
                 <img class="gif" id="gifImage" src="..\media\animations\{{ $gifFilename }}" alt="" style="display: none;">
             </div>
         @endif
-
+        <div class="basile"><img src="..\media\coffee.jpg"></div>
     </main>
 </body>
 </html>
