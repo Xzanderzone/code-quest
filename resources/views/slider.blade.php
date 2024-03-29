@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        <script src="js/script.js" defer></script>
         <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css" />
         <title>A Web Dev Journey</title>
     </head>
@@ -16,16 +17,31 @@
         @include("_partials.header") 
         <main class="game">
             <div class="terminal">
-                <div class="popup terminal" id="lost" style="display: none">
+                <!-- warning -->
+                <div class="popup terminal" id="warning" style="display: none">
                     <div class="bar">
-                        <p>📟 YOU LOSE 😭</p>
+                        <p>📟WARNING: SKIP HAS IMPACT</p>
                     </div>
                     <div class="content">
-                        <p id='msgLost'>📟 YOU LOSE 😭</p>
-                        <br>
-                        <a id='msgLink'href="/story">> Not throwing away my shot!(try again)</a>
+                        <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p>
+                        <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> 
+                        <button id='continueGame'>> KEEP GOING </button>
+                        <a href="/story">> Reset puzzle </a><br>
+                        <a href="/next">> I'M SURE! LET ME SKIP</a>
                     </div>
                 </div>
+                <!-- extra info  -->
+                <div class="popup terminal" id="info" style="display: none">
+                    <div class="bar">
+                        <p>📟Slider puzzle info </p>
+                    </div>
+                    <div class="content">
+                        <p class='matrix-text'>The goal of this game is to restore the image, <br>
+                           starting in the top left and working row by row is advised.</p> 
+                        <button id='return'>>Got it!</button>
+                    </div>
+                </div>
+                <!-- winning  -->
                 <div class="popup terminal" id="won" style="display: none">
                     <div class="bar">
                         <p >📟 YOU WIN 😁</p>

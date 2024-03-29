@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('tech_talk')->nullable();
             $table->string('feedback')->nullable();
             $table->string('track')->nullable();
+            $table->integer('score')->default(0);
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

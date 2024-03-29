@@ -39,6 +39,7 @@ body {
     align-items: center;
 
     overflow: hidden;
+
 }
 
 a {
@@ -50,10 +51,9 @@ a:hover {
     text-decoration: underline;
 }
 
-h1 {
+#title {
     font-family: var(--basic-body-font);
-    font-size: 36px;
-    text-decoration: none;
+    font-size: 1.1vw;
     color: var(--matrix-color);
     text-shadow: 3px 4px 1px black;
 }
@@ -150,6 +150,7 @@ main {
     grid-area: text;
     display: flex;
     align-items: center;
+    opacity: 0;
 }
 
 .terminal {
@@ -169,6 +170,7 @@ main {
     background-color: black;
 }
 
+/* FOOTER */
 .basile {
     grid-area: basile;
 
@@ -495,6 +497,10 @@ button:hover {
 .choose-character label {
     height: 200px;
     padding: 20px;
+}
+
+.choose-character label:first-of-type {
+    padding-left: 0;
 }
 
 .choose-character label::selection {
