@@ -40,7 +40,7 @@
                 <div class="text-balloon-line"><div class="actual-line"></div></div>
                 @include("_partials.drawings") 
             @else
-                <div class="basile"><img src="..\media\stickmen\glasses.png"></div>
+                <div class="basile"><img src="..\media\stickmen\Bonasi-crying.gif"></div>
                 <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
             @endif
 
