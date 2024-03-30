@@ -48,7 +48,7 @@ function newGame() {
     // loadTiles("salesforce");
     // loadTiles("numbers");
     // loadTiles("java");
-    let game = document.currentScript.getAttribute("track") ?? "java";
+    let game = document.currentScript.getAttribute("track");
     loadTiles(game);
     setTimeout(() => {
         shuffle();
@@ -125,6 +125,19 @@ function swap(tile) {
 
     if (shuffled) {
         if (checkHasWon()) {
+            let track = document.currentScript.getAttribute("track");
+            let storeThis = document.getElementById("skill");
+            switch (track) {
+                case "Fullstack":
+                    storeThis.value = "Laravel";
+                    break;
+                case "Salesforce":
+                    storeThis.value = "Salesforce"; //placeholder
+                    break;
+                default: //java
+                    storeThis.value = "Java";
+                    break;
+            }
             setTimeout(EndGame, 500);
         } else if (totalMoves > 25) {
             giveUpBtn.disabled = false;

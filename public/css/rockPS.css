@@ -12,11 +12,11 @@
     border-bottom: 2px solid #000000;
     margin-top: 95px;
 }
-#history{
+#history {
     margin-left: 270px;
     margin-top: -50px;
 }
-#historyBasile{
+#historyBasile {
     margin-left: 380px;
     text-align: left;
     margin-top: -50px;
@@ -27,7 +27,7 @@
 }
 #player img {
     margin-left: 30px;
-    width: 50px;
+    width: 100px;
 }
 #persilCharacter {
     margin-left: 150px;
@@ -45,10 +45,10 @@
     font-size: large;
     height: 200px;
 }
-button {
+#options button {
     border-radius: 15px;
     width: 42%;
-    border: 2px solid #000000;
+    border: 5px solid #3a3a3a;
     font-size: large;
     height: 75px;
 }
@@ -63,9 +63,15 @@ button {
     padding-top: 20px;
     width: 50%;
 }
-#question {
+#fight {
     background-color: rgb(158, 0, 0);
     margin-bottom: 10px;
+}
+#fight:disabled {
+    border: 5px solid #3a3a3a;
+    cursor: not-allowed;
+    background-color: rgb(102, 0, 0);
+    color: rgb(71, 71, 71);
 }
 #rock {
     background-color: rgb(0, 158, 13);
@@ -75,6 +81,15 @@ button {
 }
 #scissor {
     background-color: rgb(155, 158, 0);
+}
+#rock.highlighted {
+    border: 5px solid #33ff00;
+}
+#paper.highlighted {
+    border: 5px solid #003cff;
+}
+#scissor.highlighted {
+    border: 5px solid #e5ff00;
 }
 .disabled {
     background-color: rgb(67, 72, 88);

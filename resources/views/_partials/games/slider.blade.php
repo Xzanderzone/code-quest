@@ -6,7 +6,10 @@
 		<img src="./media/slider/java/solved.png" alt="solved puzzle example">
 		<button id='invert'>Invert controls</button> <br>
 		<button id='skip' disabled>Give up</button><br>
-		<button id='infoBtn'>Help</button><br>
+		<form action="/slider">
+			<input type="text" id='skill' style="display:none" >
+			<button id='infoBtn'>Help</button><br>
+		</form>
 	</div>
 		<!-- <p >Slider puzzle info: </p> -->
 </div>
