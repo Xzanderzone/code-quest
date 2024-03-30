@@ -1,24 +1,26 @@
-#game {
-    width: 900px;
-    height: 650px;
+#rps {
+    width: 55vw;
     border: inset 2px #000000;
     border-radius: 0.7rem;
     background-color: white;
 }
 #persil {
     display: flex;
-    width: 100%;
     text-align: right;
     border-bottom: 2px solid #000000;
     margin-top: 95px;
 }
+#persilCharacter {
+    margin-left: 100px;
+}
 #history {
-    margin-left: 270px;
+    margin-left: 200px;
     margin-top: -50px;
+    text-align: center;
 }
 #historyBasile {
-    margin-left: 380px;
-    text-align: left;
+    margin-left: 35%;
+    text-align: center;
     margin-top: -50px;
 }
 #persil img {
@@ -26,11 +28,8 @@
     margin-right: 50px;
 }
 #player img {
-    margin-left: 30px;
+    margin-left: 25px;
     width: 100px;
-}
-#persilCharacter {
-    margin-left: 150px;
 }
 #player {
     display: flex;

@@ -6,6 +6,7 @@ let empty = numberOfTiles;
 let shuffled = false;
 let totalMoves = 0;
 let inverted = false;
+let game = document.currentScript.getAttribute("track");
 
 let giveUpBtn = document.getElementById("skip");
 let PuzzleContainer = document.getElementById("puzzle");
@@ -46,9 +47,7 @@ newGame();
 function newGame() {
     // loadTiles("laravel");
     // loadTiles("salesforce");
-    // loadTiles("numbers");
     // loadTiles("java");
-    let game = document.currentScript.getAttribute("track");
     loadTiles(game);
     setTimeout(() => {
         shuffle();
@@ -125,9 +124,8 @@ function swap(tile) {
 
     if (shuffled) {
         if (checkHasWon()) {
-            let track = document.currentScript.getAttribute("track");
             let storeThis = document.getElementById("skill");
-            switch (track) {
+            switch (game) {
                 case "Fullstack":
                     storeThis.value = "Laravel";
                     break;

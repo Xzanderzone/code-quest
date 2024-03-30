@@ -45,7 +45,12 @@
                     <div class="content">
                         <p id="msgWin">📟 YOU WIN 😁</p>
                         <br>
-                        <a href="/next">> NICE! CONTINUE</a>
+                <form action="/rockps" method="POST">
+                    @csrf
+                    <input type="text" name='skill'id='skill' style="display:none" >
+                    <!-- <input type="text" id='skill2' style="display:none" > -->
+                    <button >> NICE! CONTINUE</button>
+                </form>
                     </div>
                 </div>
                 <div class="bar">

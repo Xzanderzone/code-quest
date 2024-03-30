@@ -43,7 +43,12 @@
             </div>
             <div class="content">
                 <p> YOU ARE THE MASTERMIND </p>
-                <a href="/next">> NICE! CONTINUE</a>
+                <form action="/mastermind" method="POST">
+                    @csrf
+                    <input type="text" name='skill'id='skill' style="display:none" >
+                    <!-- <input type="text" id='skill2' style="display:none" > -->
+                    <button >> NICE! CONTINUE</button>
+                </form>
             </div>
         </div>
         <div class="terminal">

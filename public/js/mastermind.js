@@ -287,6 +287,8 @@ function showAnswer(){
 
 function EndGame(win=false){
     if(win){
+        let storeThis = document.getElementById("skill");
+        storeThis.value = "HTML & CSS";
         let popup = document.querySelector('#won');
         popup.style.display = "block";
     }else{

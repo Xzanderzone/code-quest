@@ -1,18 +1,16 @@
-<div id='game'>
+<div id='rps'>
 	<div id="persil">
 		<div id='historyBasile'>
-			<p>Persils Choice:</p><br>
+			<p>Persils Choice</p><br><br>
 			<img id="basileSVG"style='width:100px'src=""></img></div>
-			<!-- <object data="\media\rock_paper_scissor\rock.svg" width="100" height="100"> </object> -->
 			<div id="persilCharacter">
 				<p>The mighty Persil!</p>
 				<img src="..\media\stickmen\Stickman-persile-v1.gif"style='width:120px' alt="">
 			</div>
-			
 		</div>
 		<div id="player">
 			<div>
-				<p style="text-align:center">{{$user->name}} </p>
+				<p style="text-align:center">It's a me! </p>
 				@if(empty($user->character))
 				<img src="..\media\stickmen\Stickman-moustache.svg"  alt="">
 				@else 
@@ -20,7 +18,7 @@
 				@endif
 			</div>
 			<div id='history'>
-				<p>Your Choice:</p><br>
+				<p>Your Choice</p><br><br>
 				<img id="playerSVG"style='width:100px'src=""></img></div>
 			</div>
 			<div id='ui'>
