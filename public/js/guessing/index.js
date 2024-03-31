@@ -27,7 +27,7 @@ guessButton.addEventListener("click", () => {
     let history = document.getElementById("history");
     let historybasile = document.getElementById("historyBasile");
     history.innerHTML = "Guessing history:<br><br>";
-    historybasile.innerHTML = "History of wrong guesses:<br><br>";
+    historybasile.innerHTML = "Wrong guesses:<br><br>";
     guesses.forEach((element, index) => {
         history.innerHTML += "<i>" + element + "</i> ";
         historybasile.innerHTML +=
@@ -40,12 +40,20 @@ guessButton.addEventListener("click", () => {
 
     //make basile respond differently depending on guessed age
     let msg = document.getElementById("persilChat");
+
     if (duplicate)
         msg.textContent = "guessing the same over and over wont help you!";
+    else if (n == 35)
+        msg.textContent =
+            "You think I would make the placeholder my actual age, " +
+            n +
+            " is not correct.";
     else if (n < 18)
         msg.textContent = "You think im a child!? I am definitely not " + n;
-    else if (n < 28) msg.textContent = "I'm flattered! but my age is not " + n;
-    else if (n < 38) msg.textContent = "No,my age is not " + n;
+    else if (n < 23)
+        msg.textContent = "Not" + n + " years old, I'm eternally youthful.";
+    else if (n < 30) msg.textContent = "I'm flattered! but my age is not " + n;
+    else if (n < 40) msg.textContent = "Alas,my age is not " + n;
     else if (n < 55) msg.textContent = "Nay, mine own age is not " + n;
     else
         msg.textContent =
@@ -53,6 +61,8 @@ guessButton.addEventListener("click", () => {
 
     if (guesses.length > max) {
         //end game after max guess
+        giveUpButton.disabled = true;
+        guessButton.disabled = true;
 
         let storeThis = document.getElementById("skill");
         storeThis.value = "Presistent";
@@ -65,7 +75,7 @@ guessButton.addEventListener("click", () => {
     } else if (guesses.length >= min && !passedMin) {
         //enable surrender button after min guesses
         passedMin = true;
-        giveUpButton.classList.remove("disabled");
+        giveUpButton.disabled = false;
         let modal = document.getElementById("won");
         modal.style.display = "";
         //hide the modal without reloading page
