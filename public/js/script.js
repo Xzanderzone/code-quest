@@ -41,22 +41,25 @@ skip.addEventListener("click", () => {
 
 //avoid refresh on slider puzzle "continue"
 var continueGame = document.getElementById("continueGame");
-continueGame.addEventListener("click", () => {
-    var finalWarning = document.getElementById("warning");
-    finalWarning.style.display = "none";
-});
+continueGame != null ??
+    continueGame.addEventListener("click", () => {
+        var finalWarning = document.getElementById("warning");
+        finalWarning.style.display = "none";
+    });
 
 //help pop up explaining minigames?
 var info = document.getElementById("infoBtn");
-info.addEventListener("click", () => {
-    var infoModal = document.getElementById("info");
-    if (infoModal.style.display == "none") infoModal.style.display = "";
-    else infoModal.style.display = "none";
-});
+info != null ??
+    info.addEventListener("click", () => {
+        var infoModal = document.getElementById("info");
+        if (infoModal.style.display == "none") infoModal.style.display = "";
+        else infoModal.style.display = "none";
+    });
 
 //close help pop up extra button
 var info = document.getElementById("return");
-info.addEventListener("click", () => {
-    var infoModal = document.getElementById("info");
-    infoModal.style.display = "none";
-});
+info != null ??
+    info.addEventListener("click", () => {
+        var infoModal = document.getElementById("info");
+        infoModal.style.display = "none";
+    });

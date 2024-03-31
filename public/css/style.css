@@ -39,6 +39,7 @@ body {
     align-items: center;
 
     overflow: hidden;
+
 }
 
 a {
@@ -144,6 +145,7 @@ main {
     grid-area: text;
     display: flex;
     align-items: center;
+    opacity: 0;
 }
 
 .terminal {

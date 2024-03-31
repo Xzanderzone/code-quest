@@ -5,28 +5,37 @@ let total = 5;
 let options = ["rock", "paper", "scissor"];
 let randomOptionIndex = Math.floor(Math.random() * options.length);
 let chatbox = document.getElementById("chatbox");
-
-handleClick = (e) => {
-    let element = e.target.id;
-    if (options[randomOptionIndex] === element) UpdateHistory("Tied", element);
-    else if (options[(randomOptionIndex + 1) % options.length] === element)
-        UpdateHistory("Won", element);
-    else UpdateHistory("Lost", element);
-};
+let choice = null;
 
 let rockButton = document.getElementById("rock");
 let paperButton = document.getElementById("paper");
 let scissorButton = document.getElementById("scissor");
-rockButton.addEventListener("click", handleClick);
-paperButton.addEventListener("click", handleClick);
-scissorButton.addEventListener("click", handleClick);
+let confirmButton = document.getElementById("fight");
+handleChoice = (e) => {
+    if (choice) document.getElementById(choice).classList.remove("highlighted");
+    choice = e.target.id;
+    confirmButton.disabled = false;
+    let playerSVG = document.getElementById("playerSVG");
+    playerSVG.src = "/media/rock_paper_scissor/" + choice + ".svg";
+    console.log(e.target);
+    e.target.classList.add("highlighted");
+};
+handleConfirm = () => {
+    if (options[randomOptionIndex] === choice) UpdateHistory("Tied", choice);
+    else if (options[(randomOptionIndex + 1) % options.length] === choice)
+        UpdateHistory("Won", choice);
+    else UpdateHistory("Lost", choice);
+};
+rockButton.addEventListener("click", handleChoice);
+paperButton.addEventListener("click", handleChoice);
+scissorButton.addEventListener("click", handleChoice);
+confirmButton.addEventListener("click", handleConfirm);
 
 function UpdateHistory(outcome, e) {
     //update display for player and pc choises
-    let persilSVG=document.getElementById("basileSVG");
-    persilSVG.src="/media/rock_paper_scissor/"+options[randomOptionIndex]+".svg";
-    let playerSVG=document.getElementById("playerSVG");
-    playerSVG.src="/media/rock_paper_scissor/"+e+".svg";
+    let persilSVG = document.getElementById("basileSVG");
+    persilSVG.src =
+        "/media/rock_paper_scissor/" + options[randomOptionIndex] + ".svg";
     if (outcome == "Won") {
         wins++;
         chatbox.style.color = "green";
@@ -41,28 +50,30 @@ function UpdateHistory(outcome, e) {
     }
 
     chatbox.innerHTML =
-    "You " +
-    outcome +
-    "!<br>Your choise: " +
-    e +
-    "<br>Persil's choise: " +
-    options[randomOptionIndex] +
-    "     <br>Score: Wins " +
-    wins +
-    " Losses " +
-    losses +
-    " Ties: " +
-    ties;
+        "You " +
+        outcome +
+        // "!<br>Your choise: " +
+        // e +
+        // "<br>Persil's choise: " +
+        // options[randomOptionIndex] +
+        "     <br><br>Wins: " +
+        wins +
+        " <br><br>Losses: " +
+        losses +
+        " <br><br>Ties: " +
+        ties;
     //new random for persil
     randomOptionIndex = Math.floor(Math.random() * options.length);
-
 }
 function EndGame(win) {
     if (win) {
-        //change scene to victory screen
+        let storeThis = document.getElementById("skill");
+        storeThis.value = "JavaScript";
         let msg = document.getElementById("msgWin");
         msg.style.color = "white";
-        msg.textContent = "You've beaten the mighty Persil!";
+        msg.style.textAlign = "center";
+        msg.innerHTML =
+            "Thanks to the mighty Persil challange<br>you unlock some of your potential<br> Skill added: JavaScript";
         let modal = document.getElementById("won");
         modal.style.display = "";
     } else {

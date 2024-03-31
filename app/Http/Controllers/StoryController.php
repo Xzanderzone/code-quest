@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class StoryController extends Controller
 {
     public function getPageArray(){
-        return ["100","101","102","103","104","105","106","107",
-        "108",
+        return ["100","101","102","103","104","105","106","107","108",
         "201","202","203","204","205","guessing","rockPS",
         "301","302","303","304","305","306",
         // "memory",
@@ -18,37 +17,28 @@ class StoryController extends Controller
     }
     public function story() {
         $user = Auth::user();
-  
         $pages=StoryController::getPageArray();
-        $progress = $user->progress ;
-        //100 to check older accounts from before array method
-        if (!$progress || $progress>=100) {
-            $progress = 0;
-        } 
-
+        $progress=0;
+        if($user)$progress = $user->progress??0;
+        else return redirect('/');//prevents crashing on invalid user
         $user->update(['progress' => $progress]);
-
         return view($pages[$progress], ['user' => $user]);
     }
 
     public function cv() {
         $user = Auth::user();
-
         if (!$user) {
             return redirect('/');
         }
-
         return view('cv', ['user' => $user]);
     }
 
     public function nextPage() {
-        // if(in_array($id,StoryController::getPageArray())){
         $user = Auth::user();
         $user->progress += 1;
         $user->save();
 
         return redirect('/story');
-        // }else dd("page not found(story controller nextPage with id: ".$id);
     }
 
     public function chooseCharacter(Request $request) {
@@ -78,7 +68,66 @@ class StoryController extends Controller
         $user->save();
 
         return redirect('/story');
+    } 
+    public function guessing(Request $request)  {
+        $request->validate([
+            'skill' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->guessing= $request->skill;
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
     }
+    public function rockps(Request $request)  {
+        $request->validate([
+            'skill' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->rockps= $request->skill;
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }  
+    public function slider(Request $request)  {
+        $request->validate([
+            'skill' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->slider= $request->skill;
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }   
+    public function mastermind(Request $request)  {
+        $request->validate([
+            'skill' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->mastermind= $request->skill;
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }   
+    public function memory(Request $request)  {
+        $request->validate([
+            'skill' => 'required',
+            'skill2' => 'required',
+            'skill3' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->memory1= $request->skill1;
+        $user->memory2= $request->skill2;
+        $user->memory3= $request->skill3;
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }   
 
     public function cards(Request $request) {
 
@@ -106,10 +155,6 @@ class StoryController extends Controller
         $user->save();
 
         return redirect('/story');
-    }
-
-    public function mastermindCheck(Request $request) {
-        
     }
 
     public function toiletChoice(Request $request) {
@@ -188,5 +233,4 @@ class StoryController extends Controller
 
         return redirect('/story');
     }
-    
 }
