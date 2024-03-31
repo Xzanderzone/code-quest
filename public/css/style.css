@@ -473,6 +473,18 @@ button:hover {
     flex-direction: column;
 }
 
+.sad {
+    background-image: url(../media/new_skill/sad-face.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: opacity(0.5);
+}
+
 /*/ / CHOSE PERSON / /*/
 .choose-character {
     width: 100%;
