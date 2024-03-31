@@ -468,9 +468,8 @@ button:hover {
     background-position: center;
     background-size: contain;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .sad {
@@ -481,8 +480,15 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.whiteBlock {
+    background-color: rgba(255, 255, 255, 0.66);
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    filter: opacity(0.5);
 }
 
 /*/ / CHOSE PERSON / /*/
