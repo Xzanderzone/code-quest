@@ -66,19 +66,21 @@ function UpdateHistory(outcome, e) {
     randomOptionIndex = Math.floor(Math.random() * options.length);
 }
 function EndGame(win) {
+    rockButton.disabled = true;
+    paperButton.disabled = true;
+    scissorButton.disabled = true;
+    confirmButton.disabled = true;
     if (win) {
         let storeThis = document.getElementById("skill");
         storeThis.value = "JavaScript";
         let msg = document.getElementById("msgWin");
-        msg.style.color = "white";
         msg.style.textAlign = "center";
         msg.innerHTML =
-            "Thanks to the mighty Persil challange<br>you unlock some of your potential<br> Skill added: JavaScript";
+            "Thanks to the mighty Persils challange<br>you unlock some of your potential<br><br> Skill added: JavaScript";
         let modal = document.getElementById("won");
         modal.style.display = "";
     } else {
         let msg = document.getElementById("msgLost");
-        msg.style.color = "white";
         msg.textContent = "The mighty Persil wins this time! Try again?";
         let modal = document.getElementById("lost");
         modal.style.display = "";

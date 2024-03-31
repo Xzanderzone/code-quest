@@ -123,30 +123,30 @@ function swap(tile) {
     } else totalMoves--;
 
     if (shuffled) {
-        if (checkHasWon()) {
-            let storeThis = document.getElementById("skill");
-            switch (game) {
-                case "Fullstack":
-                    storeThis.value = "Laravel";
-                    break;
-                case "Salesforce":
-                    storeThis.value = "Salesforce"; //placeholder
-                    break;
-                default: //java
-                    storeThis.value = "Java";
-                    break;
-            }
-            setTimeout(EndGame, 500);
-        } else if (totalMoves > 25) {
+        if (checkHasWon()) setTimeout(EndGame, 500);
+        else if (totalMoves > 25) {
             giveUpBtn.disabled = false;
         }
     } else totalMoves = 0;
 }
 function EndGame() {
+    let storeThis = document.getElementById("skill");
+    switch (game) {
+        case "Fullstack":
+            storeThis.value = "Laravel";
+            break;
+        case "Salesforce":
+            storeThis.value = "Salesforce"; //placeholder
+            break;
+        default: //java
+            storeThis.value = "Java";
+            break;
+    }
     //change scene to victory screen
     let msg = document.getElementById("msgWin");
-    msg.style.color = "white";
-    msg.textContent = "Landslide to victory!";
+    msg.innerHTML =
+        "Well done!<br> You unlock a greater understanding of " +
+        storeThis.value;
     let modal = document.getElementById("won");
     modal.style.display = "";
 }

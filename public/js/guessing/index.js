@@ -9,7 +9,6 @@ let giveUpButton = document.getElementById("giveUp");
 
 giveUpButton.addEventListener("click", () => {
     let msg = document.getElementById("msgLost");
-    msg.style.color = "white";
     msg.textContent =
         "I remain the incognito master ! We shall settle this in a game of rock paper scissors instead.";
     let modal = document.getElementById("lost");
@@ -67,9 +66,8 @@ guessButton.addEventListener("click", () => {
         let storeThis = document.getElementById("skill");
         storeThis.value = "Presistent";
         msg = document.getElementById("msgLost");
-        msg.style.color = "white";
-        msg.textContent =
-            "I grow weary of your presistence, a game of rock paper scissors will decide your skill.";
+        msg.innerHTML =
+            "I grow weary of your presistence, a game of rock paper scissors will decide your skill.<br> You've unlocked bonus soft skill: Presistent ";
         let modal = document.getElementById("lost");
         modal.style.display = "";
     } else if (guesses.length >= min && !passedMin) {

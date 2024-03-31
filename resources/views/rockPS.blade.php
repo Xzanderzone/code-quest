@@ -43,7 +43,7 @@
                         <p >📟 YOU WIN 😁</p>
                     </div>
                     <div class="content">
-                        <p id="msgWin">📟 YOU WIN 😁</p>
+                        <p id="msgWin"class='matrix-text'>📟 YOU WIN 😁</p>
                         <br>
                 <form action="/rockps" method="POST">
                     @csrf

@@ -42,7 +42,8 @@
                 <p>📟 YOU WIN 😁</p>
             </div>
             <div class="content">
-                <p> YOU ARE THE MASTERMIND </p>
+                <p class='matrix-text'> YOU ARE THE MASTERMIND </p>
+                <p class='matrix-text'> You unlocked HTML & CSS </p>
                 <form action="/mastermind" method="POST">
                     @csrf
                     <input type="text" name='skill'id='skill' style="display:none" >
