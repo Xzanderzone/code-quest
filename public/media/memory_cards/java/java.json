@@ -1,43 +1,43 @@
 [
     {
         "image": "./media/memory_cards/java/rest-api-icon.png",
-        "name": "git"
-    },
-    {
-        "image": "./media/memory_cards/java/devops.png",
-        "name": "github"
-    },
-    {
-        "image": "./media/memory_cards/java/eclipse.png",
-        "name": "mysql"
-    },
-    {
-        "image": "./media/memory_cards/java/intellij.png",
-        "name": "php"
-    },
-    {
-        "image": "./media/memory_cards/java/junit.jpg",
         "name": "api"
     },
     {
+        "image": "./media/memory_cards/java/devops.png",
+        "name": "devops"
+    },
+    {
+        "image": "./media/memory_cards/java/eclipse.png",
+        "name": "eclipse"
+    },
+    {
+        "image": "./media/memory_cards/java/intellij.png",
+        "name": "intellij"
+    },
+    {
+        "image": "./media/memory_cards/java/junit.png",
+        "name": "junit"
+    },
+    {
         "image": "./media/memory_cards/java/mockito.png",
-        "name": "sass"
+        "name": "mockito"
     },
     {
         "image": "./media/memory_cards/java/oop.jpg",
-        "name": "sass"
+        "name": "oop"
     },
     {
         "image": "./media/memory_cards/java/springboot.png",
-        "name": "sass"
+        "name": "springboot"
     },
     {
-        "image": "./media/memory_cards/java/architecture.jpg",
-        "name": "sass"
+        "image": "./media/memory_cards/java/architecture.png",
+        "name": "architecture"
     },
     {
         "image": "./media/memory_cards/java/jsf.png",
-        "name": "sass"
+        "name": "jsf"
     }
 
 ]

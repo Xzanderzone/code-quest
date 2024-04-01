@@ -39,7 +39,6 @@ body {
     align-items: center;
 
     overflow: hidden;
-
 }
 
 a {
@@ -150,7 +149,6 @@ main {
     grid-area: text;
     display: flex;
     align-items: center;
-    opacity: 0;
 }
 
 .terminal {
@@ -475,6 +473,24 @@ button:hover {
     background-position: center;
     background-size: contain;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sad {
+    background-image: url(../media/new_skill/sad-face.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteBlock {
+    background-color: rgba(255, 255, 255, 0.66);
+    padding: 2vw;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -521,7 +537,7 @@ input[type="radio"] {
 }
 
 .characters input[type="radio"]:checked + label img {
-    border: 4px solid var(--matrix-color);
+    border: 4px solid rgb(195, 18, 168);
 }
 .characters input[type="radio"]:hover + label img {
     border: 4px solid var(--matrix-color);
@@ -538,11 +554,11 @@ input[type="radio"] {
     color: white;
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
-    line-height: 30px;
+    line-height: 1.8;
 }
 
 .options input[type="radio"]:checked + label {
-    background-color: var(--matrix-color);
+    background-color: rgb(195, 18, 168);
 }
 .options input[type="radio"]:hover + label {
     background-color: var(--matrix-color);
@@ -572,7 +588,7 @@ input[type="radio"] {
 }
 
 .cards input[type="radio"]:checked + label {
-    border: var(--matrix-color) 6px solid;
+    border: rgb(195, 18, 168) 6px solid;
 }
 .cards input[type="radio"]:hover + label {
     border: var(--matrix-color) 6px solid;

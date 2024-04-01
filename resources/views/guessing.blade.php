@@ -18,9 +18,14 @@
                     <p>📟 IMPOSSIBLE ODDS 😭</p>
                 </div>
                 <div class="content">
-                    <p id='msgLost'>📟 YOU LOSE 😭</p>
+                    <p id='msgLost'class='matrix-text'>📟 YOU LOSE 😭</p>
                     <br>
-                    <a id='msgLink' href="/next">> Let's Rock!</a>
+                <form action="/guessing" method="POST">
+                    @csrf
+                    <input type="text" name='skill'id='skill' value=null style="display:none" >
+                    <!-- <input type="text" id='skill2' style="display:none" > -->
+                    <button >> Let's rock!</button>
+                </form>
                 </div>
             </div>
             <div class="popup terminal" id="won" style="display: none">
@@ -28,7 +33,7 @@
                     <p>📟 THE MIGHTY PERSIL 😁</p>
                 </div>
                 <div class="content">
-                    <p id="msgWin" style='color:white;'>Surrender now! You will never find my age.<br>
+                    <p id="msgWin" class='matrix-text'>Surrender now! You will never find my age.<br>
                         Let us settle this in a game of Rock paper scissor instead.</p>
                     <br>
                     <br>

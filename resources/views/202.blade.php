@@ -14,14 +14,19 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~   What do you do?</p>
+                <br>
                 <form action="/toilet-choice" method="POST">
                     @csrf
                     <div class="options">
-                        <input type="radio" name="toilet_choice" value="Initiative" id="option1"><label for="option1">1) I go explain the situation to the coach</label> 
-                        <input type="radio" name="toilet_choice" value="Conflict Resolution" id="option2"><label for="option2">2) I support him to correct the situation</label>
-                        <input type="radio" name="toilet_choice" value="null" id="option3"><label for="option3">3) hehehehe BONASI HAHAHAHAHAHA</label> 
-                        <input type="radio" name="toilet_choice" value="null" id="option4"><label for="option4">4) I leave the bathroom and do nothing</label>
+                        <input type="radio" name="toilet_choice" value="Initiative" id="option1"><label for="option1">a) I go explain the situation to the coach</label> 
+                        <br>
+                        <input type="radio" name="toilet_choice" value="Conflict Resolution" id="option2"><label for="option2">b) I support him to correct the situation</label>
+                        <br>
+                        <input type="radio" name="toilet_choice" value="null" id="option3"><label for="option3">c) hehehehe BONASI HAHAHAHAHAHA</label> 
+                        <br>
+                        <input type="radio" name="toilet_choice" value="null" id="option4"><label for="option4">d) I leave the bathroom and do nothing</label>
                     </div> 
+                    <br>
                     <button id="animationButton">> That's what I do</button>
                 </form>
             </div>

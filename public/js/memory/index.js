@@ -7,42 +7,37 @@ let score = 0;
 
 document.querySelector(".score").textContent = score;
 
-// switch(course) {
-//   case fullstack:
-//     fetch("/media/memory_cards/fullstack/fullstack.json")
-//     .then((res) => res.json())
-//     .then((data) => {
-//       cards = [...data, ...data];
-//       shuffleCards();
-//       generateCards();
-//     });
-//     break;
-//   case salesforce:
-//     fetch("/media/memory_cards/salesforce/salesforce.json")
-//     .then((res) => res.json())
-//     .then((data) => {
-//       cards = [...data, ...data];
-//       shuffleCards();
-//       generateCards();
-//     });
-//     break;
-//   case java:
-//     fetch("/media/memory_cards/java/java.json")
-//     .then((res) => res.json())
-//     .then((data) => {
-//       cards = [...data, ...data];
-//       shuffleCards();
-//       generateCards();
-//     });
-// }
+let course = document.currentScript.getAttribute("track")
+console.log(course);
 
-fetch("/media/memory_cards/java/java.json")
-.then((res) => res.json())
-.then((data) => {
-  cards = [...data, ...data];
-  shuffleCards();
-  generateCards();
-});
+switch(course) {
+  case "Fullstack":
+    fetch("/media/memory_cards/fullstack/fullstack.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+    break;
+  case "Salesforce":
+    fetch("/media/memory_cards/salesforce/salesforce.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+    break;
+  case "Java":
+    fetch("/media/memory_cards/java/java.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+}
 
 
 function shuffleCards() {

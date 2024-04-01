@@ -34,6 +34,7 @@
                     <div class="content">
                         <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p> <br>
                         <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> <br>
+                        <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: JavaScript </p> <br>
                         <a href="/story">> KEEP GOING </a><br><br>
                         <a href="/next">> I'M SURE! LET ME SKIP</a>
                     </div>
@@ -43,9 +44,14 @@
                         <p >📟 YOU WIN 😁</p>
                     </div>
                     <div class="content">
-                        <p id="msgWin">📟 YOU WIN 😁</p>
+                        <p id="msgWin"class='matrix-text'>📟 YOU WIN 😁</p>
                         <br>
-                        <a href="/next">> NICE! CONTINUE</a>
+                <form action="/rockps" method="POST">
+                    @csrf
+                    <input type="text" name='skill'id='skill' style="display:none" >
+                    <!-- <input type="text" id='skill2' style="display:none" > -->
+                    <button >> NICE! CONTINUE</button>
+                </form>
                     </div>
                 </div>
                 <div class="bar">

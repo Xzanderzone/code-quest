@@ -1,24 +1,26 @@
-#game {
-    width: 900px;
-    height: 650px;
+#rps {
+    width: 55vw;
     border: inset 2px #000000;
     border-radius: 0.7rem;
     background-color: white;
 }
 #persil {
     display: flex;
-    width: 100%;
     text-align: right;
     border-bottom: 2px solid #000000;
     margin-top: 95px;
 }
-#history{
-    margin-left: 270px;
-    margin-top: -50px;
+#persilCharacter {
+    margin-left: 100px;
 }
-#historyBasile{
-    margin-left: 380px;
-    text-align: left;
+#history {
+    margin-left: 200px;
+    margin-top: -50px;
+    text-align: center;
+}
+#historyBasile {
+    margin-left: 35%;
+    text-align: center;
     margin-top: -50px;
 }
 #persil img {
@@ -26,11 +28,8 @@
     margin-right: 50px;
 }
 #player img {
-    margin-left: 30px;
-    width: 50px;
-}
-#persilCharacter {
-    margin-left: 150px;
+    margin-left: 25px;
+    width: 100px;
 }
 #player {
     display: flex;
@@ -45,10 +44,10 @@
     font-size: large;
     height: 200px;
 }
-button {
+#options button {
     border-radius: 15px;
     width: 42%;
-    border: 2px solid #000000;
+    border: 5px solid #3a3a3a;
     font-size: large;
     height: 75px;
 }
@@ -63,18 +62,33 @@ button {
     padding-top: 20px;
     width: 50%;
 }
-#question {
+#fight {
     background-color: rgb(158, 0, 0);
     margin-bottom: 10px;
 }
+#fight:disabled {
+    border: 5px solid #3a3a3a;
+    cursor: not-allowed;
+    background-color: rgb(102, 0, 0);
+    color: rgb(71, 71, 71);
+}
 #rock {
-    background-color: rgb(0, 158, 13);
+    background-color: rgb(0, 158, 0);
 }
 #paper {
-    background-color: rgb(0, 37, 158);
+    background-color: rgb(0, 0, 158);
 }
 #scissor {
-    background-color: rgb(155, 158, 0);
+    background-color: rgb(158, 158, 0);
+}
+#rock.highlighted {
+    border: 5px solid #33ff00;
+}
+#paper.highlighted {
+    border: 5px solid #003cff;
+}
+#scissor.highlighted {
+    border: 5px solid #e5ff00;
 }
 .disabled {
     background-color: rgb(67, 72, 88);

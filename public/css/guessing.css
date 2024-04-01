@@ -1,106 +1,104 @@
 #game {
-    width: 900px;
-    height: 650px;
+    width: 55vw;
     border: inset 2px #000000;
     border-radius: 0.7rem;
     background-color: white;
 }
 #persil {
     display: flex;
-    width: 100%;
     text-align: right;
     border-bottom: 2px solid #000000;
     margin-top: 95px;
 }
-#history{
-    margin-left: 200px;
-    margin-top: -50px;
-}
-#historyBasile{
-    margin-left: 220px;
-    margin-top: -50px;
-}
-i{
-    font-size: large;
-}
-s{
-    text-decoration-color: rgb(255, 0, 0);
-    text-decoration-style:wavy;
-}
-#persil img {
-    width: 50px;
-    margin-right: 50px;
-}
-#player img {
-    margin-left: 30px;
-    width: 50px;
+#persilCharacter img {
+    margin-right: 15%;
 }
 #persilCharacter {
-    margin-left: 150px;
+    margin-left: 10%;
+}
+#history {
+    margin-left: 15%;
+    margin-top: -50px;
+}
+#historyBasile {
+    margin-left: 35%;
+    margin-top: -50px;
+}
+i {
+    font-size: large;
+}
+s {
+    text-decoration-color: rgb(255, 0, 0);
+    text-decoration-style: wavy;
+}
+#player img {
+    margin-left: 25px;
+    width: 100px;
 }
 #player {
     display: flex;
     border-bottom: 2px solid #000000;
     margin-top: 95px;
-    width: 100%;
 }
 #ui {
     background-color: #000000;
     display: flex;
     text-align: center;
     font-size: large;
-    height: 200px;
+    height: 180px;
 }
-button {
+#options button {
     border-radius: 15px;
-    width: 39%;
-    border: 2px solid #000000;
+    width: 38%;
     font-size: large;
+    border: 2px solid #494949;
+    margin-top: 10px;
     height: 55px;
 }
 #chatbox {
     padding-top: 20px;
     padding-left: 10px;
+    margin-top: 10px;
     width: 50%;
     color: white;
-    margin-top: 10px;
 }
 #options {
     padding-top: 20px;
     width: 50%;
 }
 
-.disabled {
-    background-color: rgb(67, 72, 88);
-    opacity: 0.6;
+#question:disabled {
+    border: px solid #3a3a3a;
     cursor: not-allowed;
-}
-
-#question {
-    border-radius: 10px;
-    background-color: rgb(158, 0, 0);
-    border: 2px solid #000000;
-    display: block;
-    margin: 0 auto;
+    background-color: rgb(110, 11, 11);
+    color: rgb(71, 71, 71);
     width: 90%;
 }
 #numberInput {
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: x-large;
     width: 45px;
-    height: 45px;
+    height: 50px;
 }
 #guess {
-    border-radius: 10px;
-    margin-left: -15px;
-    background-color: rgb(0, 158, 13);
-    border: 2px solid #000000;
+    margin-left: -10px;
+    background-color: rgb(0, 158, 0);
+}
+#guess:disabled {
+    border: px solid #3a3a3a;
+    cursor: not-allowed;
+    background-color: rgb(0, 100, 0);
+    color: rgb(71, 71, 71);
 }
 #giveUp {
-    border-radius: 10px;
-    background-color: rgb(0, 37, 158);
-    border: 2px solid #000000;
+    background-color: rgb(0, 0, 158);
 }
-#continue:hover{
+#giveUp:disabled {
+    border: px solid #3a3a3a;
+    cursor: not-allowed;
+    background-color: rgb(0, 0, 100);
+    color: rgb(71, 71, 71);
+}
+#continue:hover {
     cursor: pointer;
 }

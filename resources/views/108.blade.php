@@ -33,6 +33,7 @@
             <div class="content">
                 <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p> <br>
                 <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> <br>
+                <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: HTML & CSS </p> <br>
                 <a href="/story">> KEEP GOING </a><br><br>
                 <a href="/next">> I'M SURE! LET ME SKIP</a>
             </div>
@@ -42,8 +43,14 @@
                 <p>📟 YOU WIN 😁</p>
             </div>
             <div class="content">
-                <p> YOU ARE THE MASTERMIND </p>
-                <a href="/next">> NICE! CONTINUE</a>
+                <p class='matrix-text'> YOU ARE THE MASTERMIND </p>
+                <p class='matrix-text'> You unlocked HTML & CSS </p>
+                <form action="/mastermind" method="POST">
+                    @csrf
+                    <input type="text" name='skill'id='skill' style="display:none" >
+                    <!-- <input type="text" id='skill2' style="display:none" > -->
+                    <button >> NICE! CONTINUE</button>
+                </form>
             </div>
         </div>
         <div class="terminal">
