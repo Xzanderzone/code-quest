@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('track')->nullable();
             $table->string('track_first')->nullable();
             $table->string('track_second')->nullable();
+            $table->string('celebration')->nullable();
             $table->string('mastermind')->nullable();//store mastermind skill here
             $table->string('guessing')->nullable();// guessing 
             $table->string('rockps')->nullable();// rps 

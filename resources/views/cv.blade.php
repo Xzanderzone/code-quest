@@ -70,6 +70,14 @@
                 <h2>Soft Skills</h2>
                 <ul>
                     @if($user->card_reason)<li title="Card choice">{{$user->card_reason}} •</li>
+                    @if($user->toilet_choice !== "null")<li title="Bonasi's choice">{{$user->toilet_choice}} •</li>
+                    @if($user->extra_toilet)<li title="">{{$user->extra_toilet}} •</li>
+                    @if($user->guessing)<li title="Guessing Persile's age">{{$user->guessing}} •</li>
+                    @if($user->tech_talk !== "null")<li title="Tech Talk topic">{{$user->tech_talk}} •</li>
+                    @if($user->feedback !== "null")<li title="Tech Talk feedback">{{$user->feedback}} •</li>
+                    @if($user->track_first)<li title="">{{$user->track_first}} •</li>
+                    @if($user->track_second !== "null")<li title="">{{$user->track_second}} •</li>
+                    @if($user->celebration)<li title="">{{$user->celebration}} •</li>
                     @endif
                 </ul>
             </div>
