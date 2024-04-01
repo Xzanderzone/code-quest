@@ -102,7 +102,7 @@
                         <td>
                             <img src="..\media\cards\{{ $user->card }}" alt="">
                         </td>    
-                        <td class="points">666</td>   
+                        <td class="points">{{$user->score}}</td>   
                     </tr>
                     @endif
                 </table>

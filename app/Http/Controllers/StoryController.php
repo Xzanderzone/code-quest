@@ -8,10 +8,11 @@ use Illuminate\Support\Facades\Auth;
 class StoryController extends Controller
 {
     public function getPageArray(){
-        return ["100","101","102","103","104","105","106","107","mastermind",
-        "201","202","203","204","205","guessing","rockPS",
-        "301","302","303","304",
-        "305","306",
+        return ["100","101","102","103","104","105","106","107",
+        "mastermind",
+        "201","202","203","204","205",
+        "guessing","rockPS",
+        "301","302","303","304","305","306",
         // "memory",
         "401","402","403","404","405","406",
         "slider",
@@ -161,6 +162,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->card_reason = $request->card_reason;
 
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
@@ -173,6 +175,10 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->toilet_choice = $request->toilet_choice;
+
+        if($request->toilet_choice !== "null") {
+            $user->score += 5;
+        }
 
         $user->progress += 1;
         $user->save();
@@ -189,6 +195,7 @@ class StoryController extends Controller
             $user->extra_toilet = "Positive Attitude";
         }
         
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
@@ -199,6 +206,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->card_reason = null;
 
+        $user->score -= 5;
         $user->progress += 1;
         $user->save();
 
@@ -212,6 +220,10 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->tech_talk = $request->tech_talk;
 
+        if($request->tech_talk !== "null") {
+            $user->score += 5;
+        }
+
         $user->progress += 1;
         $user->save();
 
@@ -224,6 +236,10 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->feedback = $request->feedback;
+
+        if($request->feedback !== "null") {
+            $user->score += 5;
+        }
 
         $user->progress += 1;
         $user->save();
@@ -251,6 +267,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->track_first = $request->track_first;
 
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
@@ -264,6 +281,9 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->track_second = $request->track_second;
 
+        if($request->track_second !== "null") {
+            $user->score += 5;
+        }
         $user->progress += 1;
         $user->save();
 
@@ -277,6 +297,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->celebration = $request->celebration;
 
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
