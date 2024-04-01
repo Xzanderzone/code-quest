@@ -23,7 +23,19 @@
             @elseif ($user->track === "Full-Stack" && $user->track_second === "Active Listening")
                 <p>Your teammates come with some great ideas of how to improve productivity using a new way of grouping and assigning unfinished tasks.<br>
                 The change pays off and when it's time to present, you have a finished project with some extra features that you were able to implement last week. The class is impressed by the communication and collaboration of your group, and the project is a great portfolio addition.
-                </p>   
+                </p>
+            @elseif ($user->track === "Java" && $user->track_second === "Decision Making")
+                <p>It's time to present to the whole class! Because of your quick decision making on the start of the assignment, you have time to develop a considerable complex architecture on your REST API project.<br>
+                Your colleagues are impressed by your skills and ask questions about your learning process. You feel happy and confident about the skills you acquired.
+                </p>
+            @elseif ($user->track === "Java" && $user->track_second === "Analytical Thinking")
+                <p>It's time to present to the whole class! Your structure is not as complex as it could be, but your approach to the problem is so analytical that leaves no room for error, allowing you to spend more time on tightening up the cracks.<br>
+                Your project is near perfect and all the class can see it. You feel happy about your choice and confident that you will be a great Java developer.
+                </p>
+            @elseif ($user->track === "Java" && $user->track_second === "null")
+                <p>As the deadline approached, you had to quickly prepare something to present to the class. You create a poor architecture for your REST API project, and your explanation of it is even more confusing than the result itself.<br>
+                You finish your presentation and the class is deadly quiet. A colleague asks a question about your code and you manage to answer it, which brings you some relief. You doubt your decisions, and promises yourself to put more effort on your future projects.                    
+                </p>
             @endif
         </div>
         <div class="terminal">

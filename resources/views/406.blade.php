@@ -13,6 +13,10 @@
             @elseif($user->track === "Full-Stack")
                 <p>To be a Full-Stack Developer, you need to learn how to use Full-Stack frameworks!<br>
                 Show us everything you can do it!</p>
+            @elseif($user->track === "Java")
+                <p>To be a Java Developer, you need to prove your knowledge of the 'superior language'!<br>
+                Come on, prove your worthiness!</p>
+            @endif
         </div>
         <div class="terminal">
             <div class="bar">
