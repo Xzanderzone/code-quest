@@ -7,7 +7,7 @@
         <div class="text-balloon">
             Hello and welcome to CodeQuest.  <br>My name is Persile and  I’ll guide you through this course where you’ll learn how to be a Web Developer.<br>
             With this your chances of getting a JOB or an INTERNSHIP will increase! <br><br>
-            Tell me fellow student, what is your name?
+            Tell me, student, what is your name?
         </div>
         <div class="terminal">
             <div class="bar">
@@ -22,7 +22,7 @@
                     <input type="password" name="password-check" placeholder="▋password check">
                     <button>> REGISTER</button>
                 </form>
-                <p class="matrix-text">ANONYMOUS ~ Don’t you recognize me? It’s me:</p>
+                <p class="matrix-text">ANONYMOUS ~ Don't you recognize me? It's me:</p>
                 <form action="/login" method="post" class="login">
                     @csrf
                     <input type="text" name="name" placeholder="▋name">
