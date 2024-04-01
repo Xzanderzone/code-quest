@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('tech_talk')->nullable();
             $table->string('feedback')->nullable();
             $table->string('track')->nullable();
+            $table->string('track_first')->nullable();
             $table->string('mastermind')->nullable();//store mastermind skill here
             $table->string('guessing')->nullable();// guessing 
             $table->string('rockps')->nullable();// rps 

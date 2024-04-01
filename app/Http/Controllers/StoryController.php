@@ -12,7 +12,7 @@ class StoryController extends Controller
         "201","202","203","204","205","guessing","rockPS",
         "301","302","303","304","305","306",
         // "memory",
-        "401",
+        "401","402",
         "slider",
         "999"];
     }
@@ -235,6 +235,19 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->track = $request->track;
+
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function trackFirstSkill(Request $request) {
+        $request->validate([
+            'track_first' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->track_first = $request->track_first;
 
         $user->progress += 1;
         $user->save();

@@ -38,6 +38,7 @@ Route::post('/card-reason-update', [StoryController::class, 'deleteCardReason'])
 Route::post('/tech-talk', [StoryController::class, 'techTalkTopic']);
 Route::post('/feedback', [StoryController::class, 'feedback']);
 Route::post('/track', [StoryController::class, 'developerTrack']);
+Route::post('/track-first-choice', [StoryController::class, 'trackFirstSkill']);
 
 Route::post('/mastermind', [StoryController::class, 'mastermind']);
 Route::post('/guessing', [StoryController::class, 'guessing']);
