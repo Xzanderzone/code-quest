@@ -25,6 +25,7 @@
                     <div class="content">
                         <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p>
                         <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> 
+                        <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: {{$user->track}} </p> <br>
                         <button id='continueGame'>> KEEP GOING </button>
                         <a href="/story">> Reset puzzle </a><br>
                         <a href="/next">> I'M SURE! LET ME SKIP</a>

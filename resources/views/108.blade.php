@@ -33,6 +33,7 @@
             <div class="content">
                 <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p> <br>
                 <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> <br>
+                <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: HTML & CSS </p> <br>
                 <a href="/story">> KEEP GOING </a><br><br>
                 <a href="/next">> I'M SURE! LET ME SKIP</a>
             </div>
