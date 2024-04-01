@@ -8,13 +8,14 @@ use Illuminate\Support\Facades\Auth;
 class StoryController extends Controller
 {
     public function getPageArray(){
-        return ["100","101","102","103","104","105","106","107","mastermind",
-        "201","202","203","204","205","guessing","rockPS",
-        "301","302","303","304","305","306",
+        return ["100","101",//"102","103","104","105","106","107","mastermind",
+        //"201","202","203","204","205","guessing","rockPS",
+        //"301","302","303","304",
+        "305","306",
         // "memory",
-        "401","402","403","404","405","406",
-        "slider",
-        "999"];
+        //"401","402","403","404","405","406",
+        //"slider",
+        "501","502","503","504","505"];
     }
     public function story() {
         $user = Auth::user();
@@ -261,6 +262,19 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->track_second = $request->track_second;
+
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function celebrationChoice(Request $request) {
+        $request->validate([
+            'celebration' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->celebration = $request->celebration;
 
         $user->progress += 1;
         $user->save();

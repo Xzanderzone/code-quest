@@ -77,7 +77,7 @@
                     @if($user->feedback !== "null")<li title="Tech Talk feedback">{{$user->feedback}} •</li>@endif
                     @if($user->track_first)<li title="">{{$user->track_first}} •</li>@endif
                     @if($user->track_second !== "null")<li title="">{{$user->track_second}} •</li>@endif
-                    @if($user->celebration)<li title="">{{$user->celebration}} •</li>@endif
+                    @if($user->celebration)<li title="">Networking •</li>@endif
                 </ul>
             </div>
             <div class="TechSkills">
