@@ -27,13 +27,13 @@
                 @csrf
                 @if ($user->score >= 85)
                     <p class="matrix-text">{{$user->name}} ~ CONGRATULATIONS!</p>
-                    <a href="/next">> I have a job!</a>
-                @elseif ($user->score >=65 && $user->score < 85)
+                    <button id="animationButton" class="skipBtn">> I have a job!</button>
+                @elseif ($user->score >=65 )
                     <p class="matrix-text">{{$user->name}} ~ CONGRATULATIONS!</p>
-                    <a href="/next">> I have an internship!</a>
+                    <button id="animationButton" class="skipBtn">>  I have an internship!</button>
                 @elseif ($user->score < 65)
                     <p class="matrix-text">{{$user->name}} ~ OH NO!</p>
-                    <a href="/next">> Go back to your mom's basement</a>
+                    <button id="animationButton" class="skipBtn">> Go back to your mom's basement</button>
                 @endif
             </div>
         </div>

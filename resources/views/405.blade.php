@@ -13,7 +13,7 @@
                 <p>Congratz! You unlocked 2 Softskills:</p>
                 <h2>{{$user->track_first}} and {{$user->track_second}}</h2>
             @endif
-                <a class="pixel" href="/next"><p class="matrix-text">I'm happy!</p></a>
+            <button id="animationButton" class="skipBtn">> I'm happy!</button>
             </div>
         </main>
 </body>

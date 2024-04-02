@@ -34,7 +34,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ </p>
-                <a href="/next">> What's in it for me?</a>
+                    <button id="animationButton" class="skipBtn">> What's in it for me?</button>
             </div>
         </div>
 

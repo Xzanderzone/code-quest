@@ -61,7 +61,7 @@
                         @endif
                     </div> 
                     <br>
-                    <button>> Let's make it happen</button>
+                    <button class='nextBtn'>> Let's make it happen</button>
                 </form>
             </div>
         </div>

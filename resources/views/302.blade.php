@@ -41,7 +41,7 @@
                         @endif
                     </div> 
                     <br>
-                    <button>> I'm going with that</button>
+                    <button class='nextBtn'>> I'm going with that</button>
                 </form>
             </div>
         </div>

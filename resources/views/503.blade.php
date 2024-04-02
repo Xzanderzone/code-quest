@@ -7,7 +7,7 @@
         <div class="whiteBlock">
             <p>Congratz! You earned your last Softskill:</p>
             <h2>Networking</H2>
-            <a class="pixel" href="/next"><p class="matrix-text">I'm happy!</p></a>
+            <button id="animationButton" class="skipBtn">> I'm happy!</button>
         </div>
     </main>
 </body>

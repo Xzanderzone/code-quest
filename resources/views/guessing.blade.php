@@ -24,7 +24,7 @@
                     @csrf
                     <input type="text" name='skill'id='skill' value=null style="display:none" >
                     <!-- <input type="text" id='skill2' style="display:none" > -->
-                    <button >> Let's rock!</button>
+                    <button class='nextBtn' >> Let's rock!</button>
                 </form>
                 </div>
             </div>
@@ -37,10 +37,10 @@
                         Let us settle this in a game of Rock paper scissor instead.</p>
                     <br>
                     <br>
-                    <a id="continue"><u>>I AM DETERMINED</u></a>
+                    <a id="continue">>I AM DETERMINED</a>
                     <br>
                     <br>
-                    <a href="/next"><u>>Rock Paper Scissor it is!</u></a>
+                    <button id="animationButton" class="skipBtn">> Rock Paper Scissor it is!</button>
                 </div>
             </div>
             <div class="bar">

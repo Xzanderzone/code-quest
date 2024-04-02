@@ -38,18 +38,10 @@ class StoryController extends Controller
     }
 
     public function nextPage() {
-        //whoops this is javascript...laravel way unknown 
-        //     if($timeout==false){
-        //         $timeout==true;
-        //         setTimeout(() => {
-        //     $timeout=false;
-        // }, 1000);
             $user = Auth::user();
             $user->progress += 1;
             $user->save();
-            
             return redirect('/story');
-        // }
     }
 
     public function chooseCharacter(Request $request) {

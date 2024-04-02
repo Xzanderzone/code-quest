@@ -23,7 +23,7 @@
                         <input type="radio" name="character" value="hat.png" id="hat"><label for="hat"><img src="..\media\stickmen\hat.png"></label>
                         <input type="radio" name="character" value="wheelchair.png" id="nose"><label for="nose"><img src="..\media\stickmen\wheelchair.png"></label>
                     </div>
-                    <button>> This is me</button>
+                    <button class='nextBtn'>> This is me</button>
                 </form>
             </div>
         </div>

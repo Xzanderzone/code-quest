@@ -34,7 +34,7 @@
 
 //actual skip button press
 let skipBtn = document.getElementsByClassName("skipBtn");
-if (skipBtn)
+if (skipBtn[0])
     skipBtn[0].addEventListener(
         "click",
         () => {
@@ -42,7 +42,13 @@ if (skipBtn)
         },
         { once: true }
     );
-
+let nextBtn = document.getElementsByClassName("nextBtn");
+if (nextBtn[0])
+    nextBtn[0].addEventListener("click", function (event) {
+        setTimeout(function () {
+            event.target.disabled = true;
+        }, 0);
+    });
 //show warning when attempting to skip a game
 let skip = document.getElementById("skip");
 if (skip)

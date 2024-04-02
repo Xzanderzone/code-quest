@@ -8,7 +8,7 @@
         <div class="whiteBlock">
             <p>Congratz! You earned your first Softskill:</p>
             <h2>{{$user->card_reason}}</H2>
-            <a class="pixel" href="/next"><p class="matrix-text">I'm happy!</p></a>
+                <button id="animationButton" class="skipBtn pixel">I'm happy!</button>
         </div>
     </main>
 </body>

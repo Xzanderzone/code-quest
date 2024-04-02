@@ -14,7 +14,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ Oh?</p>
-                <a href="/next" id="animationButton">> Enter the bathroom</a>
+                <button id="animationButton" class="skipBtn">>  Enter the bathroom</button>
             </div>
         </div>
  

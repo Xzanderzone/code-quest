@@ -28,13 +28,13 @@
                 @csrf
                 @if ($user->track === "Salesforce")
                     <p class="matrix-text">{{$user->name}} ~ This business case will make or break your chances with the company.</p>
-                    <a href="/next" id="animationButton">> Let's do it!</a>
+                    <button id="animationButton" class="skipBtn">> Let's do it!</button>
                 @elseif ($user->track === "Full-Stack")
                     <p class="matrix-text">{{$user->name}} ~ Yeah!</p>
-                    <a href="/next" id="animationButton">> That's who I am</a>
+                    <button id="animationButton" class="skipBtn">>  That's who I am</button>
                 @elseif ($user->track === "Java")
                     <p class="matrix-text">{{$user->name}} ~ Yeah!</p>
-                    <a href="/next" id="animationButton">> That sounds good</a>
+                    <button id="animationButton" class="skipBtn">> That sounds good</button>
                 @endif
             </div>
         </div>

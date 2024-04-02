@@ -26,7 +26,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ Your phone rings</p>
-                <a href="/next">> Pick up the call</a>
+                <button id="animationButton" class="skipBtn">> Pick up the call</button>
             </div>
         </div>
 
