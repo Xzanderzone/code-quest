@@ -35,7 +35,8 @@
                 <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> <br>
                 <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: HTML & CSS </p> <br>
                 <a href="/story">> KEEP GOING </a><br><br>
-                <a href="/next">> I'M SURE! LET ME SKIP</a>
+                <!-- <a href="/next">> I'M SURE! LET ME SKIP</a> -->
+                <button class="skipBtn">> I'M SURE! LET ME SKIP</button>
             </div>
         </div>
         <div class="popup terminal" id="won" style="display: none">
