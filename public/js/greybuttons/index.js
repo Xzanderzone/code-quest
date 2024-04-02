@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function showGifImage() {
         gifImage.style.display = "block";
         userImage.style.display = "none";
+        button.style.cursor = "pointer";
         button.style.textDecoration = "underline";
     }
 
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function showUserImage() {
         gifImage.style.display = "none";
         userImage.style.display = "block";
+        button.style.cursor = "not-allowed";
         button.style.textDecoration = "none";
     }
 
