@@ -553,7 +553,9 @@ input[type="radio"] {
 }
 
 .characters input[type="radio"]:checked + label img {
-    border: 4px solid rgb(195, 18, 168);
+    border: 8px solid rgb(255, 255, 255);
+    background-color: var(--matrix-color);
+    padding: 8px;
 }
 .characters input[type="radio"]:hover + label img {
     border: 4px solid var(--matrix-color);
@@ -574,7 +576,8 @@ input[type="radio"] {
 }
 
 .options input[type="radio"]:checked + label {
-    background-color: rgb(195, 18, 168);
+    background-color: rgb(255, 255, 255);
+    color: #000000;
 }
 .options input[type="radio"]:hover + label {
     background-color: var(--matrix-color);
@@ -604,7 +607,9 @@ input[type="radio"] {
 }
 
 .cards input[type="radio"]:checked + label {
-    border: rgb(195, 18, 168) 6px solid;
+    border: 8px solid rgb(255, 255, 255);
+    background-color: var(--matrix-color);
+    padding: 8px;
 }
 .cards input[type="radio"]:hover + label {
     border: var(--matrix-color) 6px solid;
