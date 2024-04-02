@@ -31,7 +31,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ </p>
-                <a href="/next">> What happens now?</a>
+                <a href="/next" id="hoverOnlyButton">> What happens now?</a>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>

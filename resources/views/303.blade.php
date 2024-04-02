@@ -34,7 +34,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ </p>
-                <a href="/next">> What's in it for me?</a>
+                <a href="/next" id="hoverOnlyButton">> What's in it for me?</a>
             </div>
         </div>
 

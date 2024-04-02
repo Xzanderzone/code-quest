@@ -20,7 +20,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ </p>
-                <a href="/next">> What's the outcome for me?</a>
+                <a href="/next" id="hoverOnlyButton">> What's the outcome for me?</a>
             </div>
         </div>
 

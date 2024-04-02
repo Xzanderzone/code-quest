@@ -26,7 +26,7 @@
                         <input type="radio" name="tech_talk" value="Storytelling" id="option3"><label for="option3">c) Spaceships! Replicators! Lightsabers! Weeeeeeee!</label>
                     </div> 
                     <br>
-                    <button>> Present your tech talk!</button>
+                    <button id="radioOptionButton" class="buttonGrey">> Present your tech talk!</button>
                 </form>
             </div>
         </div>

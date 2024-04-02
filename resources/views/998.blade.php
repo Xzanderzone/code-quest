@@ -26,7 +26,7 @@
                         <input type="radio" name="toilet_choice" value="null" id="option4"><label for="option4">d)Dropout</label>
                     </div> 
                     <br>
-                    <button>> That's what I do</button>
+                    <button id="radioOptionButton" class="buttonGrey">> That's what I do</button>
                 </form>
             </div>
         </div>

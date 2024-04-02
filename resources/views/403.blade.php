@@ -25,7 +25,7 @@
                         <input type="radio" name="track_second" value="Quick Learner" id="option3"><label for="option3">c) Your project is technically complex, showing extra features that were not requested on the original guidelines. You developed a whole new layer on the program, showcasing your skills.</label>
                     </div> 
                     <br>
-                    <button>> I'm going with that</button>
+                    <button id="radioOptionButton" class="buttonGrey">> I'm going with that</button>
                 </form>
             </div>
         </div>

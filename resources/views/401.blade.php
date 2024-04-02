@@ -15,7 +15,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ This business case will make or break your chances with the company.</p>
-                <a href="/next" id="animationButton">> Let's do it!</a>
+                <a href="/next" id="hoverOnlyButton">> Let's do it!</a>
             </div>
         </div>
         

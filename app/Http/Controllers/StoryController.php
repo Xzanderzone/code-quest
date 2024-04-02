@@ -8,12 +8,14 @@ use Illuminate\Support\Facades\Auth;
 class StoryController extends Controller
 {
     public function getPageArray(){
-        return ["100","101","102","103","104","105","106","107","mastermind",
-        "201","202","203","204","205","guessing","rockPS",
+        return ["100","101","102","103","104","105","106","107",
+        //"mastermind",
+        "201","202","203","204","205",
+        //"guessing","rockPS",
         "301","302","303","304","305","306",
         // "memory",
         "401","402","403","404","405","406",
-        "slider",
+        //"slider",
         "999"];
     }
     public function story() {
