@@ -26,7 +26,7 @@
                         <input type="radio" name="card" value="card5.png" id="option5"><label for="option5"><img src="..\media\cards\card5.png"></label>
                         <input type="radio" name="card" value="card6.png" id="option6"><label for="option6"><img src="..\media\cards\card6.png"></label>
                     </div>
-                <button id="radioOptionButton" class="buttonGrey">> That's the one!</button>
+                <button id="radioOptionButton" class='nextBtn buttonGrey'>> That's the one!</button>
                 </form>
             </div>
         </div>

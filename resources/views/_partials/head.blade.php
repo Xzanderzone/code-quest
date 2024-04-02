@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <script src="{{ asset('js/animations/index.js') }}"></script> 
     <script src="{{ asset('js/typewriter.js') }}" defer></script> 
+    <script src="js/script.js" defer></script>
     <script src="{{ asset('js/greybuttons/index.js') }}"></script> 
     <title>A Web Dev Journey</title>
 </head>

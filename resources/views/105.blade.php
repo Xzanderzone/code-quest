@@ -50,7 +50,7 @@
                         @endif
                         </div> 
                         <br>
-                    <button id="radioOptionButton" class="buttonGrey">> This is what I say!</button>
+                    <button id="radioOptionButton" class='nextBtn buttonGrey'>> This is what I say!</button>
                 </form>
             </div>
         </div>

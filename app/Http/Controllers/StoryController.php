@@ -9,13 +9,13 @@ class StoryController extends Controller
 {
     public function getPageArray(){
         return ["100","101","102","103","104","105","106","107",
-        //"mastermind",
+        "mastermind",
         "201","202","203","204","205",
-        //"guessing","rockPS",
+        "guessing","rockPS",
         "301","302","303","304","305","306",
         // "memory",
         "401","402","403","404","405","406",
-        //"slider",
+        "slider",
         "999"];
     }
     public function story() {
@@ -37,18 +37,10 @@ class StoryController extends Controller
     }
 
     public function nextPage() {
-        //whoops this is javascript...laravel way unknown 
-        //     if($timeout==false){
-        //         $timeout==true;
-        //         setTimeout(() => {
-        //     $timeout=false;
-        // }, 1000);
             $user = Auth::user();
             $user->progress += 1;
             $user->save();
-            
             return redirect('/story');
-        // }
     }
 
     public function chooseCharacter(Request $request) {
@@ -97,6 +89,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->rockps= $request->skill;
         $user->progress += 1;
+        $user->score += 10;
         $user->save();
 
         return redirect('/story');
@@ -108,6 +101,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->slider= $request->skill;
         $user->progress += 1;
+        $user->score += 10;
         $user->save();
 
         return redirect('/story');
@@ -119,6 +113,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->mastermind= $request->skill;
         $user->progress += 1;
+        $user->score += 10;
         $user->save();
 
         return redirect('/story');
@@ -134,6 +129,7 @@ class StoryController extends Controller
         $user->memory2= $request->skill2;
         $user->memory3= $request->skill3;
         $user->progress += 1;
+        $user->score += 10;
         $user->save();
 
         return redirect('/story');
@@ -161,6 +157,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->card_reason = $request->card_reason;
 
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
@@ -173,6 +170,10 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->toilet_choice = $request->toilet_choice;
+
+        if($request->toilet_choice !== "null") {
+            $user->score += 5;
+        }
 
         $user->progress += 1;
         $user->save();
@@ -189,6 +190,7 @@ class StoryController extends Controller
             $user->extra_toilet = "Positive Attitude";
         }
         
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
@@ -199,6 +201,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->card_reason = null;
 
+        $user->score -= 5;
         $user->progress += 1;
         $user->save();
 
@@ -212,6 +215,10 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->tech_talk = $request->tech_talk;
 
+        if($request->tech_talk !== "null") {
+            $user->score += 5;
+        }
+
         $user->progress += 1;
         $user->save();
 
@@ -224,6 +231,10 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->feedback = $request->feedback;
+
+        if($request->feedback !== "null") {
+            $user->score += 5;
+        }
 
         $user->progress += 1;
         $user->save();
@@ -251,6 +262,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->track_first = $request->track_first;
 
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
@@ -264,6 +276,23 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->track_second = $request->track_second;
 
+        if($request->track_second !== "null") {
+            $user->score += 5;
+        }
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function celebrationChoice(Request $request) {
+        $request->validate([
+            'celebration' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->celebration = $request->celebration;
+
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
