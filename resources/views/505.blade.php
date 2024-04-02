@@ -37,7 +37,7 @@
                 @endif
             </div>
         </div>
-
+        <div class="text-balloon-line"><div class="actual-line"></div></div>
         @include("_partials.drawings")
 
     </main>
