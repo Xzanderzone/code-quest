@@ -13,7 +13,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ Bwaaaah</p>
-                <button id="animationButton" class="skipBtn">> Don't make me cry, narrator...</button>
+                <button id="hoverOnlyButton" class="skipBtn">> Don't make me cry, narrator...</button>
             </div>
         </div>
  

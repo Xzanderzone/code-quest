@@ -26,12 +26,11 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ Your phone rings</p>
-                <button id="animationButton" class="skipBtn">> Pick up the call</button>
+                <button id="hoverOnlyButton" class="skipBtn">> Pick up the call</button>
             </div>
         </div>
 
-        <div class="basile"><img src="..\media\stickmen\Stickman-class.svg"></div>
-        <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
+        @include("_partials.drawings")
 
     </main>
 </body>
