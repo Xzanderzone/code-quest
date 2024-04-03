@@ -468,12 +468,10 @@ button:hover {
 
 /* FROM disable TO enable WHEN RADIO SELECT*/
 .buttonGrey {
-    color: #7b7b7b; /* Text color white */
-}
-.buttonGrey[disabled] {
     color: #7b7b7b;
     cursor: not-allowed;
 }
+
 .buttonWhite {
     color: #ffffff;
 }
