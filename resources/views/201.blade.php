@@ -5,7 +5,13 @@
     @include("_partials.header") 
     <main class="ok-page">
         <div class="text-balloon">
-            <p>You now feel confident about building beautiful websites! Seems like a good time for a cup of coffee, right?
+            <p>
+            @csrf
+            @if ($user->mastermind)
+            You now feel confident about building beautiful websites! Seems like a good time for a cup of coffee, right?
+            @else
+            You definitely could use a break right now. Coffee seems like a good idea, right?
+            @endif
             <br>You walk to the kitchen and on the way you hear crying noises coming from the bathroom.</p>
         </div>
         <div class="terminal">
@@ -13,7 +19,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~ Oh?</p>
+                <p class="matrix-text">{{$user->name}} ~    Oh?</p>
                 <button id="hoverOnlyButton" class="skipBtn">>  Enter the bathroom</button>
             </div>
         </div>

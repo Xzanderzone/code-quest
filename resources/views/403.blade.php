@@ -7,7 +7,7 @@
         <div class="text-balloon">
             @csrf
             @if($user->track === "Salesforce")
-                <p>The time for presenting your business case is arriving! Your program is ready, tested and ready to go.<br>
+                <p>The time for presenting your business case has arrived! Your program is tested and ready to go.<br>
                 You and your colleagues go to Addventure headquarters to show your project to a panel of 4 Salesforce experts.</p>
             @elseif($user->track === "Full-Stack")
                 <p>Your team decided to work with Agile management style, and you were assigned to the role of 'scrum master', the team project manager. That comes with responsibilities.<br>
@@ -25,7 +25,7 @@
             <div class="content">
                 @csrf
                 @if($user->track === "Salesforce")
-                    <p class="matrix-text">{{$user->name}} ~  Your presentation is right after your colleague 'Sunday'. It's time for you to go!</p>
+                    <p class="matrix-text">{{$user->name}} ~    My presentation is right after my colleague 'Sunday'. It's time to go!</p>
                     <br>
                 @elseif($user->track === "Full-Stack")
                     <p class="matrix-text">{{$user->name}} ~  On the meeting you...</p>
@@ -38,11 +38,11 @@
                     @csrf
                     <div class="options">
                         @if($user->track === "Salesforce")
-                            <input type="radio" name="track_second" value="Public Speaking" id="option1"><label for="option1">a) The presentation takes off with you telling a story about the project. You show the panel why the Salesforce tools are important, and how you can convince the clients that they are the best option for their business.</label> 
+                            <input type="radio" name="track_second" value="Public Speaking" id="option1"><label for="option1">a) I begin my presentation telling a story.</label> 
                             <br>
-                            <input type="radio" name="track_second" value="null" id="option2"><label for="option2">b) You start saying that your presentation is better than the other candidates and they don't have to waste time with other presentations: you are what they are looking for!</label>
+                            <input type="radio" name="track_second" value="null" id="option2"><label for="option2">b) "The time for losers is over, now the real show begins!"</label>
                             <br>
-                            <input type="radio" name="track_second" value="Quick Learner" id="option3"><label for="option3">c) Your project is technically complex, showing extra features that were not requested on the original guidelines. You developed a whole new layer on the program, showcasing your skills.</label>
+                            <input type="radio" name="track_second" value="Quick Learner" id="option3"><label for="option3">c) Kick off showing the technicalities of my project.</label>
                         @elseif($user->track === "Full-Stack")
                             <input type="radio" name="track_second" value="null" id="option1"><label for="option1">a) Make a arbitrary decision that everyone has to work overtime, on evenings and weekends.</label> 
                             <br>

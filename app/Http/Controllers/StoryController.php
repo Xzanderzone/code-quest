@@ -19,7 +19,6 @@ class StoryController extends Controller
         "501","502","503","504","505",
         "end"];
     }
-    
     public function story() {
         $user = Auth::user();
         $pages=StoryController::getPageArray();
@@ -79,6 +78,8 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->guessing= $request->skill;
+
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 

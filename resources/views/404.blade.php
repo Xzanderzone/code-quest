@@ -7,9 +7,9 @@
         <div class="text-balloon">
             @csrf
             @if ($user->track === "Salesforce" && $user->track_second === "Public Speaking")
-                <p>Your presentation went well, you were a very confident speaker and your skills didn't let you down too. The panel was impressed by your performance.</p>
+                <p>Your presentation went well, you were a very confident speaker and your skills didn't let you down too. You show the panel why the Salesforce tools are important, and how you can convince the clients that they are the best option for their business. The panel was impressed by your performance!</p>
             @elseif ($user->track === "Salesforce" && $user->track_second === "Quick Learner")
-                <p>You felt a little nervous presenting your case, but your technical knowledge shone brighter than a thousand sons! The panel was very impressed with your skills.</p>
+                <p>You felt a little nervous presenting your case, but your technical knowledge shone brighter than a thousand sons! The panel was very impressed with your skills and how you developed a whole new layer to the program, including extra features that were not requested on the original guidelines.</p>
             @elseif ($user->track === "Salesforce" && $user->track_second === "null")
                 <p>Although you felt confident, the reception of your presentation was not how you expected. You came across as arrogant, and the panel was uncomfortable with the way you started your business case, downplaying your colleague's efforts.</p>
             @elseif ($user->track === "Full-Stack" && $user->track_second === "null")

@@ -34,7 +34,7 @@
                 </div>
                 <div class="content">
                     <p id="msgWin" class='matrix-text'>Surrender now! You will never find my age.<br>
-                        Let us settle this in a game of Rock paper scissor instead.</p>
+                        Let us settle this in a game of Rock Paper Scissor instead.</p>
                     <br>
                     <br>
                     <a id="continue">>I AM DETERMINED</a>

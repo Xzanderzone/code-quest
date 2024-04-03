@@ -22,7 +22,7 @@
             <div class="content">
                 @csrf
                 @if($user->track === "Salesforce")
-                    <p class="matrix-text">{{$user->name}} ~  You finish reading the document and…</p>
+                    <p class="matrix-text">{{$user->name}} ~  I finish reading the document and…</p>
                     <br>
                 @elseif($user->track === "Full-Stack")
                     <p class="matrix-text">{{$user->name}} ~  When Persile finishes his explanation you...</p>
@@ -37,11 +37,11 @@
                         @if($user->track === "Salesforce")
                             <input type="radio" name="track_first" value="Focus" id="option1"><label for="option1">a) Immediately start working on the project. There is no time to lose!</label> 
                             <br>
-                            <input type="radio" name="track_first" value="Collaboration" id="option2"><label for="option2">b) Check with your colleagues what they thought about the assignment, sharing some ideas and tips.</label>
+                            <input type="radio" name="track_first" value="Collaboration" id="option2"><label for="option2">b) Check with my colleagues what they thought about the assignment, sharing some ideas and tips.</label>
                             <br>
-                            <input type="radio" name="track_first" value="Detail Oriented" id="option3"><label for="option3">c) Read the document once more to make sure that you understand every task.</label>
+                            <input type="radio" name="track_first" value="Detail Oriented" id="option3"><label for="option3">c) Read the document once more to make sure that I understood every task.</label>
                             <br>
-                            <input type="radio" name="track_first" value="Networking" id="option4"><label for="option4">d) Call your buddy on Addventure and ask him how was his experience on this process.</label>
+                            <input type="radio" name="track_first" value="Cooperation" id="option4"><label for="option4">d) Call my buddy on Addventure and ask him how was his experience on this process.</label>
                         @elseif($user->track === "Full-Stack")
                             <input type="radio" name="track_first" value="Focus" id="option1"><label for="option1">a) Immediately start brainstorming ideas for the project. There is no time to lose!</label> 
                             <br>

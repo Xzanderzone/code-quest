@@ -14,10 +14,10 @@
                 @elseif ($user->toilet_choice === "Conflict Resolution")
                     <p>You try to comfort 'Bonasi' and encourage him to talk to Persile.<br>
                     @if ($user->seats === 'empty-table')
-                        - Starting something new can be very stressful! I remember the first day of classes, I arrived and was so stressed about meeting new people that I isolated myself sitting at an empty table. But now I already feel more confident in meeting new people. I am sure everyone feels like this, and they will be understandable about your little slip.<br>
+                        - Starting something new can be very stressful! On the first day of classes, I was so stressed that I isolated myself sitting at an empty table. But now I already feel more confident meeting new people. I am sure everyone has this moments, and they will be understandable about your little slip.<br>
                         - Oh, thank you for these kind words, {{$user->name}}. I feel that I have a friend on you! I'll go and explain to Persile that my real name is “Yo-nasi”.
                     @elseif ($user->seats === 'occupied-table')
-                        - Starting something new can be very stressful! On my first day, I was so worried about meeting new people. I remember feeling overwhelmed about the decision of where to seat, and you kindly looked at me and asked if I would like to sit with you. That made my day so much better and you showed such kindness that I am sure that everyone in the class will reciprocate in the same way when you tell them about your little slip.<br>
+                        - Starting something new can be very stressful! On the first day, I remember feeling overwhelmed about the decision of where to seat, and you looked at me and asked if I would like to sit with you. That made my day so much better and you showed such kindness that I am sure that everyone will understand when you tell them about your little slip.<br>
                         - Oh, thank you for these kind words, {{$user->name}}. I had no idea that I already had such good friends here! I'll go and explain to Persile that my real name is “Yo-nasi”.
                     @endif
                     </p>
@@ -30,8 +30,8 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~ </p>
-                <button id="hoverOnlyButton" class="skipBtn">> What happens now?<</button>
+                <p class="matrix-text">{{$user->name}} ~</p>
+                <button id="hoverOnlyButton" class="skipBtn">> What happens now?</button>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>

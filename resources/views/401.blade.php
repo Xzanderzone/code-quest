@@ -27,7 +27,7 @@
             <div class="content">
                 @csrf
                 @if ($user->track === "Salesforce")
-                    <p class="matrix-text">{{$user->name}} ~ This business case will make or break your chances with the company.</p>
+                    <p class="matrix-text">{{$user->name}} ~ This business case will make or break my chances with the company.</p>
                     <button id="hoverOnlyButton" class="skipBtn">> Let's do it!</button>
                 @elseif ($user->track === "Full-Stack")
                     <p class="matrix-text">{{$user->name}} ~ Yeah!</p>
@@ -39,7 +39,6 @@
             </div>
         </div>
 
-        <div class="text-balloon-line"><div class="actual-line"></div></div>
         @include("_partials.drawings")
 
     </main>

@@ -12,7 +12,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{ $user->name }} ~ I look like this broh</p>
+                <p class="matrix-text">{{ $user->name }} ~    I look like this broh</p>
                 <form class="choose-character" method="POST" action="/choose-character"> 
                     @csrf
                     <div class="characters">

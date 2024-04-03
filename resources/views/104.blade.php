@@ -15,7 +15,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~ I see some cards scattered around the place. Which one should I choose?!</p>
+                <p class="matrix-text">{{$user->name}} ~    I see some cards scattered around the place. Which one should I choose?!</p>
                 <form action="/cards" method="POST" class="cards">
                     @csrf
                     <div class="cards">

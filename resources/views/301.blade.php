@@ -14,19 +14,19 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~  It's your time to present! Which topic do you choose for your Tech Talk?</p>
+                <p class="matrix-text">{{$user->name}} ~    It's my time to present! Which topic should I choose for the Tech Talk?</p>
                 <br>
                 <form action="/tech-talk" method="POST">
                     @csrf
                     <div class="options">
                         <input type="radio" name="tech_talk" value="null" id="option1"><label for="option1">a) How investing in HabibiCoins can make you become the next Melon Dusk!</label> 
                         <br>
-                        <input type="radio" name="tech_talk" value="Growth Mindset" id="option2"><label for="option2">b) Present a new coding tool that can be useful for your colleagues.</label>
+                        <input type="radio" name="tech_talk" value="Growth Mindset" id="option2"><label for="option2">b) Present a new coding tool that can be useful for my colleagues.</label>
                         <br>
                         <input type="radio" name="tech_talk" value="Storytelling" id="option3"><label for="option3">c) Spaceships! Replicators! Lightsabers! Weeeeeeee!</label>
                     </div> 
                     <br>
-                    <button id="radioOptionButton" class="nextBtn buttonGrey">> Present your tech talk!</button>
+                    <button id="radioOptionButton" class="nextBtn buttonGrey">> Present my tech talk!</button>
                 </form>
             </div>
         </div>
