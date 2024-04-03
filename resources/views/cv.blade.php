@@ -84,7 +84,7 @@
                 <h2>Tech Skills</h2>
                 <ul>
                 @if($user->mastermind !== "null")<li title="">{{$user->mastermind}} •</li>@endif
-                @if($user->memory1 !== "null")<li title="">{{$user->memory1}} •</li>@endif
+                @if($user->rockps !== "null")<li title="">{{$user->rockps}} •</li>@endif
                 @if($user->memory1 !== "null")<li title="">{{$user->memory1}} •</li>@endif
                 @if($user->memory2 !== "null")<li title="">{{$user->memory2}} •</li>@endif
                 @if($user->memory3 !== "null")<li title="">{{$user->memory3}} •</li>@endif
