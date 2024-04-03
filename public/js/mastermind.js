@@ -90,14 +90,12 @@ function generateCode() {
 }
 
 function round() {
-    console.log('check')
     selectColor();
     drawConfirmationButton();
     placePawn();
 
     let button = document.querySelector('.confirm button')
     button.addEventListener("click", ()=> {
-        console.log('yom'); 
             if(score.length>=max)EndGame(false);
         if (checkForFullRow()) {
             attempts++;
@@ -121,7 +119,6 @@ function round() {
                 } 
             }
 
-            console.log(givenAnswer);
             tips.sort((a, b) => (a === 'black') ? -1 : 1);
 
             drawTips(tips);
@@ -133,11 +130,9 @@ function round() {
                     let number = row.querySelector('.rownumber');
                     confirm.innerHTML = null;
                     if (checkActiveRow(0) === row) {
-                        console.log(number.textContent)
                         score.push(number.textContent);
                     }
                 });
-                console.log(score);
                 showAnswer();
                 removeConfirmationButton();
                 checkForFullRow() = null;
@@ -145,7 +140,6 @@ function round() {
             }else if (attempts>=max){
             EndGame(false);
             }
-            console.log("yo")
             checkActiveRow(0).played = true;
             return round();
         }
@@ -207,7 +201,6 @@ function placePawn() {
     }
 
     placeholders = checkActiveRow(0).querySelectorAll('.attempt .placeholder');
-    console.log(placeholders)
 
     
     placeholders.forEach(placeholder => {

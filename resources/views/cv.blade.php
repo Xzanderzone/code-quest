@@ -83,11 +83,12 @@
             <div class="TechSkills">
                 <h2>Tech Skills</h2>
                 <ul>
-                    <li>Java •</li>
-                    <li>Back end •</li>
-                    <li>HTML •</li>
-                    <li>Salesforce •</li>
-                    <li>Express •</li>
+                @if($user->mastermind !== "null")<li title="">{{$user->mastermind}} •</li>@endif
+                @if($user->rockps !== "null")<li title="">{{$user->rockps}} •</li>@endif
+                @if($user->memory1 !== "null")<li title="">{{$user->memory1}} •</li>@endif
+                @if($user->memory2 !== "null")<li title="">{{$user->memory2}} •</li>@endif
+                @if($user->memory3 !== "null")<li title="">{{$user->memory3}} •</li>@endif
+                @if($user->slider !== "null")<li title="">{{$user->slider}} •</li>@endif
                 </ul>
             </div>
             <div class="project">

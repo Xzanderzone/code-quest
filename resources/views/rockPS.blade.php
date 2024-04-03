@@ -24,7 +24,7 @@
                         <p id='msgLost' class='matrix-text'> YOU LOSE </p>
                         <br>
                         <a id='msgLink'href="/story">> NOT THROWING AWAY MY SHOT! (try again)</a>
-                        <button id='skip'>> SKIP</button>
+                        <button class='skipBtn'>> SKIP</button>
                     </div>
                 </div>
                 <div class="popup terminal" id="warning" style="display: none">

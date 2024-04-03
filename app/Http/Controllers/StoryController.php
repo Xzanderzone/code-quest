@@ -19,7 +19,6 @@ class StoryController extends Controller
         "501","502","503","504","505",
         "end"];
     }
-    
     public function story() {
         $user = Auth::user();
         $pages=StoryController::getPageArray();

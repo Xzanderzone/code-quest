@@ -12,24 +12,12 @@ class UserController extends Controller
     public function register(Request $request){
         
         $inputs = $request->validate([
-            'name' => 'required', 
-            'password' => 'required',
+            'name' => 'required|unique:users|min:2|max:50', 
+            'password' => 'min:3|required_with:password-check|same:password-check',
             'password-check' => 'required'
         ]);
-
-        $user = User::where('name', $inputs['name'])->first();
-
-        if ($user) {
-            dd("The username '" . $inputs['name'] . "' already exists broh");
-        }
-
-        if ($inputs['password'] === $inputs['password-check']) {
-            $inputs['password'] = bcrypt($inputs['password']);
             $user = User::create($inputs);
             auth()->login($user);
-        } else {
-            dd("The passwords are not the same, broh!");
-        }
         
         return redirect('/story');
     }
@@ -39,21 +27,13 @@ class UserController extends Controller
             'name' => 'required', 
             'password' => 'required'
         ]);
-
-        $user = User::where('name', $inputs['name'])->first();
-
-        if (!$user) {
-            dd("The username '" . $inputs['name'] . "' is not in the database, bro");
-        }
-
-        if (!auth()->attempt(['name' => $inputs['name'], 'password' => $inputs['password']])) {
-            dd('Not the correct password broh');
+        // auth()->attempt(['name' => $inputs['name'], 'password' => $inputs['password']]) ;
+        if (auth()->attempt(['name' => $inputs['name'], 'password' => $inputs['password']])) {
+            $user = User::where('name', $inputs['name'])->first();
+            return redirect('/story');
         } else {
-        $request->session()->regenerate();
+            return back()->withErrors(['password' => 'Invalid username or password.'])->withInput();
         }
-
-
-        return redirect('/story');
     }
 
     public function logout() {
