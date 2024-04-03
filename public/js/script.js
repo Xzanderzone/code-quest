@@ -32,24 +32,26 @@
 //     true
 // );
 
-
 //actual skip button press
 let skipBtn = document.getElementsByClassName("skipBtn");
-if (skipBtn[0])
-    skipBtn[0].addEventListener(
+for (let i = 0; i < skipBtn.length; i++) {
+    skipBtn[i].addEventListener(
         "click",
         () => {
             location.href = "/next";
         },
         { once: true }
     );
+}
+//post request buttons use nextBtn
 let nextBtn = document.getElementsByClassName("nextBtn");
-if (nextBtn[0])
-    nextBtn[0].addEventListener("click", function (event) {
+for (let i = 0; i < nextBtn.length; i++) {
+    nextBtn[i].addEventListener("click", function (event) {
         setTimeout(function () {
             event.target.disabled = true;
         }, 0);
     });
+}
 //show warning when attempting to skip a game
 let skip = document.getElementById("skip");
 if (skip)
