@@ -14,7 +14,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~ Yeah!</p>
+                <p class="matrix-text">{{$user->name}} ~    Yeah!</p>
                 <button id="hoverOnlyButton" class="skipBtn">> Gimmi that code!</button>
             </div>
         </div>

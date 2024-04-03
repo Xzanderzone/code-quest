@@ -29,7 +29,6 @@
                         <button id='continueGame'>> KEEP GOING </button>
                         <a href="/story">> Reset puzzle </a><br>
                         <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
-
                     </div>
                 </div>
                 <!-- extra info  -->

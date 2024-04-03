@@ -23,13 +23,13 @@
 			</div>
 			<div id='ui'>
 				<p id='chatbox'>You didn't manage to find my age!<br>
-					Bet you cant defeat ME in rock paper scissors either.<br>
-					Best 3 out of 5 wins!<br> good luck.</p>
+					Bet you cant defeat ME in Rock Paper Scissors either.<br>
+					Best 3 out of 5 wins!<br>Good luck.</p>
 					<div id='options'>
 						<button id='fight' disabled >Fight!</button>
 						<button id='rock' class=''>🗿Rock</button>
 						<button id='paper' class=''>📃Paper</button>
-						<button id='scissor' class=''	>✂️Scissor</button>
+						<button id='scissor' class=''>✂️Scissor</button>
 					</div>	
 				</div>
 			</div>

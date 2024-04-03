@@ -11,7 +11,7 @@ let course = document.currentScript.getAttribute("track");
 console.log(course);
 
 switch (course) {
-    case "Fullstack":
+    case "Full-Stack":
         fetch("/media/memory_cards/fullstack/fullstack.json")
             .then((res) => res.json())
             .then((data) => {
@@ -85,6 +85,7 @@ function flipCard() {
     lockBoard = true;
 
     checkForMatch();
+    checkGameSkip();
 }
 
 function checkForMatch() {
@@ -105,8 +106,8 @@ function checkForMatch() {
     } else {
         unflipCards();
     }
-
     console.log(matchedPair);
+    checkGameEnd();
 }
 
 function disableCards() {
@@ -149,6 +150,45 @@ function addMatchedPair(firstCardName, secondCardName) {
     matchedPair.push([firstCardName, secondCardName]);
 }
 
-let firstPair = matchedPair[0];
-let fourthPair = matchedPair[3];
-let eighthPair = matchedPair[7];
+function checkGameEnd() {
+    if (matchedPair.length === cards.length / 2) {
+        console.log("win");
+        setTimeout(gameEnd, 1000);
+    } else {
+        return false;
+    }
+}
+
+function checkGameSkip() {
+    if (score === 8) {
+        console.log("skip!");
+        setTimeout(gameSkip, 1000);
+    } else {
+        return false;
+    }
+}
+
+function gameEnd() {
+    let modelWon = document.getElementById("won");
+    modelWon.style.display = "";
+    let skillsText = document.getElementById("msgWin");
+    skillsText.innerHTML =
+        "You unlocked these skills<br>" +
+        "- " +
+        matchedPair[0][0] +
+        "<br> - " +
+        matchedPair[3][0] +
+        "<br> - " +
+        matchedPair[7][0];
+    let storeFirstPair = document.getElementById("skill");
+    let storeFourthPair = document.getElementById("skill2");
+    let storeEightPair = document.getElementById("skill3");
+    storeFirstPair.value = matchedPair[0][0];
+    storeFourthPair.value = matchedPair[3][0];
+    storeEightPair.value = matchedPair[7][0];
+}
+
+function gameSkip() {
+    let modelSkip = document.getElementById("warning");
+    modelSkip.style.display = "block";
+}

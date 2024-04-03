@@ -13,7 +13,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~   What do you do?</p>
+                <p class="matrix-text">{{$user->name}} ~    What do I do?</p>
                 <br>
                 <form action="/toilet-choice" method="POST">
                     @csrf
