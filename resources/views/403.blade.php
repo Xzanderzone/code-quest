@@ -58,7 +58,7 @@
                         @endif
                     </div> 
                     <br>
-                    <button>> I'm going with that</button>
+                    <button id="radioOptionButton" class='buttonGrey nextBtn'>> I'm going with that</button>
                 </form>
             </div>
         </div>

@@ -24,7 +24,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ Yeah!</p>
-                <a href="/next">> Let's roll!</a>
+            <button class="skipBtn" id="hoverOnlyButton">> Let's roll!</button>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>

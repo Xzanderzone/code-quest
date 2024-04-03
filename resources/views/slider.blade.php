@@ -28,7 +28,8 @@
                         <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: {{$user->track}} </p> <br>
                         <button id='continueGame'>> KEEP GOING </button>
                         <a href="/story">> Reset puzzle </a><br>
-                        <a href="/next">> I'M SURE! LET ME SKIP</a>
+                        <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
+
                     </div>
                 </div>
                 <!-- extra info  -->
@@ -54,7 +55,7 @@
                     @csrf
                             <input type="text" name='skill' id='skill' style="display:none" >
                             <!-- <input type="text" id='skill2' style="display:none" > -->
-                            <button >> NICE! CONTINUE</button>
+                            <button  class='nextBtn'>> NICE! CONTINUE</button>
                         </form>
                     </div>
                 </div>

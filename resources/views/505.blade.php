@@ -27,19 +27,18 @@
                 @csrf
                 @if ($user->score >= 85)
                     <p class="matrix-text">{{$user->name}} ~ CONGRATULATIONS!</p>
-                    <a href="/next">> I have a job!</a>
-                @elseif ($user->score >=65 && $user->score < 85)
+                    <button id="hoverOnlyButton" class="skipBtn">> I have a job!</button>
+                @elseif ($user->score >=65 )
                     <p class="matrix-text">{{$user->name}} ~ CONGRATULATIONS!</p>
-                    <a href="/next">> I have an internship!</a>
+                    <button id="hoverOnlyButton" class="skipBtn">>  I have an internship!</button>
                 @elseif ($user->score < 65)
                     <p class="matrix-text">{{$user->name}} ~ OH NO!</p>
-                    <a href="/next">> Go back to your mom's basement</a>
+                    <button id="hoverOnlyButton" class="skipBtn">> Go back to your mom's basement</button>
                 @endif
             </div>
         </div>
-
-        <div class="basile"><img src="..\media\stickmen\Stickman-class.svg"></div>
-        <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
+        <div class="text-balloon-line"><div class="actual-line"></div></div>
+        @include("_partials.drawings")
 
     </main>
 </body>

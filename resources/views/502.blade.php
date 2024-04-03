@@ -24,7 +24,7 @@
                         <input type="radio" name="celebration" value="Karaoke" id="option3"><label for="option3">c) CE-LE-BRA-TE GOOD TIMES, COME ON! Karaoke it is!</label>
                     </div> 
                     <br>
-                    <button>> Here we go!</button>
+                    <button id="radioOptionButton" class='buttonGrey nextBtn'>> Here we go!</button>
                 </form>
             </div>
         </div>

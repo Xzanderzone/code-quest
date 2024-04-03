@@ -27,7 +27,7 @@
                         <input type="radio" name="toilet_choice" value="null" id="option4"><label for="option4">d) I leave the bathroom and do nothing</label>
                     </div> 
                     <br>
-                    <button id="animationButton">> That's what I do</button>
+                    <button id="radioOptionButton" class='nextBtn buttonGrey'>> That's what I do</button>
                 </form>
             </div>
         </div>

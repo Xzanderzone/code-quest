@@ -16,8 +16,7 @@ class StoryController extends Controller
         // "memory",
         "401","402","403","404","405","406",
         "slider",
-        "501","502","503","504","505",
-        "end"];
+        "999"];
     }
     
     public function story() {
@@ -39,18 +38,10 @@ class StoryController extends Controller
     }
 
     public function nextPage() {
-        //whoops this is javascript...laravel way unknown 
-        //     if($timeout==false){
-        //         $timeout==true;
-        //         setTimeout(() => {
-        //     $timeout=false;
-        // }, 1000);
             $user = Auth::user();
             $user->progress += 1;
             $user->save();
-            
             return redirect('/story');
-        // }
     }
 
     public function chooseCharacter(Request $request) {
@@ -99,6 +90,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->rockps= $request->skill;
         $user->progress += 1;
+        $user->score += 10;
         $user->save();
 
         return redirect('/story');
@@ -110,6 +102,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->slider= $request->skill;
         $user->progress += 1;
+        $user->score += 10;
         $user->save();
 
         return redirect('/story');
@@ -121,6 +114,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->mastermind= $request->skill;
         $user->progress += 1;
+        $user->score += 10;
         $user->save();
 
         return redirect('/story');
@@ -136,6 +130,7 @@ class StoryController extends Controller
         $user->memory2= $request->skill2;
         $user->memory3= $request->skill3;
         $user->progress += 1;
+        $user->score += 10;
         $user->save();
 
         return redirect('/story');

@@ -1,6 +1,6 @@
-// var offset = [0, 0];
-// var divOverlay = document.getElementById("won");
-// var isDown = false;
+// let offset = [0, 0];
+// let divOverlay = document.getElementById("won");
+// let isDown = false;
 // divOverlay.addEventListener(
 //     "mousedown",
 //     function (e) {
@@ -32,35 +32,52 @@
 //     true
 // );
 
+//actual skip button press
+let skipBtn = document.getElementsByClassName("skipBtn");
+if (skipBtn[0])
+    skipBtn[0].addEventListener(
+        "click",
+        () => {
+            location.href = "/next";
+        },
+        { once: true }
+    );
+let nextBtn = document.getElementsByClassName("nextBtn");
+if (nextBtn[0])
+    nextBtn[0].addEventListener("click", function (event) {
+        setTimeout(function () {
+            event.target.disabled = true;
+        }, 0);
+    });
 //show warning when attempting to skip a game
-var skip = document.getElementById("skip");
+let skip = document.getElementById("skip");
 if (skip)
     skip.addEventListener("click", () => {
-        var finalWarning = document.getElementById("warning");
+        let finalWarning = document.getElementById("warning");
         finalWarning.style.display = "";
     });
 
 //avoid refresh on slider puzzle "continue"
-var continueGame = document.getElementById("continueGame");
+let continueGame = document.getElementById("continueGame");
 if (continueGame)
     continueGame.addEventListener("click", () => {
-        var finalWarning = document.getElementById("warning");
+        let finalWarning = document.getElementById("warning");
         finalWarning.style.display = "none";
     });
 
 //help pop up explaining minigames?
-var info = document.getElementById("infoBtn");
+let info = document.getElementById("infoBtn");
 if (info)
     info.addEventListener("click", () => {
-        var infoModal = document.getElementById("info");
+        let infoModal = document.getElementById("info");
         if (infoModal.style.display == "none") infoModal.style.display = "";
         else infoModal.style.display = "none";
     });
 
 //close help pop up extra button
-var info = document.getElementById("return");
-if (info)
-    info.addEventListener("click", () => {
-        var infoModal = document.getElementById("info");
+let reeturn = document.getElementById("return");
+if (reeturn)
+    reeturn.addEventListener("click", () => {
+        let infoModal = document.getElementById("info");
         infoModal.style.display = "none";
     });

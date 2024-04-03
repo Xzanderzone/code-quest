@@ -13,15 +13,12 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ Bwaaaah</p>
-                <a href="/next" id="animationButton">> Don't make me cry, narrator...</a>
+                <button id="hoverOnlyButton" class="skipBtn">> Don't make me cry, narrator...</button>
             </div>
         </div>
  
         <div class="text-balloon-line"><div class="actual-line"></div></div>
-        <div class="basile"><img src="..\media\stickmen\Stickman-class.svg"></div>
-        @if(!empty($user->character))
-            <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
-        @endif
+        @include("_partials.drawings")
 
     </main>
 </body>

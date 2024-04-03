@@ -1,18 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("animationButton"); // Replace 'yourButtonId' with the actual ID of your button
+    const hoverOnlyButton = document.getElementById("hoverOnlyButton");
     const gifImage = document.getElementById("gifImage");
     const userImage = document.getElementById("userImage");
 
-    // Add event listener for hover
-    animationButton.addEventListener("mouseenter", function () {
-        // Show GIF
+    // Add event listeners for hover effect for hoverOnlyButton
+    hoverOnlyButton.addEventListener("mouseenter", function () {
         gifImage.style.display = "block";
         userImage.style.display = "none";
     });
 
-    // Add event listener for mouseleave
-    animationButton.addEventListener("mouseleave", function () {
-        // Show original image
+    hoverOnlyButton.addEventListener("mouseleave", function () {
         gifImage.style.display = "none";
         userImage.style.display = "block";
     });

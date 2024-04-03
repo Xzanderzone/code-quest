@@ -184,8 +184,8 @@ main {
     align-items: end;
 }
 
-.gif {
-    animation: moveRight 5s forwards; /* Adjust the value as needed */
+.move-animation {
+    animation: moveRight 5s forwards;
 }
 
 @keyframes moveRight {
@@ -193,7 +193,7 @@ main {
         transform: translateX(0);
     }
     to {
-        transform: translateX(18vw); /* Adjust the value as needed */
+        transform: translateX(18vw);
     }
 }
 
@@ -466,6 +466,22 @@ button:hover {
     text-decoration: underline;
 }
 
+/* FROM disable TO enable WHEN RADIO SELECT*/
+.buttonGrey {
+    color: #7b7b7b; /* Text color white */
+}
+.buttonGrey[disabled] {
+    color: #7b7b7b;
+    cursor: not-allowed;
+}
+.buttonWhite {
+    color: #ffffff;
+}
+
+#radioOptionButton {
+    text-decoration: none;
+}
+
 /*/ / STAR YOU EARNED A SKILL! / /*/
 .star {
     background-image: url(../media/new_skill/smile.gif);
@@ -537,7 +553,9 @@ input[type="radio"] {
 }
 
 .characters input[type="radio"]:checked + label img {
-    border: 4px solid rgb(195, 18, 168);
+    border: 8px solid rgb(255, 255, 255);
+    background-color: var(--matrix-color);
+    padding: 8px;
 }
 .characters input[type="radio"]:hover + label img {
     border: 4px solid var(--matrix-color);
@@ -558,7 +576,8 @@ input[type="radio"] {
 }
 
 .options input[type="radio"]:checked + label {
-    background-color: rgb(195, 18, 168);
+    background-color: rgb(255, 255, 255);
+    color: #000000;
 }
 .options input[type="radio"]:hover + label {
     background-color: var(--matrix-color);
@@ -588,7 +607,9 @@ input[type="radio"] {
 }
 
 .cards input[type="radio"]:checked + label {
-    border: rgb(195, 18, 168) 6px solid;
+    border: 8px solid rgb(255, 255, 255);
+    background-color: var(--matrix-color);
+    padding: 8px;
 }
 .cards input[type="radio"]:hover + label {
     border: var(--matrix-color) 6px solid;

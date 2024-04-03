@@ -12,7 +12,8 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <a href="next" id="animationButton">> cool</a>
+                <p class='matrix-text'>{{$user->name}}~ Woah i'm so lucky to be here! </p> <br>
+                <button id="hoverOnlyButton" class="skipBtn">> Cool !</button>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>

@@ -26,7 +26,7 @@
                         <input type="radio" name="track" value="Java" id="option3"><label for="option3">c) Java is the superior language.</label>
                     </div> 
                     <br>
-                    <button>> This is the way</button>
+                    <button id="radioOptionButton" class='nextBtn buttonGrey'>> This is the way</button>
                 </form>
             </div>
         </div>
