@@ -47,10 +47,7 @@
         </div>
  
         <div class="text-balloon-line"><div class="actual-line"></div></div>
-        <div class="basile"><img src="..\media\stickmen\Stickman-class.svg"></div>
-        @if(!empty($user->character))
-            <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
-        @endif
+        @include("_partials.class")
 
     </main>
 </body>
