@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        <script src="js/script.js" defer></script>
 		    <link rel="stylesheet" type="text/css" media="screen" href="css/memory.css" />
         <title>A Web Dev Journey</title>
     </head>
@@ -30,8 +31,8 @@
                         <form action="/memory" method="POST">
                     @csrf
                             <input type="text" name='skill' id='skill' style="display:none" >
-                            <input type="text" name='skill' id='skill2' style="display:none" >
-                            <input type="text" name='skill' id='skill3' style="display:none" >
+                            <input type="text" name='skill2' id='skill2' style="display:none" >
+                            <input type="text" name='skill3' id='skill3' style="display:none" >
                             <button  class='nextBtn'>> NICE! CONTINUE</button>
                         </form>
                     </div>

@@ -149,7 +149,7 @@ function addMatchedPair(firstCardName, secondCardName) {
 function checkGameEnd() {
   if (matchedPair.length === cards.length / 2) {
     console.log('win');
-    gameEnd();
+    setTimeout(gameEnd, 1000);
   } else {
     return false;
   }
@@ -158,7 +158,7 @@ function checkGameEnd() {
 function checkGameSkip() {
   if (score === 8) {
     console.log("skip!");
-    gameSkip();
+    setTimeout(gameSkip, 1000);
   } else {
     return false;
   }
@@ -168,7 +168,7 @@ function gameEnd() {
   let modelWon = document.getElementById("won")
   modelWon.style.display = "";
   let skillsText = document.getElementById("msgWin");
-  skillsText.innerHTML = "You unlocked these skills<br>" + matchedPair[0][0] + " " + matchedPair[3][0] + " " + matchedPair[7][0];
+  skillsText.innerHTML = "You unlocked these skills<br>" + "- " + matchedPair[0][0] + "<br> - " + matchedPair[3][0] + "<br> - " + matchedPair[7][0];
   let storeFirstPair = document.getElementById("skill"); 
   let storeFourthPair = document.getElementById("skill2");
   let storeEightPair = document.getElementById("skill3");
@@ -181,52 +181,3 @@ function gameSkip() {
   let modelSkip = document.getElementById("warning")
   modelSkip.style.display = "block";
 }
-
-let skipBtn = document.getElementsByClassName("skipBtn");
-if (skipBtn[0])
-    skipBtn[0].addEventListener(
-        "click",
-        () => {
-            location.href = "/next";
-        },
-        { once: true }
-    );
-let nextBtn = document.getElementsByClassName("nextBtn");
-if (nextBtn[0])
-    nextBtn[0].addEventListener("click", function (event) {
-        setTimeout(function () {
-            event.target.disabled = true;
-        }, 0);
-    });
-//show warning when attempting to skip a game
-let skip = document.getElementById("skip");
-if (skip)
-    skip.addEventListener("click", () => {
-        let finalWarning = document.getElementById("warning");
-        finalWarning.style.display = "";
-    });
-
-//avoid refresh on slider puzzle "continue"
-let continueGame = document.getElementById("continueGame");
-if (continueGame)
-    continueGame.addEventListener("click", () => {
-        let finalWarning = document.getElementById("warning");
-        finalWarning.style.display = "none";
-    });
-
-//help pop up explaining minigames?
-let info = document.getElementById("infoBtn");
-if (info)
-    info.addEventListener("click", () => {
-        let infoModal = document.getElementById("info");
-        if (infoModal.style.display == "none") infoModal.style.display = "";
-        else infoModal.style.display = "none";
-    });
-
-//close help pop up extra button
-let reeturn = document.getElementById("return");
-if (reeturn)
-    reeturn.addEventListener("click", () => {
-        let infoModal = document.getElementById("info");
-        infoModal.style.display = "none";
-    });

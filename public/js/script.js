@@ -32,6 +32,7 @@
 //     true
 // );
 
+
 //actual skip button press
 let skipBtn = document.getElementsByClassName("skipBtn");
 if (skipBtn[0])
