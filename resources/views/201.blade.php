@@ -14,7 +14,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ Oh?</p>
-                <a href="/next" id="animationButton">> Enter the bathroom</a>
+                <button id="hoverOnlyButton" class="skipBtn">>  Enter the bathroom</button>
             </div>
         </div>
  
@@ -27,7 +27,7 @@
                 <img class="gif" id="gifImage" src="..\media\animations\{{ $gifFilename }}" alt="" style="display: none;">
             </div>
         @endif
-        <div class="basile"><img src="..\media\coffee.jpg"></div>
+        <div class="basile"><iframe src="https://giphy.com/embed/l0MYv5EjWCxRt7ONy" frameBorder="0"></iframe></div>
     </main>
 </body>
 </html>

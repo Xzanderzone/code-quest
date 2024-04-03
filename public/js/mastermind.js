@@ -1,18 +1,18 @@
 let codes = [
-    ['black', 'yellow', 'yellow', 'red'],
-    ['blue', 'blue', 'white', 'red'], 
-    ['white', 'black', 'white', 'black'], 
-    ['green', 'yellow', 'red', 'yellow'], 
-    ['blue', 'black', 'blue', 'blue'], 
-    ['green', 'green', 'red', 'blue'], 
+    // ['black', 'yellow', 'yellow', 'red'],
+    // ['blue', 'blue', 'white', 'red'], 
+    // ['white', 'black', 'white', 'black'], 
+    // ['green', 'yellow', 'red', 'yellow'], 
+    // ['blue', 'black', 'blue', 'blue'], 
+    // ['green', 'green', 'red', 'blue'], 
     ['red', 'red', 'red', 'red'], 
-    ['red', 'black', 'white', 'green'], 
-    ['green', 'green', 'green', 'white'], 
-    ['black', 'yellow', 'green', 'green'], 
-    ['blue', 'green', 'red', 'black'], 
-    ['yellow', 'black', 'red', 'yellow'], 
-    ['yellow', 'yellow', 'white', 'white'], 
-    ['blue', 'red', 'blue', 'white']
+    // ['red', 'black', 'white', 'green'], 
+    // ['green', 'green', 'green', 'white'], 
+    // ['black', 'yellow', 'green', 'green'], 
+    // ['blue', 'green', 'red', 'black'], 
+    // ['yellow', 'black', 'red', 'yellow'], 
+    // ['yellow', 'yellow', 'white', 'white'], 
+    // ['blue', 'red', 'blue', 'white']
 ]
 
 let score = [];
@@ -287,6 +287,8 @@ function showAnswer(){
 
 function EndGame(win=false){
     if(win){
+        let storeThis = document.getElementById("skill");
+        storeThis.value = "HTML & CSS";
         let popup = document.querySelector('#won');
         popup.style.display = "block";
     }else{

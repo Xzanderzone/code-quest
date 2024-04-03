@@ -14,13 +14,16 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~    Hmmm, I see a few empty seats in the classroom. I must quickly chose what I do now!</p>
+                <br>
                 <form action="/seats" method="POST">
                     @csrf
                     <div class="options">
-                        <input type="radio" name="seats" value="empty-table" id="empty-table"><label for="empty-table">1) I choose an empty table</label> 
-                        <input type="radio" name="seats" value="occupied-table" id="occupied-table"><label for="occupied-table">2) I choose a table that is occupied by a small group, where there is one seat left.</label>
+                        <input type="radio" name="seats" value="empty-table" id="empty-table"><label for="empty-table">a) I choose an empty table</label> 
+                        <br>
+                        <input type="radio" name="seats" value="occupied-table" id="occupied-table"><label for="occupied-table">b) I choose a table that is occupied by a small group, where there is one seat left.</label>
                     </div> 
-                    <button id="animationButton">> Let's own this decision</button>
+                    <br>
+                    <button id="radioOptionButton" class='nextBtn buttonGrey'>> Let's own this decision</button>
                 </form>
             </div>
         </div>

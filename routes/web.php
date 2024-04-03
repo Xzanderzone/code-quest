@@ -38,21 +38,30 @@ Route::post('/card-reason-update', [StoryController::class, 'deleteCardReason'])
 Route::post('/tech-talk', [StoryController::class, 'techTalkTopic']);
 Route::post('/feedback', [StoryController::class, 'feedback']);
 Route::post('/track', [StoryController::class, 'developerTrack']);
+Route::post('/track-first-choice', [StoryController::class, 'trackFirstSkill']);
+Route::post('/track-second-choice', [StoryController::class, 'trackSecondSkill']);
+Route::post('/celebration', [StoryController::class, 'celebrationChoice']);
 
-Route::get('/slider', function () {
-    return view('slider');
-});
-Route::get('/guessing', function () {
-    return view('guessing');
-});
-Route::get('/rockPS', function () {
-    return view('rockPS');
-});
-Route::get('/memory', function () {
-    return view('memory');
-});
-Route::get('/mastermind', function () {
-    return view('108');
-});
+Route::post('/mastermind', [StoryController::class, 'mastermind']);
+Route::post('/guessing', [StoryController::class, 'guessing']);
+Route::post('/rockps', [StoryController::class, 'rockps']);
+Route::post('/memory', [StoryController::class, 'memory']);
+Route::post('/slider', [StoryController::class, 'slider']);
+
+// Route::get('/slider', function () {
+//     return view('slider');
+// });
+// Route::get('/guessing', function () {
+//     return view('guessing');
+// });
+// Route::get('/rockPS', function () {
+//     return view('rockPS');
+// });
+// Route::get('/memory', function () {
+//     return view('memory');
+// });
+// Route::get('/mastermind', function () {
+//     return view('108');
+// });
 
 

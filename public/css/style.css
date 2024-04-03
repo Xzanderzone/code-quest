@@ -39,11 +39,15 @@ body {
     align-items: center;
 
     overflow: hidden;
-
 }
 
 a {
     color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 #title {
@@ -145,7 +149,6 @@ main {
     grid-area: text;
     display: flex;
     align-items: center;
-    opacity: 0;
 }
 
 .terminal {
@@ -181,8 +184,8 @@ main {
     align-items: end;
 }
 
-.gif {
-    animation: moveRight 5s forwards; /* Adjust the value as needed */
+.move-animation {
+    animation: moveRight 5s forwards;
 }
 
 @keyframes moveRight {
@@ -190,7 +193,7 @@ main {
         transform: translateX(0);
     }
     to {
-        transform: translateX(18vw); /* Adjust the value as needed */
+        transform: translateX(18vw);
     }
 }
 
@@ -463,12 +466,46 @@ button:hover {
     text-decoration: underline;
 }
 
+/* FROM disable TO enable WHEN RADIO SELECT*/
+.buttonGrey {
+    color: #7b7b7b; /* Text color white */
+}
+.buttonGrey[disabled] {
+    color: #7b7b7b;
+    cursor: not-allowed;
+}
+.buttonWhite {
+    color: #ffffff;
+}
+
+#radioOptionButton {
+    text-decoration: none;
+}
+
 /*/ / STAR YOU EARNED A SKILL! / /*/
 .star {
     background-image: url(../media/new_skill/smile.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sad {
+    background-image: url(../media/new_skill/sad-face.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteBlock {
+    background-color: rgba(255, 255, 255, 0.66);
+    padding: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -516,7 +553,9 @@ input[type="radio"] {
 }
 
 .characters input[type="radio"]:checked + label img {
-    border: 4px solid var(--matrix-color);
+    border: 8px solid rgb(255, 255, 255);
+    background-color: var(--matrix-color);
+    padding: 8px;
 }
 .characters input[type="radio"]:hover + label img {
     border: 4px solid var(--matrix-color);
@@ -533,11 +572,12 @@ input[type="radio"] {
     color: white;
     font-family: var(--terminal-text);
     font-size: var(--terminal-text-size);
-    line-height: 30px;
+    line-height: 1.8;
 }
 
 .options input[type="radio"]:checked + label {
-    background-color: var(--matrix-color);
+    background-color: rgb(255, 255, 255);
+    color: #000000;
 }
 .options input[type="radio"]:hover + label {
     background-color: var(--matrix-color);
@@ -567,7 +607,9 @@ input[type="radio"] {
 }
 
 .cards input[type="radio"]:checked + label {
-    border: var(--matrix-color) 6px solid;
+    border: 8px solid rgb(255, 255, 255);
+    background-color: var(--matrix-color);
+    padding: 8px;
 }
 .cards input[type="radio"]:hover + label {
     border: var(--matrix-color) 6px solid;

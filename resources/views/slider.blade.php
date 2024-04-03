@@ -25,9 +25,10 @@
                     <div class="content">
                         <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p>
                         <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> 
+                        <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: {{$user->track}} </p> <br>
                         <button id='continueGame'>> KEEP GOING </button>
                         <a href="/story">> Reset puzzle </a><br>
-                        <a href="/next">> I'M SURE! LET ME SKIP</a>
+                        <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
                     </div>
                 </div>
                 <!-- extra info  -->
@@ -47,9 +48,14 @@
                         <p >📟 YOU WIN 😁</p>
                     </div>
                     <div class="content">
-                        <p id="msgWin">📟 YOU WIN 😁</p>
-                        <br>
-                        <a href="/next">> NICE! CONTINUE</a>
+                        <p id="msgWin" class='matrix-text'>📟 YOU WIN 😁</p>
+                        <br>       
+                        <form action="/slider" method="POST">
+                    @csrf
+                            <input type="text" name='skill' id='skill' style="display:none" >
+                            <!-- <input type="text" id='skill2' style="display:none" > -->
+                            <button  class='nextBtn'>> NICE! CONTINUE</button>
+                        </form>
                     </div>
                 </div>
                 <div class="bar">

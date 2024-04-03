@@ -27,6 +27,16 @@ return new class extends Migration
             $table->string('tech_talk')->nullable();
             $table->string('feedback')->nullable();
             $table->string('track')->nullable();
+            $table->string('track_first')->nullable();
+            $table->string('track_second')->nullable();
+            $table->string('celebration')->nullable();
+            $table->string('mastermind')->nullable();//store mastermind skill here
+            $table->string('guessing')->nullable();// guessing 
+            $table->string('rockps')->nullable();// rps 
+            $table->string('memory1')->nullable();// memory (1)
+            $table->string('memory2')->nullable();// memory (2)
+            $table->string('memory3')->nullable();// memory (3)
+            $table->string('slider')->nullable();// slider 
             $table->integer('score')->default(0);
         });
 

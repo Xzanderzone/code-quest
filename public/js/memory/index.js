@@ -7,42 +7,37 @@ let score = 0;
 
 document.querySelector(".score").textContent = score;
 
-// switch(course) {
-//   case fullstack:
-//     fetch("/media/memory_cards/fullstack/fullstack.json")
-//     .then((res) => res.json())
-//     .then((data) => {
-//       cards = [...data, ...data];
-//       shuffleCards();
-//       generateCards();
-//     });
-//     break;
-//   case salesforce:
-//     fetch("/media/memory_cards/salesforce/salesforce.json")
-//     .then((res) => res.json())
-//     .then((data) => {
-//       cards = [...data, ...data];
-//       shuffleCards();
-//       generateCards();
-//     });
-//     break;
-//   case java:
-//     fetch("/media/memory_cards/java/java.json")
-//     .then((res) => res.json())
-//     .then((data) => {
-//       cards = [...data, ...data];
-//       shuffleCards();
-//       generateCards();
-//     });
-// }
+let course = document.currentScript.getAttribute("track")
+console.log(course);
 
-fetch("/media/memory_cards/java/java.json")
-.then((res) => res.json())
-.then((data) => {
-  cards = [...data, ...data];
-  shuffleCards();
-  generateCards();
-});
+switch(course) {
+  case "Full-Stack":
+    fetch("/media/memory_cards/fullstack/fullstack.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+    break;
+  case "Salesforce":
+    fetch("/media/memory_cards/salesforce/salesforce.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+    break;
+  case "Java":
+    fetch("/media/memory_cards/java/java.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cards = [...data, ...data];
+      shuffleCards();
+      generateCards();
+    });
+}
 
 
 function shuffleCards() {
@@ -91,6 +86,7 @@ function flipCard() {
   lockBoard = true;
 
   checkForMatch();
+  checkGameSkip();
 }
 
 function checkForMatch() {
@@ -107,8 +103,8 @@ function checkForMatch() {
   } else {
     unflipCards();
   }
-
   console.log(matchedPair)
+  checkGameEnd();
 }
 
 function disableCards() {
@@ -149,7 +145,88 @@ function addMatchedPair(firstCardName, secondCardName) {
   matchedPair.push([firstCardName, secondCardName]);
 }
 
-let firstPair = matchedPair[0];
-let fourthPair = matchedPair[3];
-let eighthPair = matchedPair[7];
 
+function checkGameEnd() {
+  if (matchedPair.length === cards.length / 2) {
+    console.log('win');
+    gameEnd();
+  } else {
+    return false;
+  }
+}
+
+function checkGameSkip() {
+  if (score === 8) {
+    console.log("skip!");
+    gameSkip();
+  } else {
+    return false;
+  }
+}
+
+function gameEnd() {
+  let modelWon = document.getElementById("won")
+  modelWon.style.display = "";
+  let skillsText = document.getElementById("msgWin");
+  skillsText.innerHTML = "You unlocked these skills<br>" + matchedPair[0][0] + " " + matchedPair[3][0] + " " + matchedPair[7][0];
+  let storeFirstPair = document.getElementById("skill"); 
+  let storeFourthPair = document.getElementById("skill2");
+  let storeEightPair = document.getElementById("skill3");
+  storeFirstPair.value = matchedPair[0][0];
+  storeFourthPair.value = matchedPair[3][0];
+  storeEightPair.value = matchedPair[7][0];
+}
+
+function gameSkip() {
+  let modelSkip = document.getElementById("warning")
+  modelSkip.style.display = "block";
+}
+
+let skipBtn = document.getElementsByClassName("skipBtn");
+if (skipBtn[0])
+    skipBtn[0].addEventListener(
+        "click",
+        () => {
+            location.href = "/next";
+        },
+        { once: true }
+    );
+let nextBtn = document.getElementsByClassName("nextBtn");
+if (nextBtn[0])
+    nextBtn[0].addEventListener("click", function (event) {
+        setTimeout(function () {
+            event.target.disabled = true;
+        }, 0);
+    });
+//show warning when attempting to skip a game
+let skip = document.getElementById("skip");
+if (skip)
+    skip.addEventListener("click", () => {
+        let finalWarning = document.getElementById("warning");
+        finalWarning.style.display = "";
+    });
+
+//avoid refresh on slider puzzle "continue"
+let continueGame = document.getElementById("continueGame");
+if (continueGame)
+    continueGame.addEventListener("click", () => {
+        let finalWarning = document.getElementById("warning");
+        finalWarning.style.display = "none";
+    });
+
+//help pop up explaining minigames?
+let info = document.getElementById("infoBtn");
+if (info)
+    info.addEventListener("click", () => {
+        let infoModal = document.getElementById("info");
+        if (infoModal.style.display == "none") infoModal.style.display = "";
+        else infoModal.style.display = "none";
+    });
+
+//close help pop up extra button
+let reeturn = document.getElementById("return");
+if (reeturn)
+    reeturn.addEventListener("click", () => {
+        let infoModal = document.getElementById("info");
+        infoModal.style.display = "none";
+    });

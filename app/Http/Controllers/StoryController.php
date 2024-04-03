@@ -9,46 +9,40 @@ class StoryController extends Controller
 {
     public function getPageArray(){
         return ["100","101","102","103","104","105","106","107",
-        "108",
-        "201","202","203","204","205","guessing","rockPS",
+        "mastermind",
+        "201","202","203","204","205",
+        "guessing","rockPS",
         "301","302","303","304","305","306",
-        // "memory",
+        "memory",
+        "401","402","403","404","405","406",
         "slider",
-        "999"];
+        "501","502","503","504","505",
+        "end"];
     }
+    
     public function story() {
         $user = Auth::user();
-  
         $pages=StoryController::getPageArray();
-        $progress = $user->progress ;
-        //100 to check older accounts from before array method
-        if (!$progress || $progress>=100) {
-            $progress = 0;
-        } 
-
+        $progress=0;
+        if($user)$progress = $user->progress??0;
+        else return redirect('/');//prevents crashing on invalid user
         $user->update(['progress' => $progress]);
-
         return view($pages[$progress], ['user' => $user]);
     }
 
     public function cv() {
         $user = Auth::user();
-
         if (!$user) {
             return redirect('/');
         }
-
         return view('cv', ['user' => $user]);
     }
 
     public function nextPage() {
-        // if(in_array($id,StoryController::getPageArray())){
-        $user = Auth::user();
-        $user->progress += 1;
-        $user->save();
-
-        return redirect('/story');
-        // }else dd("page not found(story controller nextPage with id: ".$id);
+            $user = Auth::user();
+            $user->progress += 1;
+            $user->save();
+            return redirect('/story');
     }
 
     public function chooseCharacter(Request $request) {
@@ -78,7 +72,70 @@ class StoryController extends Controller
         $user->save();
 
         return redirect('/story');
+    } 
+    public function guessing(Request $request)  {
+        $request->validate([
+            'skill' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->guessing= $request->skill;
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
     }
+    public function rockps(Request $request)  {
+        $request->validate([
+            'skill' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->rockps= $request->skill;
+        $user->progress += 1;
+        $user->score += 10;
+        $user->save();
+
+        return redirect('/story');
+    }  
+    public function slider(Request $request)  {
+        $request->validate([
+            'skill' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->slider= $request->skill;
+        $user->progress += 1;
+        $user->score += 10;
+        $user->save();
+
+        return redirect('/story');
+    }   
+    public function mastermind(Request $request)  {
+        $request->validate([
+            'skill' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->mastermind= $request->skill;
+        $user->progress += 1;
+        $user->score += 10;
+        $user->save();
+
+        return redirect('/story');
+    }   
+    public function memory(Request $request)  {
+        $request->validate([
+            'skill' => 'required',
+            'skill2' => 'required',
+            'skill3' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->memory1= $request->skill1;
+        $user->memory2= $request->skill2;
+        $user->memory3= $request->skill3;
+        $user->progress += 1;
+        $user->score += 10;
+        $user->save();
+
+        return redirect('/story');
+    }   
 
     public function cards(Request $request) {
 
@@ -102,14 +159,11 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->card_reason = $request->card_reason;
 
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
         return redirect('/story');
-    }
-
-    public function mastermindCheck(Request $request) {
-        
     }
 
     public function toiletChoice(Request $request) {
@@ -118,6 +172,10 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->toilet_choice = $request->toilet_choice;
+
+        if($request->toilet_choice !== "null") {
+            $user->score += 5;
+        }
 
         $user->progress += 1;
         $user->save();
@@ -134,6 +192,7 @@ class StoryController extends Controller
             $user->extra_toilet = "Positive Attitude";
         }
         
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 
@@ -144,6 +203,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->card_reason = null;
 
+        $user->score -= 5;
         $user->progress += 1;
         $user->save();
 
@@ -157,6 +217,10 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->tech_talk = $request->tech_talk;
 
+        if($request->tech_talk !== "null") {
+            $user->score += 5;
+        }
+
         $user->progress += 1;
         $user->save();
 
@@ -169,6 +233,10 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->feedback = $request->feedback;
+
+        if($request->feedback !== "null") {
+            $user->score += 5;
+        }
 
         $user->progress += 1;
         $user->save();
@@ -188,5 +256,48 @@ class StoryController extends Controller
 
         return redirect('/story');
     }
-    
+
+    public function trackFirstSkill(Request $request) {
+        $request->validate([
+            'track_first' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->track_first = $request->track_first;
+
+        $user->score += 5;
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function trackSecondSkill(Request $request) {
+        $request->validate([
+            'track_second' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->track_second = $request->track_second;
+
+        if($request->track_second !== "null") {
+            $user->score += 5;
+        }
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
+
+    public function celebrationChoice(Request $request) {
+        $request->validate([
+            'celebration' => 'required'
+        ]);
+        $user = Auth::user();
+        $user->celebration = $request->celebration;
+
+        $user->score += 5;
+        $user->progress += 1;
+        $user->save();
+
+        return redirect('/story');
+    }
 }

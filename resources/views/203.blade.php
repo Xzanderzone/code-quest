@@ -31,7 +31,7 @@
             </div>
             <div class="content">
                 <p class="matrix-text">{{$user->name}} ~ </p>
-                <a href="/next">> What happens now?</a>
+                <button id="hoverOnlyButton" class="skipBtn">> What happens now?<</button>
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>
@@ -40,8 +40,7 @@
                 <div class="text-balloon-line"><div class="actual-line"></div></div>
                 @include("_partials.drawings") 
             @else
-                <div class="basile"><img src="..\media\stickmen\Bonasi-crying.gif"></div>
-                <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
+                @include("_partials.bonasi") 
             @endif
 
     </main>

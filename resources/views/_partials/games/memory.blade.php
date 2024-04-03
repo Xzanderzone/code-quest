@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="grid-container">
-    <script defer src="js/memory/index.js"></script>
+    <script defer track='{{$user->track}}' src="js/memory/index.js"></script>
     </div>
     <p id="score-text">Score: <span class="score"></span></p>
     <div class="actions">

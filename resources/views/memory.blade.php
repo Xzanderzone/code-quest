@@ -20,7 +20,36 @@
             </div>
             <div class="content">
     @include("_partials.games.memory")
+    <div class="popup terminal" id="won" style="display: none">
+                    <div class="bar">
+                        <p >📟 YOU WIN 😁</p>
+                    </div>
+                    <div class="content">
+                        <p id="msgWin" class='matrix-text'>📟 YOU WIN 😁</p>
+                        <br>       
+                        <form action="/memory" method="POST">
+                    @csrf
+                            <input type="text" name='skill' id='skill' style="display:none" >
+                            <input type="text" name='skill' id='skill2' style="display:none" >
+                            <input type="text" name='skill' id='skill3' style="display:none" >
+                            <button  class='nextBtn'>> NICE! CONTINUE</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+            <div class="popup terminal" id="warning" style="display: none">
+                    <div class="bar">
+                        <p>📟WARNING: SKIP HAS IMPACT</p>
+                    </div>
+                    <div class="content">
+                        <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p>
+                        <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> 
+                        <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: {{$user->track}} </p> <br>
+                        <button id='continueGame'>> KEEP GOING </button>
+                        <a href="/story">> Reset puzzle </a><br>
+                        <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
+                    </div>
+                </div>
         </div>
     </main>
 </body>
