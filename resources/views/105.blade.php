@@ -13,7 +13,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~ Hello class, I chose this card for the following reason:</p>
+                <p class="matrix-text">{{$user->name}} ~    Hello class, I chose this card for the following reason:</p>
                 <br>
                 <form action="/card-reason" method="POST">
                     @csrf

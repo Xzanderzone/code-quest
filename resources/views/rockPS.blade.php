@@ -23,7 +23,7 @@
                     <div class="content">
                         <p id='msgLost' class='matrix-text'> YOU LOSE </p>
                         <br>
-                        <a id='msgLink'href="/story">> Not throwing away my shot!(try again)</a>
+                        <a id='msgLink'href="/story">> NOT THROWING AWAY MY SHOT! (try again)</a>
                         <button id='skip'>> SKIP</button>
                     </div>
                 </div>

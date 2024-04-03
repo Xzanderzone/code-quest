@@ -79,6 +79,8 @@ class StoryController extends Controller
         ]);
         $user = Auth::user();
         $user->guessing= $request->skill;
+
+        $user->score += 5;
         $user->progress += 1;
         $user->save();
 

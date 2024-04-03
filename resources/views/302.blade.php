@@ -23,7 +23,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class="matrix-text">{{$user->name}} ~  How do you react to this feedback?</p>
+                <p class="matrix-text">{{$user->name}} ~    What do I say?</p>
                 <br>
                 <form action="/feedback" method="POST">
                     @csrf
@@ -35,9 +35,9 @@
                             <br>
                             <input type="radio" name="feedback" value="null" id="option3"><label for="option3">c) You dismiss the input, saying that he is incapable of appreciating good aesthetics and the minimalist approach you took.</label>
                         @else
-                            <input type="radio" name="feedback" value="Accountability" id="option1"><label for="option1">d) You profusely apologise and explain that you misunderstood the remark.</label> 
+                            <input type="radio" name="feedback" value="Accountability" id="option1"><label for="option1">a) I profusely apologise and explain that I misunderstood the remark.</label> 
                             <br>
-                            <input type="radio" name="feedback" value="null" id="option2"><label for="option2">e) You stand your ground and say that you thought the topic was interesting anyway.</label>
+                            <input type="radio" name="feedback" value="null" id="option2"><label for="option2">b) I stand my ground and say that I thought the topic was interesting anyway.</label>
                         @endif
                     </div> 
                     <br>

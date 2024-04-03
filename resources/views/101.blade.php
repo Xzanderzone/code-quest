@@ -12,7 +12,7 @@
                 <p>📟 YOUR TERMINAL</p>
             </div>
             <div class="content">
-                <p class='matrix-text'>{{$user->name}}~ Woah i'm so lucky to be here! </p> <br>
+                <p class='matrix-text'>{{$user->name}} ~    Woah I'm so lucky to be here! </p> <br>
                 <button id="hoverOnlyButton" class="skipBtn">> Cool !</button>
             </div>
         </div>
