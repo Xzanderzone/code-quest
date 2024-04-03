@@ -4,6 +4,8 @@
 <body>
     @include("_partials.header") 
     
+    
+    
         @csrf
             @if ($user->toilet_choice == "Initiative")
             <main class="star">

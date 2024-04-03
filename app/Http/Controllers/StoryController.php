@@ -13,7 +13,7 @@ class StoryController extends Controller
         "201","202","203","204","205",
         "guessing","rockPS",
         "301","302","303","304","305","306",
-        // "memory",
+        "memory",
         "401","402","403","404","405","406",
         "slider",
         "501","502","503","504","505",
@@ -127,7 +127,7 @@ class StoryController extends Controller
             'skill3' => 'required'
         ]);
         $user = Auth::user();
-        $user->memory1= $request->skill1;
+        $user->memory1= $request->skill;
         $user->memory2= $request->skill2;
         $user->memory3= $request->skill3;
         $user->progress += 1;

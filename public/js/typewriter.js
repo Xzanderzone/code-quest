@@ -4,7 +4,7 @@ console.log(text.textContent)
 
 var i = 0;
 var txt = text.textContent; /* The text */
-var speed = 14; /* The speed/duration of the effect in milliseconds */
+var speed = 28; /* The speed/duration of the effect in milliseconds */
 text.textContent = "";
 
 window.addEventListener('DOMContentLoaded', () => {
