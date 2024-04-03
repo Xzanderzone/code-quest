@@ -1,9 +1,7 @@
 let text = document.querySelector('.text-balloon:not(.landing .text-balloon)')
 
-console.log(text.textContent)
-
 var i = 0;
-var txt = text.textContent; /* The text */
+var txt = text.innerHTML; /* The text */
 var speed = 28; /* The speed/duration of the effect in milliseconds */
 text.textContent = "";
 
@@ -14,7 +12,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function typeWriter() {
   if (i < txt.length) {
-    text.innerHTML += txt.charAt(i);
+    if (txt.charAt(i) === "<") {
+      text.innerHTML += "<br>"
+      i += 3
+    } else {
+      text.innerHTML += txt.charAt(i);
+    }
     i++;
     setTimeout(typeWriter, speed);
   }
