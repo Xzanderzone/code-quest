@@ -14,11 +14,13 @@
             <div class="popup terminal" id="info">
                 <div class="bar">
                     <p>📟 Log in failed:</p>    
-                </div class="content">
+                </div>
+                <div class="content">
                     @foreach ($errors->all() as $e)
                     <p  class='matrix-text'>{{ $e }}</p>
                     @endforeach
                 <button id="return">>Okay</button>
+            </div>
             </div>
             @endif
             <div class="terminal">

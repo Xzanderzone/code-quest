@@ -23,7 +23,7 @@
             <div class="content">
                 <p class='matrix-text'>YOU DIDN'T CRACK THE CODE THIS TIME! </p> <br><br>
                 <a href="/story">> TRY AGAIN</a><br><br>
-                <button id="animationButton" class="skipBtn">> SKIP MASTERMIND!</button>
+                <button id="skip">> SKIP MASTERMIND!</button>
             </div>
         </div>
         <div class="popup terminal" id="warning" style="display: none">
@@ -35,7 +35,7 @@
                 <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> <br>
                 <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: HTML & CSS </p> <br>
                 <a href="/story">> KEEP GOING </a><br><br>
-                <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
+                <button class="skipBtn">> I'M SURE! LET ME SKIP</button>
             </div>
         </div>
         <div class="popup terminal" id="won" style="display: none">
