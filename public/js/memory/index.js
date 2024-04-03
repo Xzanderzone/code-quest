@@ -168,7 +168,7 @@ function gameEnd() {
   let modelWon = document.getElementById("won")
   modelWon.style.display = "";
   let skillsText = document.getElementById("msgWin");
-  skillsText.innerHTML = "You unlocked these skills<br>" + "- " + matchedPair[0][0] + "<br> - " + matchedPair[3][0] + "<br> - " + matchedPair[7][0];
+  skillsText.innerHTML = "You unlocked these skills<br><br>" + "- " + matchedPair[0][0].toUpperCase() + "<br> - " + matchedPair[3][0].toUpperCase() + "<br> - " + matchedPair[7][0].toUpperCase();
   let storeFirstPair = document.getElementById("skill"); 
   let storeFourthPair = document.getElementById("skill2");
   let storeEightPair = document.getElementById("skill3");

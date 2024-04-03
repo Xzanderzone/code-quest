@@ -12,7 +12,7 @@
                 <div class="whiteBlock">
                     <p>Congratz! You unlocked a Softskill:</p>
                     <h2>{{$user->toilet_choice}}</h2>
-                    <button class="pixel skipBtn matrix-text">> I'm happy!</button>
+                    <button class="skipBtn pixel"><p class="matrix-text">I'm happy!</p></button>
                 </div>
             </main>
             @elseif ($user->toilet_choice == "Conflict Resolution")
@@ -28,7 +28,7 @@
                     </h2>
                     <form action="/extra-toilet-skill" method="POST">
                         @csrf
-                        <button class="nextBtn pixel"><p class="matrix-text">I'm happy!</p></button>
+                        <button class="skipBtn pixel"><p class="matrix-text">I'm happy!</p></button>
                     </form>
                 </div>
             </main>
@@ -38,7 +38,7 @@
                     <p>Your colleagues are disappointed in you. {{$user->card_reason}} was removed from your CV.</p>
                     <form action="/card-reason-update" method="POST">
                         @csrf
-                        <button class="nextBtn pixel"><p class="matrix-text">Let's move on</p></button>
+                        <button class="skipBtn pixel"><p class="matrix-text">Let's move on</p></button>
                     </form>
                 </div>
             </main>

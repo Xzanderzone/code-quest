@@ -17,7 +17,7 @@
                 When it's time to present, your group doesn't have a finished product, but still manages to give a good overview of your project, skills and languages used on it.
                 </p>
             @elseif ($user->track === "Full-Stack" && $user->track_second === "Critical Thinking")
-                <p>Your group happily agrees with your proposal and starts prioritising main functional components.<br>
+                <p>They happily agree with your proposal and starts prioritising main functional components.<br>
                 After 5 weeks, your group presents a finished product. There is still room for improvement, but your project impresses by the techniques used and how much you were able to achieve in such a short time. The project is a good portfolio addition!
                 </p>
             @elseif ($user->track === "Full-Stack" && $user->track_second === "Active Listening")
