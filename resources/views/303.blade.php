@@ -42,8 +42,8 @@
                 <div class="text-balloon-line"><div class="actual-line"></div></div>
                 @include("_partials.drawings") 
             @else
-                <div class="basile"><img src="..\media\stickmen\Stickman-class.svg"></div>
-                <div class="you"><img src="..\media\stickmen\{{ $user->character }}" alt=""></div>
+                <div class="text-balloon-line"><div class="actual-line"></div></div>
+                @include("_partials.class")
             @endif
 
     </main>

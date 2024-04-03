@@ -37,7 +37,6 @@
         <div class="text-balloon-line"><div class="actual-line"></div></div>
 
             @if ($user->toilet_choice === "Initiative")
-                <div class="text-balloon-line"><div class="actual-line"></div></div>
                 @include("_partials.drawings") 
             @else
                 @include("_partials.bonasi") 
