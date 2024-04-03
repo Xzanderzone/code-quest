@@ -1,4 +1,4 @@
-let text = document.querySelector('.text-balloon')
+let text = document.querySelector('.text-balloon:not(.landing .text-balloon)')
 
 console.log(text.textContent)
 
