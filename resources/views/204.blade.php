@@ -3,6 +3,8 @@
     @include("_partials.head")
 <body>
     @include("_partials.header") 
+    
+    
     <main class="star">
         @csrf
             @if ($user->toilet_choice == "Initiative")
