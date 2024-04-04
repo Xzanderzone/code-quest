@@ -22,8 +22,10 @@
             </div>
             <div class="content">
                 <p class='matrix-text'>Try to guess to right color combination (the same color can be used multiple times!) <br>
-                For each right color on the right place, you get a black peg as a feedback. <br>
-            For each right color that is not on the right place, you get a white peg.</p> <br><br>
+                For each correct color in the correct place, you get a black peg as a feedback. <br>
+            For each correct color that is not in the correct place, you get a white peg. <br>
+            WARNING: THE ORDER IN WHICH THE FEEDBACK PEGS ARE PLACED, DON'T CORRESPOND TO THE COLORS YOU PLACED! (as it is supposed to be bro/sis!)
+        </p> <br><br>
                 <button id='return'>>Got it!</button>
             </div>
         </div>
