@@ -16,7 +16,8 @@ class StoryController extends Controller
         // "memory",
         //"401","402","403","404","405","406",
         "slider",
-        "501","502","503","504","505",
+        "501","502","503","504",
+        "505",
         "end"];
     }
     public function story() {
