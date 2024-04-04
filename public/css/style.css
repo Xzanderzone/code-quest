@@ -205,6 +205,11 @@ main {
 .end-footer {
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+}
+
+.copyrights {
+    font-size: 0.9vw;
 }
 
 /*/ / OK-PAGE TEMPLATE / /*/
