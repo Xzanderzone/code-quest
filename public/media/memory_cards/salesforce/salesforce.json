@@ -21,22 +21,22 @@
     },
     {
         "image": "./media/memory_cards/salesforce/Ranger.png",
-        "name": "Ranger"
+        "name": "Ranger Expert"
     },
     {
         "image": "./media/memory_cards/salesforce/Ranger_I.png",
-        "name": "Ranger_I"
+        "name": "Ranger Newbie"
     },
     {
         "image": "./media/memory_cards/salesforce/Ranger_II.png",
-        "name": "Ranger_II"
+        "name": "Ranger Beginner"
     },
     {
-        "image": "./media/memory_cards/salesforce/Ranger_III.png",
-        "name": "Ranger_III"
+        "image": "./media/memory_cards/salesforce/Ranger_IV.png",
+        "name": "Ranger Intermediate"
     },
     {
         "image": "./media/memory_cards/salesforce/Scout.png",
-        "name": "Ranger_IV"
+        "name": "Ranger Advanced"
     }
 ]

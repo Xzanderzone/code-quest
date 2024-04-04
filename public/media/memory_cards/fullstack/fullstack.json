@@ -13,31 +13,31 @@
     },
     {
         "image": "./media/memory_cards/fullstack/PHP.png",
-        "name": "Php"
+        "name": "PHP"
     },
     {
-        "image": "./media/memory_cards/fullstack/rest-api-icon.png",
-        "name": "api"
+        "image": "./media/memory_cards/fullstack/Rest-Api.png",
+        "name": "Rest-Api"
     },
     {
-        "image": "./media/memory_cards/fullstack/sass.png",
-        "name": "sass"
+        "image": "./media/memory_cards/fullstack/Sass.png",
+        "name": "Sass"
     },
     {
-        "image": "./media/memory_cards/fullstack/node_js.png",
-        "name": "node.js"
+        "image": "./media/memory_cards/fullstack/Node_js.png",
+        "name": "Node.js"
     },
     {
-        "image": "./media/memory_cards/fullstack/react.png",
-        "name": "react"
+        "image": "./media/memory_cards/fullstack/React.png",
+        "name": "React"
     },
     {
-        "image": "./media/memory_cards/fullstack/vue.png",
-        "name": "vue"
+        "image": "./media/memory_cards/fullstack/Vue.png",
+        "name": "Vue"
     },
     {
         "image": "./media/memory_cards/fullstack/SEO.png",
-        "name": "seo"
+        "name": "SEO"
     }
 
 ]
