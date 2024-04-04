@@ -1,43 +1,43 @@
 [
     {
-        "image": "./media/memory_cards/java/rest-api-icon.png",
-        "name": "api"
+        "image": "./media/memory_cards/java/Rest-Api.png",
+        "name": "Rest-Api"
     },
     {
-        "image": "./media/memory_cards/java/devops.png",
-        "name": "devops"
+        "image": "./media/memory_cards/java/Devops.png",
+        "name": "Devops"
     },
     {
-        "image": "./media/memory_cards/java/eclipse.png",
-        "name": "eclipse"
+        "image": "./media/memory_cards/java/Eclipse.png",
+        "name": "Eclipse"
     },
     {
-        "image": "./media/memory_cards/java/intellij.png",
-        "name": "intellij"
+        "image": "./media/memory_cards/java/Intellij.png",
+        "name": "Intellij"
     },
     {
-        "image": "./media/memory_cards/java/junit.png",
-        "name": "junit"
+        "image": "./media/memory_cards/java/Junit.png",
+        "name": "Junit"
     },
     {
-        "image": "./media/memory_cards/java/mockito.png",
-        "name": "mockito"
+        "image": "./media/memory_cards/java/Mockito.png",
+        "name": "Mockito"
     },
     {
-        "image": "./media/memory_cards/java/oop.jpg",
-        "name": "oop"
+        "image": "./media/memory_cards/java/OOP.jpg",
+        "name": "OOP"
     },
     {
-        "image": "./media/memory_cards/java/springboot.png",
-        "name": "springboot"
+        "image": "./media/memory_cards/java/Springboot.png",
+        "name": "Springboot"
     },
     {
-        "image": "./media/memory_cards/java/architecture.png",
-        "name": "architecture"
+        "image": "./media/memory_cards/java/Architecture.png",
+        "name": "Architecture"
     },
     {
-        "image": "./media/memory_cards/java/jsf.png",
-        "name": "jsf"
+        "image": "./media/memory_cards/java/JSF.png",
+        "name": "JSF"
     }
 
 ]
