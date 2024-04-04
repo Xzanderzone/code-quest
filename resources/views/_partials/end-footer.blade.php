@@ -11,3 +11,7 @@
     <img src="..\media\stickman-ending\Stickman-ending-partyhat.gif">
     <img src="..\media\stickman-ending\Stickman-ending-moustache.gif">
 </div>
+
+<div class="end-footer">
+    <p class="copyrights">© Creators: Eduarda, Gust, Luis, Pieter and Sieglinde ~ <script>document.write( new Date().getFullYear() );</script></p> 
+</div>
