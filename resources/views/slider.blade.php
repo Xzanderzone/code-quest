@@ -34,11 +34,13 @@
                 <!-- extra info  -->
                 <div class="popup terminal" id="info" style="display: none">
                     <div class="bar">
-                        <p>📟Slider puzzle info </p>
+                        <p>📟Instructions</p>
                     </div>
                     <div class="content">
-                        <p class='matrix-text'>The goal of this game is to restore the image, <br>
-                           starting in the top left and working row by row is advised.</p> 
+                        <!-- <p class='matrix-text'>Slider puzzle</p> -->
+                        <p class='white'>The goal of this game is to restore the scrambled image back to its original state by moving the empty tile. <br><br>
+                            This can be done by clicking on an adjacent tile you want to move, or with the arrow keys on the keyboard.<br><br>
+                           </p> 
                         <button id='return'>>Got it!</button>
                     </div>
                 </div>
@@ -51,7 +53,7 @@
                         <p id="msgWin" class='matrix-text'>📟 YOU WIN 😁</p>
                         <br>       
                         <form action="/slider" method="POST">
-                    @csrf
+                            @csrf
                             <input type="text" name='skill' id='skill' style="display:none" >
                             <!-- <input type="text" id='skill2' style="display:none" > -->
                             <button  class='nextBtn'>> NICE! CONTINUE</button>
@@ -60,6 +62,10 @@
                 </div>
                 <div class="bar">
                     <p>📟 SLIDER PUZZLE</p>
+                    <div class='barBtns'>
+                        <button id='skip' class='barBorder'title="Unlocks in 25 moves" disabled>Skip</button> 
+                        <button id='infoBtn' title='game instructions'>Help</button>
+                    </div>
                 </div>
                 <div class="content">
                     <div class="board">

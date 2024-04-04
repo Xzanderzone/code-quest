@@ -41,6 +41,31 @@
     color: rgb(0, 0, 0);
     background-color: #dbdbdb;
 }
-/* #skip disabled {
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#infoBtn {
+    margin-right: 10px;
+}
+.bar {
+    display: flex;
+    justify-content: space-between;
+}
+.barBtns :disabled {
     cursor: not-allowed;
-} */
+    color: rgb(148, 14, 14);
+}
+.white {
+    color: rgb(209, 209, 209);
+}
+
+.barBorder {
+    border-left: 2px dotted rgb(138, 138, 138);
+    border-right: 2px dotted rgb(138, 138, 138);
+    margin-top: 1px;
+    padding-right: 8px;
+    padding-left: 8px;
+}

@@ -39,6 +39,19 @@
                         <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
                     </div>
                 </div>
+                <!-- extra info  -->
+                <div class="popup terminal" id="info" style="display: none">
+                    <div class="bar">
+                        <p>📟Instructions</p>
+                    </div>
+                    <div class="content">
+                        <p class='white'>The classic rock paper scissors!. <br><br>
+                            Select your fighter and fight against the mighty Persil!<br><br>
+                           </p> 
+                        <button id='return'>>Got it!</button>
+                    </div>
+                </div>
+                <!-- winning -->
                 <div class="popup terminal" id="won" style="display: none">
                     <div class="bar">
                         <p >📟 YOU WIN 😁</p>
@@ -55,7 +68,10 @@
                     </div>
                 </div>
                 <div class="bar">
-                    <p>📟 ROCK PAPER SCISSOR</p>
+                    <p>📟 ROCK PAPER SCISSOR</p>   
+                    <div>
+                        <button id='infoBtn' title='game instructions'>Help</button>
+                    </div>
                 </div>
                 <div class="content">
                     @include("_partials.games.rockPS")
