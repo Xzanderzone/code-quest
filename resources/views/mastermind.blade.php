@@ -16,6 +16,16 @@
 <body>
     @include("_partials.header") 
     <main class="game">
+        <div class="popup terminal" id="info" style="display: none">
+            <div class="bar">
+                <p>📟 INSTRUCTION 😭</p>
+            </div>
+            <div class="content">
+                <p class='matrix-text'>YOU DIDN'T CRACK THE CODE THIS TIME! </p> <br><br>
+                <a href="/story">> TRY AGAIN</a><br><br>
+                <button id="skip">> SKIP MASTERMIND!</button>
+            </div>
+        </div>
         <div class="popup terminal" id="lost" style="display: none">
             <div class="bar">
                 <p>📟 YOU LOSE 😭</p>
