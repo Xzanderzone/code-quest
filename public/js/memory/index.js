@@ -4,6 +4,9 @@ let firstCard, secondCard;
 let matchedPair = [];
 let lockBoard = false;
 let score = 0;
+let giveUpBtn = document.getElementById("skip");
+
+giveUpBtn.addEventListener('click', checkGameSkip);
 
 document.querySelector(".score").textContent = score;
 
@@ -85,7 +88,6 @@ function flipCard() {
     lockBoard = true;
 
     checkForMatch();
-    checkGameSkip();
 }
 
 function checkForMatch() {
@@ -160,10 +162,12 @@ function checkGameEnd() {
 }
 
 function checkGameSkip() {
-    if (score === 8) {
+    if (score <= 10) {
         console.log("skip!");
+        giveUpBtn.disabled = true;
         setTimeout(gameSkip, 1000);
     } else {
+        giveUpBtn.disabled = false;
         return false;
     }
 }
@@ -172,7 +176,7 @@ function gameEnd() {
     let modelWon = document.getElementById("won");
     modelWon.style.display = "";
     let skillsText = document.getElementById("msgWin");
-    skillsText.innerHTML =
+    skillsText.innerHTML = "";
         "You unlocked these skills<br><br>" +
         "- " +
         matchedPair[0][0].toUpperCase() +

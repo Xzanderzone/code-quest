@@ -11,6 +11,7 @@
     <p id="score-text">Score: <span class="score"></span></p>
     <div class="actions">
         <button onclick="restart()">Restart</button>
+	</div>
     </div>
   </body>
 </html>
