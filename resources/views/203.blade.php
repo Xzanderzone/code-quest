@@ -7,9 +7,9 @@
         <div class="text-balloon">
             @csrf
                 @if ($user->toilet_choice === "Initiative")
-                    <p>You go to the coach and explain the situation.<br>
+                    <p>You go to the coach and explain the situation.<br><br>
                     - Hey Persile, Bonasi's name isn't actually Bonasi. I don't know his name either but he's crying in the bathroom, I think you should check up on him to clear the confusion.<br>
-                    - Thanks for having the initiative of talking to me and helping your colleague, {{$user->name}}. - said Persile.
+                    - Thanks for having the initiative of talking to me and helping your colleague, {{$user->name}}.
                     </p>
                 @elseif ($user->toilet_choice === "Conflict Resolution")
                     <p>You try to comfort 'Bonasi' and encourage him to talk to Persile.<br>

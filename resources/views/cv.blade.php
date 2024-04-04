@@ -70,25 +70,25 @@
                 <h2>Soft Skills</h2>
                 <ul>
                     @if($user->card_reason)<li title="Card choice">{{$user->card_reason}} •</li>@endif
-                    @if($user->toilet_choice !== "null")<li title="Bonasi's choice">{{$user->toilet_choice}} •</li>@endif
+                    @if(!empty($user->toilet_choice) && $user->toilet_choice !== "null")<li title="Bonasi's choice">{{$user->toilet_choice}} •</li>@endif
                     @if($user->extra_toilet)<li title="">{{$user->extra_toilet}} •</li>@endif
                     @if($user->guessing)<li title="Guessing Persile's age">{{$user->guessing}} •</li>@endif
-                    @if($user->tech_talk !== "null")<li title="Tech Talk topic">{{$user->tech_talk}} •</li>@endif
-                    @if($user->feedback !== "null")<li title="Tech Talk feedback">{{$user->feedback}} •</li>@endif
+                    @if(!empty($user->tech_talk) && $user->tech_talk !== "null")<li title="Tech Talk topic">{{$user->tech_talk}} •</li>@endif
+                    @if(!empty($user->feedback) && $user->feedback !== "null")<li title="Tech Talk feedback">{{$user->feedback}} •</li>@endif
                     @if($user->track_first)<li title="">{{$user->track_first}} •</li>@endif
-                    @if($user->track_second !== "null")<li title="">{{$user->track_second}} •</li>@endif
+                    @if(!empty($user->track_second) && $user->track_second !== "null")<li title="">{{$user->track_second}} •</li>@endif
                     @if($user->celebration)<li title="">Networking •</li>@endif
                 </ul>
             </div>
             <div class="TechSkills">
                 <h2>Tech Skills</h2>
                 <ul>
-                @if($user->mastermind !== "null")<li title="">{{$user->mastermind}} •</li>@endif
-                @if($user->rockps !== "null")<li title="">{{$user->rockps}} •</li>@endif
-                @if($user->memory1 !== "null")<li title="">{{$user->memory1}} •</li>@endif
-                @if($user->memory2 !== "null")<li title="">{{$user->memory2}} •</li>@endif
-                @if($user->memory3 !== "null")<li title="">{{$user->memory3}} •</li>@endif
-                @if($user->slider !== "null")<li title="">{{$user->slider}} •</li>@endif
+                @if($user->mastermind)<li title="">HTML • CSS •</li>@endif
+                @if($user->rockps)<li title="">{{$user->rockps}} •</li>@endif
+                @if($user->memory1)<li title="">{{$user->memory1}} •</li>@endif
+                @if($user->memory2)<li title="">{{$user->memory2}} •</li>@endif
+                @if($user->memory3)<li title="">{{$user->memory3}} •</li>@endif
+                @if($user->slider)<li title="">{{$user->slider}} •</li>@endif
                 </ul>
             </div>
             <div class="project">
