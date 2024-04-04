@@ -35,27 +35,72 @@
                         </br>{{ $user->name }}
                   </p>
                 <p>
-                      <b>Favorite Pet:</b></br>Cow
+                      <b>Favorite Pet:</b></br>
+                      @csrf
+                      @if ($user->character === "glasses.png")
+                          Fish
+                      @elseif ($user->character === "hair.png")
+                          Cat
+                      @elseif ($user->character === "hat.png")
+                          Horse
+                      @elseif ($user->character === "moustache.png")
+                          Rabbit
+                      @elseif ($user->character === "partyhat.png")
+                          Dog
+                      @elseif ($user->character === "wheelchair.png")
+                          Cow
+                      @endif
                   </p>
             </div>
             <div class="Summary">
                 <h2>Summary</h2>
                 <p>
-                    Beautiful moustache man. 
+                    @csrf
+                    @if ($user->character === "glasses.png")
+                        This font is too small.
+                    @elseif ($user->character === "hair.png")
+                        Metalhead that spend lots of money in hair conditioner.
+                    @elseif ($user->character === "hat.png")
+                        Some Shakespeare quote.
+                    @elseif ($user->character === "moustache.png")
+                        Beautiful moustache man. 
+                    @elseif ($user->character === "partyhat.png")
+                        Party rock is in the house tonight!
+                    @elseif ($user->character === "wheelchair.png")
+                        Likes rolling around the world.
+                    @endif
                 </p>
             </div>
             <div class="Language">
                 <h2>Language</h2>
                 <ul>
                     <li>English</li>
-                    <li>Hindi</li>
+                    <li>Dutch</li>
                 </ul>
             </div>
             <div class="Hobbies">
                 <h2>Hobbies</h2>
                 <ul>
-                    <li>Playing cricket</li>
-                    <li>Swimming</li>
+                    @csrf
+                    @if ($user->character === "glasses.png")
+                        <li>Reading</li>
+                        <li>Eating fruits</li>
+                    @elseif ($user->character === "hair.png")
+                        <li>Playing guitar</li>
+                        <li>Cycling</li>
+                    @elseif ($user->character === "hat.png")
+                        <li>Amateur theatre</li>
+                        <li>Rugby</li>
+                    @elseif ($user->character === "moustache.png")
+                        <li>Horse riding</li>
+                        <li>Baking</li>
+                    @elseif ($user->character === "partyhat.png")
+                        <li>Partying</li>
+                        <li>Mangas</li>
+                    @elseif ($user->character === "wheelchair.png")
+                        <li>Boardgames</li>
+                        <li>Travelling</li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -64,7 +109,12 @@
                 <h1>{{ $user->name }}</h1>
             </div>
             <div class="title">
-                <p>Web Developer</p>
+                <p>Web Developer 
+                    @csrf 
+                    @if ($user->track)
+                    • {{$user->track}}
+                    @endif
+                </p>
             </div>
             <div class="SoftSkills">
                 <h2>Soft Skills</h2>
