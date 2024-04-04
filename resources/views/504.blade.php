@@ -29,7 +29,7 @@
                 <button id="hoverOnlyButton" class="skipBtn">> Pick up the call</button>
             </div>
         </div>
-        <div class="text-balloon-line"><div class="actual-line"></div></div>
+
         @include("_partials.drawings")
 
     </main>

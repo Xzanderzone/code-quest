@@ -15,7 +15,7 @@
         @elseif (($user->tech_talk === "Growth Mindset" || $user->tech_talk === "Storytelling") && ($user->feedback === "Adaptability" || $user->feedback === "Openness to Feedback"))
             <main class="star">
                 <div class="whiteBlock">
-                    <p>Congratz! Your tech talk topic and your reaction to feedback unlocked 2 Softskills:</p>
+                    <p>Congratz! You unlocked 2 Softskills:</p>
                     <h2>{{$user->tech_talk}} and {{$user->feedback}}</h2>
                     <button class="pixel skipBtn"><p class="matrix-text">I'm happy!</p></button>
                 </div>

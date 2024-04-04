@@ -40,7 +40,7 @@
                     <a id="continue">>I AM DETERMINED</a>
                     <br>
                     <br>
-                    <button id="animationButton" class="skipBtn">> Rock Paper Scissor it is!</button>
+                    <button class="skipBtn">> Rock Paper Scissor it is!</button>
                 </div>
             </div>
             <div class="bar">

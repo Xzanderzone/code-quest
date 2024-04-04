@@ -1,9 +1,9 @@
-let text = document.querySelector('.text-balloon:not(.landing .text-balloon)')
+let text = document.querySelector('.text-balloon:not(.landing .text-balloon):not(.introducing .text-balloon)');
 
-var i = 0;
-var txt = text.innerHTML; /* The text */
-var speed = 28; /* The speed/duration of the effect in milliseconds */
-text.textContent = "";
+let i = 0;
+let txt = text.innerHTML; /* The text */
+let speed = 28; /* The speed/duration of the effect in milliseconds */
+text.innerHTML = "";
 
 window.addEventListener('DOMContentLoaded', () => {
     text.style.opacity = 1;
@@ -11,14 +11,23 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 function typeWriter() {
-  if (i < txt.length) {
-    if (txt.charAt(i) === "<") {
-      text.innerHTML += "<br>"
-      i += 3
-    } else {
-      text.innerHTML += txt.charAt(i);
+    if (i < txt.length) {
+        let char = txt.charAt(i);
+        
+        if (char === '<') {
+            let endIndex = txt.indexOf('>', i);
+            let tag = txt.substring(i, endIndex + 1);
+            if (tag === "<br>") {
+                text.innerHTML += "<br>";
+            } else {
+                text.innerHTML += tag;
+            }
+            i = endIndex + 1;
+        } else {
+            text.innerHTML += char;
+            i++;
+        }
+        
+        setTimeout(typeWriter, speed);
     }
-    i++;
-    setTimeout(typeWriter, speed);
-  }
 }
