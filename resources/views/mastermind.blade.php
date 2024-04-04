@@ -70,7 +70,7 @@
             <div class="bar">
                 <p>📟 MASTERMIND</p>
                 <div class='barBtns'>
-                    <button id='skip' class='barBorder skipBtn' title="Unlocks in 5 moves" disabled>Skip</button> 
+                    <button id='skip' class='barBorder' title="Unlocks in 5 moves" disabled>Skip</button> 
                     <button id='infoBtn' title='game instructions'>Help</button>
                 </div>
             </div>
