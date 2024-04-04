@@ -38,8 +38,16 @@
                 @endif
             </div>
         </div>
+        <div class="text-balloon-line"><div class="actual-line"></div></div>
 
-        @include("_partials.drawings")
+        @csrf
+        @if ($user->track === "Salesforce")
+            @include("_partials.sail")
+        @elseif ($user->track === "Full-Stack")
+            @include("_partials.drawings")
+        @elseif ($user->track === "Java")
+            @include("_partials.matty")
+        @endif
 
     </main>
 </body>

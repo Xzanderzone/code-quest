@@ -6,7 +6,7 @@
     <main class="ok-page">
         <div class="text-balloon">
             <p>Now you have an important choice to make!<br>
-            On your journey to be a Web Developer, you can follow different tracks: <span class="highlight-green">Salesforce, Java</span> or <span class="highlight-green">Full-Stack</span>. Each of them have their own languages and skills to develop, and this will affect your final CV.
+            On your journey to be a Web Developer, you can follow different tracks: Salesforce, Java or Full-Stack. Each of them have their own languages and skills to develop, and this will affect your final CV.
             </p>
         </div>
         <div class="terminal">

@@ -76,7 +76,7 @@ function EndGame(win) {
         let msg = document.getElementById("msgWin");
         msg.style.textAlign = "center";
         msg.innerHTML =
-            "Thanks to the mighty Persile's challange<br>you unlock some of your potential.<br><br> Skill added: JavaScript";
+            "Thanks to the mighty Persile's challange,<br>you unlock some of your potential.<br><br> Skill added: JavaScript";
         let modal = document.getElementById("won");
         modal.style.display = "";
     } else {
