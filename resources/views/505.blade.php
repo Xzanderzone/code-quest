@@ -25,13 +25,13 @@
             </div>
             <div class="content">
                 @csrf
-                @if ($user->score >= 85)
+                @if ($user->score >= 95)
                     <p class="matrix-text">{{$user->name}} ~ CONGRATULATIONS!</p>
                     <button id="hoverOnlyButton" class="skipBtn">> I have a job!</button>
-                @elseif ($user->score >=65 )
+                @elseif ($user->score >=75 )
                     <p class="matrix-text">{{$user->name}} ~ CONGRATULATIONS!</p>
                     <button id="hoverOnlyButton" class="skipBtn">>  I have an internship!</button>
-                @elseif ($user->score < 65)
+                @elseif ($user->score < 75)
                     <p class="matrix-text">{{$user->name}} ~ OH NO!</p>
                     <button id="hoverOnlyButton" class="skipBtn">> Go back to your mom's basement</button>
                 @endif
