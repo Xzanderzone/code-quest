@@ -18,6 +18,10 @@
         <div class="terminal">
             <div class="bar">
                 <p>📟 MEMORY GAME</p>
+                <div>
+                <button id='skip'disabled>Skip</button>
+		        <button id='infoBtn'>Help</button>
+                </div>
             </div>
             <div class="content">
     @include("_partials.games.memory")
@@ -45,9 +49,8 @@
                     <div class="content">
                         <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p>
                         <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> 
-                        <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: {{$user->track}} </p> <br>
+                        <p class='matrix-text'>SKILLS WILL NOT BE UNLOCKED! </p> <br>
                         <button id='continueGame'>> KEEP GOING </button>
-                        <a href="/story">> Reset puzzle </a><br>
                         <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
                     </div>
                 </div>
