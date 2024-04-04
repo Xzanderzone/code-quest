@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/guessing.css" />
+    <script src="js/script.js" defer></script>
     <title>A Web Dev Journey</title>
 </head>
 <body>
@@ -28,6 +29,18 @@
                 </form>
                 </div>
             </div>
+            <!-- extra info  -->
+            <div class="popup terminal" id="info" style="display: none">
+                <div class="bar">
+                    <p>📟Instructions</p>
+                </div>
+                <div class="content">
+                    <p class='white'>Simply find Persils age! <br><br>
+                        Guess a number and be the first to find the truth!<br><br>
+                        </p> 
+                    <button id='return'>>Got it!</button>
+                </div>
+            </div>
             <div class="popup terminal" id="won" style="display: none">
                 <div class="bar">
                     <p>📟 THE MIGHTY PERSIL 😁</p>
@@ -44,7 +57,10 @@
                 </div>
             </div>
             <div class="bar">
-                <p>📟 GUESSING GAME</p>
+                <p>📟 GUESSING GAME</p> 
+                <div>
+                    <button id='infoBtn' title='game instructions'>Help</button>
+                </div>
             </div>
             <div class="content">
                 @include("_partials.games.guessing")

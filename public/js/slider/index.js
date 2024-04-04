@@ -7,7 +7,7 @@ let shuffled = false;
 let totalMoves = 0;
 let inverted = false;
 let game = document.currentScript.getAttribute("track");
-
+if (!game) game = "Java";
 let giveUpBtn = document.getElementById("skip");
 let PuzzleContainer = document.getElementById("puzzle");
 let invertButton = document.getElementById("invert");
@@ -124,7 +124,11 @@ function swap(tile) {
 
     if (shuffled) {
         if (checkHasWon()) setTimeout(EndGame, 500);
-        else if (totalMoves > 25) {
+        else if (totalMoves <= 25) {
+            giveUpBtn.disabled = true;
+            giveUpBtn.title = "Unlocks in " + (25 - totalMoves) + " moves";
+        } else {
+            giveUpBtn.title = "Don't do it Anakin!";
             giveUpBtn.disabled = false;
         }
     } else totalMoves = 0;
@@ -132,11 +136,11 @@ function swap(tile) {
 function EndGame() {
     let storeThis = document.getElementById("skill");
     switch (game) {
-        case "Fullstack":
+        case "Full-Stack":
             storeThis.value = "Laravel";
             break;
         case "Salesforce":
-            storeThis.value = "Salesforce"; //placeholder
+            storeThis.value = "Platform App Builder";
             break;
         default: //java
             storeThis.value = "Java";
