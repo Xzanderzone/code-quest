@@ -14,6 +14,7 @@
             <br>
             <a href="/" class="pixel"><p class="matrix-text">Go to the Homepage</p></a>
         </div>
+        @include("_partials.end-footer")
     </main>
 </body>
 </html>

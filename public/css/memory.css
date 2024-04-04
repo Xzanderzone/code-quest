@@ -1,8 +1,7 @@
-*{
-  padding: 0;
-  margin: 0;
+* {
+    padding: 0;
+    margin: 0;
 }
-
 
 body {
     min-height: 100vh;
@@ -29,8 +28,6 @@ body {
       border-radius: 10px;
       background-color: #27ae60;
       color: white;
-      margin-left: 5px;
-      margin-right: 5px;
   }
   
   .grid-container {
@@ -39,9 +36,9 @@ body {
     grid-gap: 4px;
     grid-template-columns: repeat(4, 150px);
     grid-template-rows: repeat(5, 100px);
-  }
-  
-  .card {
+}
+
+.card {
     width: calc(100px / 2 * 3);
     height: 100px;
     border-radius: 10px;
@@ -49,38 +46,39 @@ body {
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
-  }
-  
-  .front-image {
+}
+
+.front-image {
     height: 65px;
     /* opacity: 0; */
-  }
-  
-  .front-image .flipped {
+}
+
+.front-image .flipped {
     height: 60px;
-  }
-  
-  .card.flipped {
+}
+
+.card.flipped {
     transform: rotateY(180deg);
-  }
-  
-  .front, .back {
-      backface-visibility: hidden;
-      position: absolute;
-      border-radius: 10px;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-  }
-  
-  .card .front {
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card .front {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .card .back { 
+}
+
+.card .back {
     background-position: center center;
     background-size: cover;
     backface-visibility: hidden;
@@ -89,27 +87,3 @@ body {
   .card .front {
     transform: rotateY(180deg);
   }
-
-  .bar {
-    display: flex;
-    justify-content: space-between;
-}
-
-#infoBtn {
-  margin-right: 10px;
-}
-.barBtns :disabled {
-  cursor: not-allowed;
-  color: rgb(148, 14, 14);
-}
-.white {
-  color: rgb(209, 209, 209);
-}
-
-.barBorder {
-  border-left: 2px dotted rgb(138, 138, 138);
-  border-right: 2px dotted rgb(138, 138, 138);
-  margin-top: 1px;
-  padding-right: 8px;
-  padding-left: 8px;
-}
