@@ -696,7 +696,6 @@ input[type="radio"] {
 
 .right li {
     display: inline-block;
-    margin-right: 10px;
 }
 
 .right li:hover {
