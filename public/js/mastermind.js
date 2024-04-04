@@ -123,6 +123,18 @@ function round() {
 
             drawTips(tips);
 
+            let giveUpBtn = document.querySelector('.barBtns #skip')
+
+            if (attempts < 5) {
+                console.log('someting')
+                giveUpBtn.disabled = true;
+                giveUpBtn.title = "Unlocks in " + (5 - attempts) + " moves";
+            } else {
+                console.log(attempts)
+                giveUpBtn.title = "Don't do it Anakin!";
+                giveUpBtn.disabled = false;
+            }
+
             if (tips[3] === 'black') {
 
                 rows.forEach(row => {

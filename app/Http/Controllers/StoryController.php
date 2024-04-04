@@ -16,8 +16,7 @@ class StoryController extends Controller
         "memory",
         "401","402","403","404","405","406",
         "slider",
-        "501","502","503","504",
-        "505",
+        "501","502","503","504","505",
         "end"];
     }
     public function story() {
@@ -105,7 +104,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->slider= $request->skill;
         $user->progress += 1;
-        $user->score += 10;
+        $user->score += 15;
         $user->save();
 
         return redirect('/story');
@@ -117,7 +116,7 @@ class StoryController extends Controller
         $user = Auth::user();
         $user->mastermind= $request->skill;
         $user->progress += 1;
-        $user->score += 10;
+        $user->score += 15;
         $user->save();
 
         return redirect('/story');
@@ -133,7 +132,7 @@ class StoryController extends Controller
         $user->memory2= $request->skill2;
         $user->memory3= $request->skill3;
         $user->progress += 1;
-        $user->score += 10;
+        $user->score += 15;
         $user->save();
 
         return redirect('/story');
