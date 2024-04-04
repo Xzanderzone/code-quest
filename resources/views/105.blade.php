@@ -56,7 +56,7 @@
         </div>
         <div class="text-balloon-line"><img src="..\media\cards\{{ $user->card }}"></div>
 
-        @include("_partials.drawings") 
+        @include("_partials.class") 
     </main>
 </body>
 </html>

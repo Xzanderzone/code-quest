@@ -11,7 +11,7 @@
                     Ghibault is with his hand in the air, ready to give some constructive feedback. He tells you that you were a good speaker, but that you could have used a more interesting slide presentation.
                     </p>
                 @elseif ($user->tech_talk === "Storytelling")
-                    <p>Everyone had a blast with your fun choice and wholesome topic. You get a couple of feedback complimenting your presentation<br><br>
+                    <p>Everyone had a blast with your fun choice and wholesome topic. You get a couple of feedback complimenting your presentation.<br><br>
                     Ghibault is with his hand in the air, ready to give some constructive feedback. He tells you that you were a good speaker, but that you could have used a more interesting slide presentation.
                     </p>
                 @else
