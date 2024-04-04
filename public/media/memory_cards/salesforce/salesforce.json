@@ -1,42 +1,42 @@
 [
     {
-        "image": "./media/memory_cards/salesforce/adventurer.png",
-        "name": "adventurer"
+        "image": "./media/memory_cards/salesforce/Adventurer.png",
+        "name": "Adventurer"
     },
     {
-        "image": "./media/memory_cards/salesforce/expeditioner.png",
-        "name": "expeditioner"
+        "image": "./media/memory_cards/salesforce/Expeditioner.png",
+        "name": "Expeditioner"
     },
     {
-        "image": "./media/memory_cards/salesforce/explorer.png",
-        "name": "explorer"
+        "image": "./media/memory_cards/salesforce/Explorer.png",
+        "name": "Explorer"
     },
     {
-        "image": "./media/memory_cards/salesforce/hiker.png",
-        "name": "hiker"
+        "image": "./media/memory_cards/salesforce/Hiker.png",
+        "name": "Hiker"
     },
     {
-        "image": "./media/memory_cards/salesforce/mountaineer.png",
-        "name": "mountaineer"
+        "image": "./media/memory_cards/salesforce/Mountaineer.png",
+        "name": "Mountaineer"
     },
     {
-        "image": "./media/memory_cards/salesforce/ranger.png",
-        "name": "ranger"
+        "image": "./media/memory_cards/salesforce/Ranger.png",
+        "name": "Ranger"
     },
     {
-        "image": "./media/memory_cards/salesforce/ranger_I.png",
-        "name": "ranger_I"
+        "image": "./media/memory_cards/salesforce/Ranger_I.png",
+        "name": "Ranger_I"
     },
     {
-        "image": "./media/memory_cards/salesforce/ranger_II.png",
-        "name": "ranger_II"
+        "image": "./media/memory_cards/salesforce/Ranger_II.png",
+        "name": "Ranger_II"
     },
     {
-        "image": "./media/memory_cards/salesforce/ranger_III.png",
-        "name": "ranger_III"
+        "image": "./media/memory_cards/salesforce/Ranger_III.png",
+        "name": "Ranger_III"
     },
     {
-        "image": "./media/memory_cards/salesforce/scout.png",
-        "name": "ranger_IV"
+        "image": "./media/memory_cards/salesforce/Scout.png",
+        "name": "Ranger_IV"
     }
 ]

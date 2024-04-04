@@ -1,19 +1,19 @@
 [
     {
         "image": "./media/memory_cards/fullstack/Git.png",
-        "name": "git"
+        "name": "Git"
     },
     {
         "image": "./media/memory_cards/fullstack/Github.png",
-        "name": "github"
+        "name": "Github"
     },
     {
         "image": "./media/memory_cards/fullstack/Mysql.png",
-        "name": "mysql"
+        "name": "MySQL"
     },
     {
         "image": "./media/memory_cards/fullstack/PHP.png",
-        "name": "php"
+        "name": "Php"
     },
     {
         "image": "./media/memory_cards/fullstack/rest-api-icon.png",

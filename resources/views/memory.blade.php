@@ -18,6 +18,10 @@
         <div class="terminal">
             <div class="bar">
                 <p>📟 MEMORY GAME</p>
+                <div class="barBtns">
+                <button id='skip' title="Unlocks in 10 turns" disabled>Skip</button>
+		        <button id='infoBtn'>Help</button>
+                </div>
             </div>
             <div class="content">
     @include("_partials.games.memory")
@@ -38,6 +42,16 @@
                     </div>
                 </div>
             </div>
+            <div class="popup terminal" id="info" style="display: none">
+                    <div class="bar">
+                        <p>📟Instructions</p>
+                    </div>
+                    <div class="content">
+                        <p class='white'>The goal of this game is to pair up the matching cards. You will unlock the skills for the 1st, 4th and 8th pair. Good Luck!<br><br>
+                           </p> 
+                        <button id='return'>>Got it!</button>
+                    </div>
+                </div>
             <div class="popup terminal" id="warning" style="display: none">
                     <div class="bar">
                         <p>📟WARNING: SKIP HAS IMPACT</p>
@@ -45,9 +59,8 @@
                     <div class="content">
                         <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p>
                         <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> 
-                        <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: {{$user->track}} </p> <br>
+                        <p class='matrix-text'>SKILLS WILL NOT BE UNLOCKED! </p> <br>
                         <button id='continueGame'>> KEEP GOING </button>
-                        <a href="/story">> Reset puzzle </a><br>
                         <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
                     </div>
                 </div>

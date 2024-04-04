@@ -7,30 +7,30 @@ body {
     min-height: 100vh;
     min-width: 100vh;
     color: white;
-}
-
-#score-text {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    padding-top: 15px;
-}
-
-.actions {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-
-.actions button {
-    padding: 8px 16px;
-    font-size: 30px;
-    border-radius: 10px;
-    background-color: #27ae60;
-    color: white;
-}
-
-.grid-container {
+  }
+  
+  #score-text {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      padding-top: 15px;
+  }
+  
+  .actions {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+  }
+  
+  .actions button {
+      padding: 8px 16px;
+      font-size: 30px;
+      border-radius: 10px;
+      background-color: #27ae60;
+      color: white;
+  }
+  
+  .grid-container {
     display: grid;
     justify-content: center;
     grid-gap: 4px;
@@ -82,18 +82,15 @@ body {
     background-position: center center;
     background-size: cover;
     backface-visibility: hidden;
-}
-
-.card .front {
+  }
+  
+  .card .front {
     transform: rotateY(180deg);
-}
+  }
 
-#infoBtn {
+  #infoBtn {
     margin-right: 10px;
-}
-.bar {
-    display: flex;
-    justify-content: space-between;
+
 }
 .barBtns :disabled {
     cursor: not-allowed;
@@ -109,4 +106,8 @@ body {
     margin-top: 1px;
     padding-right: 8px;
     padding-left: 8px;
+}
+.bar {
+  display: flex;
+  justify-content: space-between;
 }

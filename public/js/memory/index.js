@@ -4,6 +4,8 @@ let firstCard, secondCard;
 let matchedPair = [];
 let lockBoard = false;
 let score = 0;
+let giveUpBtn = document.getElementById("skip");
+let helpBtn = document.getElementById("infoBtn");
 
 document.querySelector(".score").textContent = score;
 
@@ -85,12 +87,11 @@ function flipCard() {
     lockBoard = true;
 
     checkForMatch();
-    checkGameSkip();
 }
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-
+    checkGameSkip();
     if (isMatch) {
         if (!isPairMatched(firstCard.dataset.name, secondCard.dataset.name)) {
             addMatchedPair(firstCard.dataset.name, secondCard.dataset.name);
@@ -160,10 +161,13 @@ function checkGameEnd() {
 }
 
 function checkGameSkip() {
-    if (score === 8) {
+    if (score < 10) {
         console.log("skip!");
-        setTimeout(gameSkip, 1000);
+        giveUpBtn.disabled = true;
+        giveUpBtn.title = "Unlocks in" + " " + (10-score) + " " + "turns";
     } else {
+        giveUpBtn.disabled = false;
+        giveUpBtn.title = "Unlocked";
         return false;
     }
 }
@@ -191,4 +195,10 @@ function gameEnd() {
 function gameSkip() {
     let modelSkip = document.getElementById("warning");
     modelSkip.style.display = "block";
+}
+
+helpBtn.addEventListener('click, info');
+
+function infoPopup() {
+    helpBtn.style.display = "none";
 }
