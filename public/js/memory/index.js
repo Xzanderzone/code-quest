@@ -176,7 +176,7 @@ function gameEnd() {
     let modelWon = document.getElementById("won");
     modelWon.style.display = "";
     let skillsText = document.getElementById("msgWin");
-    skillsText.innerHTML = "";
+    skillsText.innerHTML =
         "You unlocked these skills<br><br>" +
         "- " +
         matchedPair[0][0].toUpperCase() +
