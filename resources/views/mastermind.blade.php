@@ -21,9 +21,10 @@
                 <p>📟 INSTRUCTION 😭</p>
             </div>
             <div class="content">
-                <p class='matrix-text'>YOU DIDN'T CRACK THE CODE THIS TIME! </p> <br><br>
-                <a href="/story">> TRY AGAIN</a><br><br>
-                <button id="skip">> SKIP MASTERMIND!</button>
+                <p class='matrix-text'>Try to guess to right color combination (the same color can be used multiple times!) <br>
+                For each right color on the right place, you get a black peg as a feedback. <br>
+            For each right color that is not on the right place, you get a white peg.</p> <br><br>
+                <button id='return'>>Got it!</button>
             </div>
         </div>
         <div class="popup terminal" id="lost" style="display: none">
@@ -66,6 +67,7 @@
         <div class="terminal">
             <div class="bar">
                 <p>📟 MASTERMIND</p>
+                <button id='infoBtn'>Help</button>
             </div>
             <div class="content">
                 <div class="board">
