@@ -16,6 +16,19 @@
 <body>
     @include("_partials.header") 
     <main class="game">
+        <div class="popup terminal" id="info" style="display: none">
+            <div class="bar">
+                <p>📟 INSTRUCTION 😭</p>
+            </div>
+            <div class="content">
+                <p class='matrix-text'>Try to guess to right color combination (the same color can be used multiple times!) <br>
+                For each correct color in the correct place, you get a black peg as a feedback. <br>
+            For each correct color that is not in the correct place, you get a white peg. <br>
+            WARNING: THE ORDER IN WHICH THE FEEDBACK PEGS ARE PLACED, DON'T CORRESPOND TO THE COLORS YOU PLACED! (as it is supposed to be bro/sis!)
+        </p> <br><br>
+                <button id='return'>>Got it!</button>
+            </div>
+        </div>
         <div class="popup terminal" id="lost" style="display: none">
             <div class="bar">
                 <p>📟 YOU LOSE 😭</p>
@@ -56,6 +69,7 @@
         <div class="terminal">
             <div class="bar">
                 <p>📟 MASTERMIND</p>
+                <button id='infoBtn'>Help</button>
             </div>
             <div class="content">
                 <div class="board">

@@ -1,4 +1,4 @@
-let text = document.querySelector('.text-balloon:not(.landing .text-balloon)');
+let text = document.querySelector('.text-balloon:not(.landing .text-balloon):not(.introducing .text-balloon)');
 
 let i = 0;
 let txt = text.innerHTML; /* The text */
