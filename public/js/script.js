@@ -33,15 +33,15 @@
 // );
 
 //actual skip button press
-let skipBtn = document.getElementsByClassName("skipBtn");
-for (let i = 0; i < skipBtn.length; i++) {
-    skipBtn[i].addEventListener(
-        "click",
-        () => {
-            location.href = "/next";
-        },
-        { once: true }
-    );
+
+let skipBtns = document.getElementsByClassName("skipBtn");
+
+for (let i = 0; i < skipBtns.length; i++) {
+    skipBtns[i].addEventListener("click", function(event) {
+        location.href = "/next";
+
+        this.disabled = true;
+    });
 }
 //post request buttons use nextBtn
 let nextBtn = document.getElementsByClassName("nextBtn");

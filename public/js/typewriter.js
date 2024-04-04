@@ -2,7 +2,7 @@ let text = document.querySelector('.text-balloon:not(.landing .text-balloon):not
 
 let i = 0;
 let txt = text.innerHTML; /* The text */
-let speed = 28; /* The speed/duration of the effect in milliseconds */
+let speed = 24; /* The speed/duration of the effect in milliseconds */
 text.innerHTML = "";
 
 window.addEventListener('DOMContentLoaded', () => {
