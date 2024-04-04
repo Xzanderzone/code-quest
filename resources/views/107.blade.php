@@ -5,9 +5,9 @@
     @include("_partials.header") 
     <main class="ok-page">
         <div class="text-balloon">
-            I am so proud of you! 🙌 Now, it's time to learn code.<br>
+            <p>I am so proud of you! 🙌 Now, it's time to learn code.<br>
             In order to master code, one first needs to know how to solve a code.<br>
-            For the next challenge, we'll see if you are truly a master mind!  
+            For the next challenge, we'll see if you are truly a master mind!</p>
         </div>
         <div class="terminal">
             <div class="bar">

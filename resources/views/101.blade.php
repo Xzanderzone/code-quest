@@ -5,7 +5,7 @@
     @include("_partials.header") 
     <main class="ok-page">
         <div class="text-balloon">
-            You arrive at CodeQuest headquarters feeling a little nervous. The classroom is full of other students, and you are greeted by Persile. 
+            <p>You arrive at CodeQuest headquarters feeling a little nervous. The classroom is full of other students, and you are greeted by Persile.</p>
         </div>
         <div class="terminal">
             <div class="bar">

@@ -70,8 +70,10 @@
         @if ($user->track === "Salesforce")
             @include("_partials.sail")
         @elseif ($user->track === "Full-Stack")
+            <div class="text-balloon-line"><div class="actual-line"></div></div>
             @include("_partials.drawings")
         @elseif ($user->track === "Java")
+            <div class="text-balloon-line"><div class="actual-line"></div></div>
             @include("_partials.matty")
         @endif
 

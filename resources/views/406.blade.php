@@ -32,7 +32,7 @@
         @if ($user->track === "Salesforce")
             @include("_partials.sail")
         @elseif ($user->track === "Full-Stack")
-            @include("_partials.class")
+            @include("_partials.drawings")
         @elseif ($user->track === "Java")
             @include("_partials.matty")
         @endif

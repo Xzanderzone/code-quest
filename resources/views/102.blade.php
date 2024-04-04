@@ -5,8 +5,7 @@
     @include("_partials.header") 
     <main class="dialogue">
         <div class="text-balloon">
-            Hello {{$user->name}} and welcome to CodeQuest! Please, choose a place to sit.
-
+            <p>Hello {{$user->name}} and welcome to CodeQuest! Please, choose a place to sit.</p>
         </div>
         <div class="terminal">
             <div class="bar">

@@ -35,7 +35,7 @@
             @elseif ($user->card_reason === "Leadership" || $user->card_reason === "Communication")
             <main class="sad">
                 <div class="whiteBlock">
-                    <p>Your colleagues are disappointed in you. {{$user->card_reason}} was removed from your CV.</p>
+                    <p>Your colleagues are disappointed in you.<br>{{$user->card_reason}} was removed from your CV.</p>
                     <form action="/card-reason-update" method="POST">
                         @csrf
                         <button class="skipBtn pixel"><p class="matrix-text">Let's move on</p></button>
@@ -45,7 +45,8 @@
             @elseif ($user->card_reason !== "Leadership" && $user->card_reason !== "Communication" && !is_null($user->card_reason))
             <main class="sad">
                 <div class="whiteBlock">
-                    <p>Your colleagues are starting to keep their distance from you and your CV progress is delayed, causing you to not acquire a new soft skill.</p>
+                    <p>Your colleagues are starting to keep their distance from you.<br>
+                        You failed to unlock a new soft skill.</p>
                     <button class="pixel skipBtn"><p class="matrix-text">Let's move on</p></button>
                 </div>
             </main>

@@ -5,7 +5,7 @@
     @include("_partials.header") 
     <main class="dialogue">
         <div class="text-balloon">
-            Welcome {{ $user->name }}, I need your details for the VdeyaB please choose a picture i can use to finish your form
+            <p>Welcome {{ $user->name }}, I need your details for the VdeyaB please choose a picture i can use to finish your form.</p>
         </div>
         <div class="terminal">
             <div class="bar">
