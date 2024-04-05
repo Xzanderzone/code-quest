@@ -63,7 +63,7 @@
                 <div class="bar">
                     <p>📟 SLIDER PUZZLE</p>
                     <div class='barBtns'>
-                        <button id='skip' class='barBorder'title="Unlocks in 25 moves" disabled>Skip</button> 
+                        <button id='skipBar' class='barBorder'title="Unlocks in 25 moves" disabled>Skip</button> 
                         <button id='infoBtn' title='game instructions'>Help</button>
                     </div>
                 </div>
