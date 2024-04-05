@@ -26,7 +26,7 @@
                         <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p>
                         <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> 
                         <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: {{$user->track}} </p> <br>
-                        <button id='continueGame'>> KEEP GOING </button>
+                        <button id='continueGame'>> KEEP GOING </button><br>
                         <a href="/story">> Reset puzzle </a><br>
                         <button id="animationButton" class="skipBtn">> I'M SURE! LET ME SKIP</button>
                     </div>
@@ -63,7 +63,7 @@
                 <div class="bar">
                     <p>📟 SLIDER PUZZLE</p>
                     <div class='barBtns'>
-                        <button id='skip' class='barBorder'title="Unlocks in 25 moves" disabled>Skip</button> 
+                        <button id='skipBar' class='barBorder'title="Unlocks in 25 moves" disabled>Skip</button> 
                         <button id='infoBtn' title='game instructions'>Help</button>
                     </div>
                 </div>

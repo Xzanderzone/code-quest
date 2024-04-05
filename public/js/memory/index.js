@@ -4,7 +4,7 @@ let firstCard, secondCard;
 let matchedPair = [];
 let lockBoard = false;
 let score = 0;
-let giveUpBtn = document.getElementById("skip");
+let giveUpBtn = document.getElementById("skipBar");
 let helpBtn = document.getElementById("infoBtn");
 
 document.querySelector(".score").textContent = score;
@@ -164,7 +164,7 @@ function checkGameSkip() {
     if (score < 10) {
         console.log("skip!");
         giveUpBtn.disabled = true;
-        giveUpBtn.title = "Unlocks in" + " " + (10-score) + " " + "turns";
+        giveUpBtn.title = "Unlocks in" + " " + (10 - score) + " " + "turns";
     } else {
         giveUpBtn.disabled = false;
         giveUpBtn.title = "Unlocked";
@@ -176,7 +176,7 @@ function gameEnd() {
     let modelWon = document.getElementById("won");
     modelWon.style.display = "";
     let skillsText = document.getElementById("msgWin");
-    skillsText.innerHTML = "";
+    skillsText.innerHTML =
         "You unlocked these skills<br><br>" +
         "- " +
         matchedPair[0][0].toUpperCase() +
@@ -197,7 +197,7 @@ function gameSkip() {
     modelSkip.style.display = "block";
 }
 
-helpBtn.addEventListener('click, info');
+helpBtn.addEventListener("click, info");
 
 function infoPopup() {
     helpBtn.style.display = "none";

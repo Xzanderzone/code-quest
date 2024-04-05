@@ -33,15 +33,15 @@
 // );
 
 //actual skip button press
-let skipBtn = document.getElementsByClassName("skipBtn");
-for (let i = 0; i < skipBtn.length; i++) {
-    skipBtn[i].addEventListener(
-        "click",
-        () => {
-            location.href = "/next";
-        },
-        { once: true }
-    );
+
+let skipBtns = document.getElementsByClassName("skipBtn");
+
+for (let i = 0; i < skipBtns.length; i++) {
+    skipBtns[i].addEventListener("click", function (event) {
+        location.href = "/next";
+
+        this.disabled = true;
+    });
 }
 //post request buttons use nextBtn
 let nextBtn = document.getElementsByClassName("nextBtn");
@@ -52,10 +52,17 @@ for (let i = 0; i < nextBtn.length; i++) {
         }, 0);
     });
 }
-//show warning when attempting to skip a game
+//show warning when attempting to skip a game(from ui/game over/...)
 let skip = document.getElementById("skip");
 if (skip)
     skip.addEventListener("click", () => {
+        let finalWarning = document.getElementById("warning");
+        finalWarning.style.display = "";
+    });
+//show warning when attempting to skip a game (from bar next to help button)
+let skipBar = document.getElementById("skipBar");
+if (skipBar)
+    skipBar.addEventListener("click", () => {
         let finalWarning = document.getElementById("warning");
         finalWarning.style.display = "";
     });

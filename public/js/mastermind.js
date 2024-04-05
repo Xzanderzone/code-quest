@@ -123,7 +123,7 @@ function round() {
 
             drawTips(tips);
 
-            let giveUpBtn = document.querySelector('.barBtns #skip')
+            let giveUpBtn = document.querySelector('#skipBar')
 
             if (attempts < 5) {
                 console.log('someting')

@@ -1,7 +1,5 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Press+Start+2P&weight=700&size=24&duration=4993&pause=1000&color=22F743&random=false&width=435&lines=Code%3EQuest;A+Web+Dev+Journey)](https://git.io/typing-svg)
 
-## Code, dream, transform.
-
 Dive into CodeQuest! Master coding through minigames, but your choices shape your social skills too. Will you become a web dev hero or extend your basement residency?
 
 ## Table of Contents

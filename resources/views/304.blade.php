@@ -23,7 +23,8 @@
         @else
             <main class="sad">
                 <div class="whiteBlock">
-                    <p>Your reaction to the feedback delays your CV progress, causing you to not acquire a new soft skill.</p>
+                    <p>Your reaction to the feedback delays your CV progress.<br>
+                    You failed to unlock a new soft skill.</p>
                     <button class="pixel skipBtn"><p class="matrix-text">Let's move on</p></button>
                 </div>
             </main>  

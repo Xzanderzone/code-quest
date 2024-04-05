@@ -47,7 +47,8 @@
                 <p class='matrix-text'>ARE YOU SURE YOU WANT TO SKIP THIS GAME ? </p> <br>
                 <p class='matrix-text'>THIS WILL NEGATIVELY IMPACT YOUR SCORE </p> <br>
                 <p class='matrix-text'>SKILL WILL NOT BE UNLOCKED: HTML & CSS </p> <br>
-                <a href="/story">> KEEP GOING </a><br><br>
+                <button id="continueGame">> KEEP GOING</button><br><br>
+                <a href="/story">> RESET GAME </a><br><br>
                 <button class="skipBtn">> I'M SURE! LET ME SKIP</button>
             </div>
         </div>
@@ -70,7 +71,7 @@
             <div class="bar">
                 <p>📟 MASTERMIND</p>
                 <div class='barBtns'>
-                    <button id='skip' class='barBorder' title="Unlocks in 5 moves" disabled>Skip</button> 
+                    <button id='skipBar' class='barBorder' title="Unlocks in 5 moves" disabled>Skip</button> 
                     <button id='infoBtn' title='game instructions'>Help</button>
                 </div>
             </div>
