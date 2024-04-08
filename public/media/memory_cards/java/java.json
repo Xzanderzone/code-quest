@@ -1,11 +1,11 @@
 [
     {
         "image": "./media/memory_cards/java/Rest-Api.png",
-        "name": "Rest-Api"
+        "name": "REST API"
     },
     {
         "image": "./media/memory_cards/java/Devops.png",
-        "name": "Devops"
+        "name": "DevOps"
     },
     {
         "image": "./media/memory_cards/java/Eclipse.png",
@@ -17,7 +17,7 @@
     },
     {
         "image": "./media/memory_cards/java/Junit.png",
-        "name": "Junit"
+        "name": "JUnit"
     },
     {
         "image": "./media/memory_cards/java/Mockito.png",
