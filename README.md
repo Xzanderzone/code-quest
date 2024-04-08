@@ -28,7 +28,7 @@ Are you ready to take on the "CodeQuest" and chart your path to becoming a maste
 
 **Here's how you get started**
 
-1. **Head over to Code>Quest!**
+1. **Head over to [Code>Quest](https://codequest.be/)!**
 2. **Create your account:** Register if you don't have a login already.
 3. **Dive into the adventure!** Once logged in, you'll be presented with choices that shape your character's path and coding journey.
 4. **Conquer engaging minigames:** Master core web development concepts like HTML, CSS, and JavaScript through fun and interactive challenges.
@@ -39,6 +39,8 @@ Are you ready to take on the "CodeQuest" and chart your path to becoming a maste
 
 * Laravel (PHP framework)
 * Vanilla JavaScript
+* Pivot Animator 5
+* Nomeo Hosting
 
 ## The Crew
 

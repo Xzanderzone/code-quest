@@ -217,28 +217,6 @@ function placePawn() {
     
     placeholders.forEach(placeholder => {
         placeholder.addEventListener("click", colorPawn);
-        // const placeholderRect = placeholder.getBoundingClientRect();
-        // const centerX = placeholderRect.left + placeholderRect.width / 2;
-        // const centerY = placeholderRect.top + placeholderRect.height / 2;
-
-        // dimension = (placeholder.clientWidth)
-        // console.log(dimension)
-
-        // function colorPawn(event) {
-        //     // Calculate the coordinates of the center of the placeholder
-    
-        //     // Calculate the distance between the click position and the center of the placeholder
-        //     const distance = Math.sqrt(Math.pow(event.clientX - centerX, 2) + Math.pow(event.clientY - centerY, 2));
-    
-        //     // Define the radius within which the click should trigger the function
-        //     const clickRadius = (dimension); // Adjust as needed
-    
-        //     // If the click is within the defined radius, trigger the function
-        //     if (distance <= clickRadius) {
-        //         console.log("Clicked!");
-        //         yo(event)
-        //     }
-        // }
     });
 }
 
