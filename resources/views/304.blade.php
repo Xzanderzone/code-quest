@@ -12,6 +12,14 @@
                     <button class="pixel skipBtn"><p class="matrix-text">I'm happy!</p></button>
                 </div>
             </main>
+        @elseif ($user->tech_talk === "Growth Mindset" || $user->tech_talk === "Storytelling")
+            <main class="star">
+                <div class="whiteBlock">
+                    <p>Congratz! You unlocked a Softskill:</p>
+                    <h2>{{$user->tech_talk}}</h2>
+                    <button class="pixel skipBtn"><p class="matrix-text">I'm happy!</p></button>
+                </div>
+            </main>
         @elseif (($user->tech_talk === "Growth Mindset" || $user->tech_talk === "Storytelling") && ($user->feedback === "Adaptability" || $user->feedback === "Openness to Feedback"))
             <main class="star">
                 <div class="whiteBlock">
