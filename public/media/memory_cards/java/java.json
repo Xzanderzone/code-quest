@@ -4,39 +4,39 @@
         "name": "Rest-Api"
     },
     {
-        "image": "./media/memory_cards/java/Devops.png",
+        "image": "./media/memory_cards/java/devops.png",
         "name": "Devops"
     },
     {
-        "image": "./media/memory_cards/java/Eclipse.png",
+        "image": "./media/memory_cards/java/eclipse.png",
         "name": "Eclipse"
     },
     {
-        "image": "./media/memory_cards/java/Intellij.png",
+        "image": "./media/memory_cards/java/intellij.png",
         "name": "Intellij"
     },
     {
-        "image": "./media/memory_cards/java/Junit.png",
+        "image": "./media/memory_cards/java/junit.png",
         "name": "Junit"
     },
     {
-        "image": "./media/memory_cards/java/Mockito.png",
+        "image": "./media/memory_cards/java/mockito.png",
         "name": "Mockito"
     },
     {
-        "image": "./media/memory_cards/java/OOP.jpg",
+        "image": "./media/memory_cards/java/oop.jpg",
         "name": "OOP"
     },
     {
-        "image": "./media/memory_cards/java/Springboot.png",
+        "image": "./media/memory_cards/java/springboot.png",
         "name": "Springboot"
     },
     {
-        "image": "./media/memory_cards/java/Architecture.png",
+        "image": "./media/memory_cards/java/architecture.png",
         "name": "Architecture"
     },
     {
-        "image": "./media/memory_cards/java/JSF.png",
+        "image": "./media/memory_cards/java/jsf.png",
         "name": "JSF"
     }
 
