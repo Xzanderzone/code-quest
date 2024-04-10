@@ -25,7 +25,7 @@
                     @csrf
                     <input type="text" name='skill'id='skill' value=null style="display:none" >
                     <!-- <input type="text" id='skill2' style="display:none" > -->
-                    <button class='skipBtn' >> Let's rock!</button>
+                    <button class='nextBtn' >> Let's rock!</button>
                 </form>
                 </div>
             </div>
