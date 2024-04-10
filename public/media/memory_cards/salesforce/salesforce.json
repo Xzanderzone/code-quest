@@ -1,42 +1,42 @@
 [
     {
-        "image": "./media/memory_cards/salesforce/Adventurer.png",
+        "image": "./media/memory_cards/salesforce/adventurer.png",
         "name": "Adventurer"
     },
     {
-        "image": "./media/memory_cards/salesforce/Expeditioner.png",
+        "image": "./media/memory_cards/salesforce/expeditioner.png",
         "name": "Expeditioner"
     },
     {
-        "image": "./media/memory_cards/salesforce/Explorer.png",
+        "image": "./media/memory_cards/salesforce/explorer.png",
         "name": "Explorer"
     },
     {
-        "image": "./media/memory_cards/salesforce/Hiker.png",
+        "image": "./media/memory_cards/salesforce/hiker.png",
         "name": "Hiker"
     },
     {
-        "image": "./media/memory_cards/salesforce/Mountaineer.png",
+        "image": "./media/memory_cards/salesforce/mountaineer.png",
         "name": "Mountaineer"
     },
     {
-        "image": "./media/memory_cards/salesforce/Ranger.png",
+        "image": "./media/memory_cards/salesforce/ranger.png",
         "name": "Ranger Expert"
     },
     {
-        "image": "./media/memory_cards/salesforce/Ranger_I.png",
+        "image": "./media/memory_cards/salesforce/ranger_I.png",
         "name": "Ranger Newbie"
     },
     {
-        "image": "./media/memory_cards/salesforce/Ranger_II.png",
+        "image": "./media/memory_cards/salesforce/ranger_II.png",
         "name": "Ranger Beginner"
     },
     {
-        "image": "./media/memory_cards/salesforce/Ranger_IV.png",
+        "image": "./media/memory_cards/salesforce/ranger_IV.png",
         "name": "Ranger Intermediate"
     },
     {
-        "image": "./media/memory_cards/salesforce/Scout.png",
+        "image": "./media/memory_cards/salesforce/scout.png",
         "name": "Ranger Advanced"
     }
 ]

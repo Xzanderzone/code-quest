@@ -4,7 +4,7 @@
         "name": "Git"
     },
     {
-        "image": "./media/memory_cards/fullstack/Github.png",
+        "image": "./media/memory_cards/fullstack/GitHub.png",
         "name": "Github"
     },
     {
@@ -17,23 +17,23 @@
     },
     {
         "image": "./media/memory_cards/fullstack/Rest-Api.png",
-        "name": "Rest-Api"
+        "name": "REST API"
     },
     {
-        "image": "./media/memory_cards/fullstack/Sass.png",
+        "image": "./media/memory_cards/fullstack/sass.png",
         "name": "Sass"
     },
     {
-        "image": "./media/memory_cards/fullstack/Node_js.png",
+        "image": "./media/memory_cards/fullstack/node_js.png",
         "name": "Node.js"
     },
     {
-        "image": "./media/memory_cards/fullstack/React.png",
+        "image": "./media/memory_cards/fullstack/react.png",
         "name": "React"
     },
     {
-        "image": "./media/memory_cards/fullstack/Vue.png",
-        "name": "Vue"
+        "image": "./media/memory_cards/fullstack/Vue_js.png",
+        "name": "Vue.js"
     },
     {
         "image": "./media/memory_cards/fullstack/SEO.png",
