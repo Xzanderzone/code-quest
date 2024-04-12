@@ -19,7 +19,7 @@
             <div class="bar">
                 <p>📟 MEMORY GAME</p>
                 <div class="barBtns">
-                <button id='skip' title="Unlocks in 10 turns" disabled>Skip</button>
+                <button id='skipBar' title="Unlocks in 10 turns" disabled>Skip</button>
 		        <button id='infoBtn'>Help</button>
                 </div>
             </div>
