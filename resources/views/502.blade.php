@@ -17,7 +17,7 @@
                 <form action="/celebration" method="POST">
                     @csrf
                     <div class="options">
-                        <input type="radio" name="celebration" value="Comic Sans" id="option1"><label for="option1">a) We should go to Comic Sans, they have the best overpriced cocktails in town!</label> 
+                        <input type="radio" name="celebration" value="Comic Sans" id="option1"><label for="option1">a) We should go to Comic Sans, they have the best cocktails in town!</label> 
                         <br>
                         <input type="radio" name="celebration" value="CodeQuest" id="option2"><label for="option2">b) Everyone can bring something to eat and drink, we can have a celebration at CodeQuest headquarters :)</label>
                         <br>

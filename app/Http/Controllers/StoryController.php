@@ -19,26 +19,28 @@ class StoryController extends Controller
         "501","502","503","504","505",
         "end"];
     }
+
     public function story() {
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $pages=StoryController::getPageArray();
-        $progress=0;
-        if($user)$progress = $user->progress??0;
-        else return redirect('/');//prevents crashing on invalid user
+        $progress= $user->progress??0;
         $user->update(['progress' => $progress]);
         return view($pages[$progress], ['user' => $user]);
     }
 
     public function cv() {
+        
         $user = Auth::user();
-        if (!$user) {
-            return redirect('/');
-        }
+        if($user==null)return redirect('/login');
         return view('cv', ['user' => $user]);
     }
 
     public function nextPage() {
-            $user = Auth::user();
+            
+        $user = Auth::user();
+        if($user==null)return redirect('/login');
             $user->progress += 1;
             $user->save();
             return redirect('/story');
@@ -50,7 +52,9 @@ class StoryController extends Controller
         ]);
         $character = $request->character;
 
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->character = $character;
 
         $user->progress += 1;
@@ -64,7 +68,9 @@ class StoryController extends Controller
             'seats' => 'required'
         ]);
 
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->seats= $request->seats;
 
         $user->progress += 1;
@@ -76,7 +82,9 @@ class StoryController extends Controller
         $request->validate([
             'skill' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->guessing= $request->skill;
 
         $user->score += 5;
@@ -89,7 +97,9 @@ class StoryController extends Controller
         $request->validate([
             'skill' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->rockps= $request->skill;
         $user->progress += 1;
         $user->score += 10;
@@ -101,7 +111,9 @@ class StoryController extends Controller
         $request->validate([
             'skill' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->slider= $request->skill;
         $user->progress += 1;
         $user->score += 15;
@@ -113,7 +125,9 @@ class StoryController extends Controller
         $request->validate([
             'skill' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->mastermind= $request->skill;
         $user->progress += 1;
         $user->score += 15;
@@ -127,7 +141,9 @@ class StoryController extends Controller
             'skill2' => 'required',
             'skill3' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->memory1= $request->skill;
         $user->memory2= $request->skill2;
         $user->memory3= $request->skill3;
@@ -144,7 +160,9 @@ class StoryController extends Controller
             'card' => 'required'
         ]);
 
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->card = $request->card;
 
         $user->progress += 1;
@@ -157,7 +175,9 @@ class StoryController extends Controller
         $request->validate([
             'card_reason' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->card_reason = $request->card_reason;
 
         $user->score += 5;
@@ -171,7 +191,9 @@ class StoryController extends Controller
         $request->validate([
             'toilet_choice' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->toilet_choice = $request->toilet_choice;
 
         if($request->toilet_choice !== "null") {
@@ -185,7 +207,9 @@ class StoryController extends Controller
     }
 
     public function extraToiletSkill(Request $request) {
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
 
         if ($user->seats === 'empty-table') {
             $user->extra_toilet = "Empathy";
@@ -201,7 +225,9 @@ class StoryController extends Controller
     }
 
     public function deleteCardReason(Request $request) {
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->card_reason = null;
 
         $user->score -= 5;
@@ -215,7 +241,9 @@ class StoryController extends Controller
         $request->validate([
             'tech_talk' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->tech_talk = $request->tech_talk;
 
         if($request->tech_talk !== "null") {
@@ -232,7 +260,9 @@ class StoryController extends Controller
         $request->validate([
             'feedback' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->feedback = $request->feedback;
 
         if($request->feedback !== "null") {
@@ -249,7 +279,9 @@ class StoryController extends Controller
         $request->validate([
             'track' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->track = $request->track;
 
         $user->progress += 1;
@@ -262,7 +294,9 @@ class StoryController extends Controller
         $request->validate([
             'track_first' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->track_first = $request->track_first;
 
         $user->score += 5;
@@ -276,7 +310,9 @@ class StoryController extends Controller
         $request->validate([
             'track_second' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->track_second = $request->track_second;
 
         if($request->track_second !== "null") {
@@ -292,7 +328,9 @@ class StoryController extends Controller
         $request->validate([
             'celebration' => 'required'
         ]);
+        
         $user = Auth::user();
+        if($user==null)return redirect('/login');
         $user->celebration = $request->celebration;
 
         $user->score += 5;
