@@ -47,7 +47,7 @@
                             <br>
                             <input type="radio" name="track_first" value="Teamwork" id="option2"><label for="option2">b) Go around the class looking for colleagues with similar interests to form a group.</label>
                             <br>
-                            <input type="radio" name="track_first" value="Flexibility" id="option3"><label for="option3">c) Let the class now that you are open to any role on the project and wait to see where you can be fitted.</label>
+                            <input type="radio" name="track_first" value="Flexibility" id="option3"><label for="option3">c) Let the class know that you are open to any role on the project and wait to see where you can be fitted.</label>
                             <br>
                             <input type="radio" name="track_first" value="Goal Oriented" id="option4"><label for="option4">d) Start thinking on a project that would be impressive on a portfolio, to increase your opportunities outside the training.</label>
                         @elseif($user->track === "Java")
